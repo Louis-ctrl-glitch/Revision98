@@ -1,0 +1,31 @@
+name = "revision-quest-98"
+main = "src/worker.js"
+compatibility_date = "2026-10-12"
+workers_dev = true
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "revision-quest-db"
+# Replace this after running: npx wrangler d1 create revision-quest-db
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+[[durable_objects.bindings]]
+name = "GAME_ROOMS"
+class_name = "GameRoom"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["GameRoom"]
+
+[limits]
+# Password hashing needs more CPU than the 10 ms Free-plan per-request limit.
+cpu_ms = 30000
+
+[observability]
+enabled = true

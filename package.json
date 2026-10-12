@@ -1,0 +1,21 @@
+{
+  "name": "revision-quest-98-cloudflare",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Revision Quest 98 GCSE revision site with Cloudflare accounts, D1 friends and Durable Object live rooms.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate:local": "wrangler d1 migrations apply revision-quest-db --local",
+    "db:migrate:remote": "wrangler d1 migrations apply revision-quest-db --remote",
+    "check": "node --check src/worker.js && node scripts/check-inline-scripts.mjs",
+    "test": "npm run check && node scripts/smoke-test.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.40.0"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}
