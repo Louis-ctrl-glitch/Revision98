@@ -1067,6 +1067,50 @@ async function rqInitCloud(){
  if(rqCloudEnabled&&rqCloudUser)rqSyncProgressSoon();
 }
 rqInitCloud();
+// Route the older room controls to the same authenticated Cloudflare live-room
+// flow as Quick Play. This prevents local-demo room codes being mistaken for
+// online invitations.
+(function routeLegacyRoomControlsToCloudflare(){
+  const roomPanel = $('roomList')?.closest('.panel');
+  if (roomPanel) {
+    const title = roomPanel.querySelector('.window-title span');
+    if (title) title.textContent = 'Online rooms · Cloudflare live games';
+    const note = roomPanel.querySelector('.notice');
+    if (note) note.textContent = 'These controls now use real Cloudflare rooms. Create a room here or in Quick Play, then share the six-character code. Old demo codes created before this update are offline-only and cannot be converted.';
+  }
+  renderRooms = function(){
+    const list = $('roomList');
+    if (list) list.innerHTML = '<p class="notice">Create a new online room or join using a six-character code from a host who is currently connected.</p>';
+  };
+  createRoom = async function(){
+    showPage('social');
+    const subject = $('roomSubject')?.value || selectedSubjects()[0] || 'Mixed GCSE';
+    const onlineSubject = $('easyGameSubject');
+    if (onlineSubject) {
+      if ([...onlineSubject.options].some(option => option.value === subject || option.textContent === subject)) onlineSubject.value = subject;
+      if (typeof updateEasyTopics === 'function') updateEasyTopics();
+    }
+    await easyCreateRoom();
+  };
+  joinRoom = async function(){
+    showPage('social');
+    const code = String($('joinRoomCode')?.value || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6);
+    if ($('easyRoomCode')) $('easyRoomCode').value = code;
+    if (code.length !== 6) {
+      toast('That looks like an old offline demo code. Ask the host to create a NEW room and send you the six-character Quick Play code.');
+      $('joinRoomCode')?.focus();
+      return;
+    }
+    await easyJoinRoom();
+  };
+  openRoom = function(){
+    showPage('social');
+    toast('Old saved rooms were offline demos. To play online, create a new Cloudflare room and share its six-character code.');
+  };
+  renderRooms();
+  if ($('activeRoomPanel')) $('activeRoomPanel').style.display = 'none';
+})();
+
 </script>
 
 </body>
