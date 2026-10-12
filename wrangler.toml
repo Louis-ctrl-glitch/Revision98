@@ -1,4 +1,4 @@
-name = "revision-quest-98"
+name = "revision98"
 main = "src/worker.js"
 compatibility_date = "2026-10-12"
 workers_dev = true
@@ -23,9 +23,6 @@ class_name = "GameRoom"
 tag = "v1"
 new_sqlite_classes = ["GameRoom"]
 
-[limits]
-# Password hashing needs more CPU than the 10 ms Free-plan per-request limit.
-cpu_ms = 30000
 
 [observability]
 enabled = true
