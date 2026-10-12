@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revision Quest — GCSE Revision Arena</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a30;--panel2:#19233d;--line:#2b3858;--text:#f4f7ff;--muted:#9eaccb;--mint:#65f0c2;--purple:#a99aff;--yellow:#ffd66b;--pink:#ff8fbd;--red:#ff777f;--shadow:0 18px 45px #0003}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 10% 0%,#20244a 0,transparent 35%),var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--mint);outline-offset:3px}.app{max-width:1400px;margin:auto;padding:22px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:21px;letter-spacing:-.5px}.logo{display:grid;place-items:center;width:43px;height:43px;border-radius:14px;background:linear-gradient(135deg,var(--mint),#7bb8ff);color:#11182b;font-size:23px;box-shadow:0 8px 24px #65f0c233}.brand small{display:block;font-size:11px;color:var(--muted);font-weight:600;letter-spacing:1.3px;text-transform:uppercase}.top-actions{display:flex;align-items:center;gap:10px}.pill{border:1px solid var(--line);background:#151d33;border-radius:999px;padding:9px 13px;color:var(--text);font-weight:700}.pill strong{color:var(--yellow)}.avatar{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#342d62;color:#d9d1ff;font-weight:900}.layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:24px}.sidebar{background:#10172a99;border:1px solid var(--line);border-radius:22px;padding:15px;height:max-content;position:sticky;top:15px}.navlabel{font-size:10px;letter-spacing:1.6px;color:#7383a8;font-weight:900;margin:12px 10px 7px}.navbtn{width:100%;display:flex;align-items:center;gap:12px;padding:11px 12px;margin:3px 0;border-radius:12px;background:transparent;color:var(--muted);text-align:left;font-weight:750}.navbtn span:first-child{width:22px;text-align:center;font-size:17px}.navbtn.active,.navbtn:hover{background:#202b48;color:white}.navbtn.active{box-shadow:inset 3px 0 var(--mint)}.sidebar-note{margin-top:22px;padding:14px;border-radius:15px;background:linear-gradient(135deg,#1b3550,#27214b);border:1px solid #354c70}.sidebar-note b{display:block;font-size:13px;margin-bottom:5px}.sidebar-note p{margin:0;color:#b8c4df;font-size:12px}.main{min-width:0}.hero{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:26px 28px;border-radius:24px;background:linear-gradient(110deg,#183a4b,#29254d 68%,#362346);border:1px solid #344566;overflow:hidden;position:relative}.hero:after{content:"✦";position:absolute;font-size:170px;color:#ffffff08;right:18%;top:-48px;pointer-events:none}.eyebrow{color:var(--mint);font-size:11px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase}.hero h1{font-size:clamp(27px,3.5vw,42px);line-height:1.08;letter-spacing:-1.5px;margin:9px 0 10px}.hero p{color:#c0cce4;max-width:590px;margin:0}.hero .btn{position:relative;z-index:1;white-space:nowrap}.btn{padding:11px 16px;border-radius:12px;background:var(--mint);color:#0c1b25;font-weight:900;transition:transform .15s,filter .15s}.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}.btn.secondary{background:#273450;color:#eef3ff;border:1px solid #3c4b6b}.btn.ghost{background:transparent;color:var(--muted);border:1px solid var(--line)}.btn.purple{background:var(--purple);color:#17142b}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:18px 0 26px}.stat{padding:17px 18px;border:1px solid var(--line);background:#121a2dce;border-radius:17px}.stat .top{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;font-weight:750}.stat .icon{font-size:18px}.stat strong{display:block;font-size:27px;letter-spacing:-1px;margin-top:7px}.stat small{color:#8292b4}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:23px 0 13px}.section-head h2{margin:0;font-size:20px;letter-spacing:-.5px}.section-head p{margin:3px 0 0;color:var(--muted);font-size:13px}.textlink{background:none;color:var(--mint);font-weight:800}.subject-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.subject{background:#121a2d;border:1px solid var(--line);border-radius:18px;padding:16px;min-width:0;transition:.15s}.subject:hover{transform:translateY(-2px);border-color:#60769f}.subject-top{display:flex;justify-content:space-between;align-items:center;gap:10px}.subject-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;font-size:21px;background:#263352}.subject .tag{font-size:10px;color:var(--muted);background:#1d2942;border-radius:6px;padding:4px 7px;font-weight:800}.subject h3{margin:12px 0 2px;font-size:16px}.subject p{margin:0;color:var(--muted);font-size:12px}.progress{height:6px;background:#28334e;border-radius:10px;overflow:hidden;margin:15px 0 8px}.progress span{height:100%;display:block;border-radius:10px;background:var(--mint)}.subject-bottom{display:flex;justify-content:space-between;align-items:center;color:#9eaccb;font-size:11px}.mini-btn{background:#24314d;color:white;padding:7px 10px;border-radius:9px;font-size:11px;font-weight:850}.lower-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:15px;margin-top:22px}.panel{background:#121a2d;border:1px solid var(--line);border-radius:19px;padding:19px;min-width:0}.panel h3{margin:0;font-size:16px}.panel-sub{margin:3px 0 15px;color:var(--muted);font-size:12px}.task{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid #26314a}.task:first-of-type{border-top:0}.task-icon{width:38px;height:38px;display:grid;place-items:center;background:#242e4a;border-radius:12px;font-size:18px}.task-copy{flex:1;min-width:0}.task-copy b{display:block;font-size:13px}.task-copy small{color:var(--muted);font-size:11px}.xp{color:var(--yellow);font-weight:900;font-size:12px;white-space:nowrap}.mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mode{padding:14px;border-radius:14px;text-align:left;background:#1a2540;border:1px solid #2c3a5c;color:white}.mode:hover{border-color:var(--mint)}.mode .emoji{font-size:22px}.mode b{display:block;margin-top:7px;font-size:13px}.mode small{color:var(--muted);font-size:11px}.page{display:none}.page.active{display:block}.toolbar{display:flex;flex-wrap:wrap;gap:9px;margin:17px 0}.field{background:#111a2e;border:1px solid var(--line);color:white;border-radius:11px;padding:10px 12px;min-width:160px}.quiz-card{max-width:780px;margin:22px auto;background:#131d33;border:1px solid #354363;border-radius:22px;padding:clamp(20px,4vw,35px);box-shadow:var(--shadow)}.quiz-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;font-weight:800}.quiz-card h2{font-size:clamp(22px,3vw,30px);line-height:1.3;margin:23px 0}.answers{display:grid;grid-template-columns:1fr 1fr;gap:10px}.answer{padding:14px;text-align:left;background:#202c48;color:white;border:1px solid #344363;border-radius:13px;font-weight:700}.answer:hover{border-color:var(--mint)}.answer.correct{border-color:var(--mint);background:#123d3a}.answer.wrong{border-color:var(--red);background:#462636}.feedback{min-height:28px;color:var(--muted);margin:15px 0;font-weight:700}.quiz-footer{display:flex;justify-content:space-between;align-items:center;gap:10px}.flashcard{min-height:250px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;border:1px solid #354363;border-radius:20px;background:linear-gradient(145deg,#1b2c49,#29234b);padding:30px;margin:18px 0}.flashcard .hint{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mint);font-weight:900}.flashcard h2{font-size:clamp(22px,3vw,32px);max-width:620px}.flashcard p{color:#bdc9e1;max-width:600px}.empty{padding:28px;text-align:center;color:var(--muted)}.library-list{display:grid;gap:10px}.library-item{display:flex;gap:13px;align-items:center;background:#151e33;border:1px solid var(--line);border-radius:14px;padding:13px}.library-item .grow{flex:1}.library-item b{display:block}.library-item small{color:var(--muted)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.formgrid label{display:grid;gap:6px;color:var(--muted);font-size:12px;font-weight:800}.formgrid .wide{grid-column:1/-1}.formgrid textarea{min-height:85px;resize:vertical}.notice{color:var(--muted);font-size:12px;margin-top:12px}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);padding:12px 18px;background:#e2fff5;color:#092a25;border-radius:12px;font-weight:900;box-shadow:var(--shadow);display:none;z-index:10}.toast.show{display:block}.mobile-nav{display:none}.timer{font-variant-numeric:tabular-nums;font-size:28px;font-weight:900;color:var(--mint)}.topic-row{display:flex;gap:8px;flex-wrap:wrap}.topic-chip{border:1px solid var(--line);background:#19233b;color:var(--muted);border-radius:99px;padding:7px 11px;font-size:12px;font-weight:800}.topic-chip.active{background:#19443f;color:var(--mint);border-color:#2c7668}
+@media(max-width:1000px){.subject-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.layout{grid-template-columns:190px minmax(0,1fr)}.lower-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.app{padding:13px 13px 82px}.topbar{margin-bottom:14px}.brand{font-size:17px}.top-actions .pill:first-child{display:none}.layout{display:block}.sidebar{display:none}.hero{padding:22px;align-items:flex-start;flex-direction:column}.hero h1{font-size:31px}.hero .btn{width:100%}.subject-grid{grid-template-columns:1fr 1fr;gap:9px}.subject{padding:12px}.subject .tag{display:none}.subject h3{font-size:14px}.stats{gap:9px;margin:12px 0 22px}.stat{padding:13px}.stat strong{font-size:23px}.mobile-nav{display:flex;position:fixed;bottom:0;left:0;right:0;background:#0e1628f5;backdrop-filter:blur(16px);border-top:1px solid var(--line);padding:8px 4px calc(8px + env(safe-area-inset-bottom));z-index:5;justify-content:space-around}.mobile-nav button{background:transparent;color:var(--muted);font-size:10px;font-weight:800;display:grid;gap:2px;justify-items:center}.mobile-nav button span{font-size:20px}.answers{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.formgrid .wide{grid-column:auto}.quiz-card{padding:20px}.section-head{align-items:start}.lower-grid{gap:12px}.top-actions{gap:6px}}
+
+/* Windows 98-inspired skin */
+:root{--bg:#008080;--panel:#c0c0c0;--panel2:#d4d0c8;--line:#777;--text:#080808;--muted:#333;--mint:#008080;--purple:#000080;--yellow:#ffff00;--pink:#ffb6c1;--red:#c00;--shadow:3px 3px 0 #333}
+body{background:#008080;color:#080808;font-family:Tahoma,"MS Sans Serif",Arial,sans-serif;font-size:14px}
+.app{max-width:1450px;padding:12px}
+.topbar{background:#c0c0c0;border:2px solid;border-color:#fff #555 #555 #fff;padding:7px 9px;margin-bottom:12px;box-shadow:2px 2px #222}
+.brand{font-size:18px;letter-spacing:0;color:#080808}.logo{border-radius:0;background:#000080;color:#fff;box-shadow:none;border:2px solid;border-color:#fff #555 #555 #fff}
+.brand small{color:#222;letter-spacing:.5px}
+.pill,.stat,.subject,.panel,.sidebar,.quiz-card,.library-item{background:#c0c0c0;color:#080808;border:2px solid;border-color:#fff #555 #555 #fff;border-radius:0;box-shadow:1px 1px #555}
+.pill{padding:5px 9px;color:#080808}.pill strong{color:#000080}.avatar{border-radius:0;background:#000080;color:white}
+.layout{gap:12px;grid-template-columns:205px minmax(0,1fr)}
+.sidebar{padding:8px;position:sticky;top:8px}.navlabel{color:#333;letter-spacing:.5px}.navbtn{border-radius:0;color:#111;padding:8px}.navbtn.active,.navbtn:hover{background:#000080;color:#fff;box-shadow:none}
+.sidebar-note{border-radius:0;background:#d4d0c8;border:2px solid;border-color:#fff #555 #555 #fff}.sidebar-note p{color:#222}
+.hero{border-radius:0;background:#c0c0c0;border:2px solid;border-color:#fff #555 #555 #fff;padding:18px}.hero:after{content:"";display:none}.eyebrow{color:#000080;letter-spacing:.5px}.hero h1{font-size:32px;letter-spacing:0;color:#000080}.hero p{color:#222}
+.btn,.btn.secondary,.btn.ghost,.btn.purple,.mini-btn,.field,.answer,.mode,.topic-chip{border-radius:0;box-shadow:inset 1px 1px #fff,inset -1px -1px #555;border:2px solid;border-color:#fff #555 #555 #fff;background:#c0c0c0;color:#080808}
+.btn{font-weight:bold;padding:8px 13px}.btn:hover,.mini-btn:hover,.mode:hover{transform:none;filter:brightness(1.03);background:#d4d0c8}.btn:active{border-color:#555 #fff #fff #555}.btn.secondary,.btn.ghost{color:#080808}
+.stats{gap:10px}.stat{padding:12px}.stat .top,.stat small{color:#222}.stat strong{color:#000080}
+.section-head h2{color:#000080}.subject{padding:13px;transition:none}.subject:hover{transform:none;border-color:#000080}.subject-icon{border-radius:0;background:#d4d0c8}.subject .tag{border-radius:0;background:#d4d0c8;color:#111}.progress{background:#eee;border:1px inset #777;border-radius:0}.progress span{border-radius:0;background:#000080!important}
+.panel{padding:14px}.task{border-color:#888}.task-icon{border-radius:0;background:#d4d0c8}.mode{border-radius:0}.mode:hover{border-color:#000080}
+.quiz-card{box-shadow:3px 3px #555}.answer{background:#d4d0c8;color:#080808}.answer.correct{background:#b8e6b8;border-color:#080}.answer.wrong{background:#f4c2c2;border-color:#c00}
+.flashcard{border-radius:0;background:#d4d0c8;border:2px solid;border-color:#fff #555 #555 #fff}.flashcard h2{color:#000080}.flashcard p{color:#222}
+.field{background:#fff;color:#080808;padding:8px}.field::placeholder{color:#555}.library-item{border-radius:0}.mobile-nav{background:#c0c0c0;border-top:2px solid #fff}.mobile-nav button{color:#111}
+.toast{border-radius:0;background:#ffffcc;color:#080808;border:2px solid;border-color:#fff #555 #555 #fff}
+.window-title{background:#000080;color:white;font-weight:bold;padding:5px 8px;margin:-1px -1px 12px;display:flex;justify-content:space-between;align-items:center}
+.window-title button{background:#c0c0c0;border:2px solid;border-color:#fff #555 #555 #fff;border-radius:0;font-weight:bold;line-height:1;padding:0 5px}
+.subject-prefs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.subject-check{display:flex;align-items:center;gap:7px;background:#d4d0c8;border:1px solid #999;padding:7px;min-width:0}
+.subject-check input{accent-color:#000080}
+.retro-note{border:1px solid #777;background:#eee;padding:9px;color:#222}
+@media(max-width:1000px){.layout{grid-template-columns:175px minmax(0,1fr)}.subject-prefs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.app{padding:7px 7px 80px}.layout{display:block}.hero h1{font-size:27px}.subject-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.subject-prefs{grid-template-columns:1fr 1fr}.topbar{gap:8px}.brand{font-size:14px}.top-actions .pill{display:none}}
+
+
+.account-overlay{position:fixed;inset:0;z-index:50;background:#008080;display:flex;align-items:center;justify-content:center;padding:18px}
+.account-window{width:min(650px,100%);max-height:94vh;overflow:auto;background:#c0c0c0;border:3px solid;border-color:#fff #555 #555 #fff;box-shadow:5px 5px #222}
+.account-title{background:#000080;color:white;padding:8px 11px;font-weight:bold;display:flex;align-items:center;justify-content:space-between}
+.account-body{padding:20px}.account-logo{font-size:42px;text-align:center;margin:3px 0}.account-body h1{text-align:center;color:#000080;font-size:24px;margin:4px 0}.account-body>p{text-align:center;color:#222;margin:4px 0 17px}.account-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}.account-form label{display:grid;gap:5px;font-weight:bold;font-size:12px}.account-form .wide{grid-column:1/-1}.account-form input,.account-form select{width:100%;min-width:0}.account-warning{font-size:11px;background:#fff7ce;border:1px solid #8a7d42;padding:9px;margin-top:13px;color:#222}.profile-button{display:flex;align-items:center;gap:7px}.profile-initial{width:27px;height:27px;display:inline-grid;place-items:center;background:#000080;color:white;border:1px solid white;font-weight:bold}
+@media(max-width:600px){.account-form{grid-template-columns:1fr}.account-form .wide{grid-column:auto}.account-body{padding:14px}}
+
+
+.social-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.retro-row{display:flex;align-items:center;gap:10px;padding:9px;background:#d4d0c8;border:1px solid #888}.retro-row .grow{flex:1}.retro-row small{display:block}.avatar-choice{display:flex;gap:8px;flex-wrap:wrap}.avatar-option{font-size:23px;padding:6px;background:#d4d0c8;border:2px solid;border-color:#fff #555 #555 #fff}.avatar-option.selected{border:3px solid #000080}.room-code{font-size:28px;letter-spacing:4px;color:#000080;background:#fff;border:2px inset #888;padding:8px 14px;display:inline-block}.retro-table{width:100%;border-collapse:collapse}.retro-table th,.retro-table td{padding:8px;text-align:left;border:1px solid #888}.retro-table th{background:#000080;color:#fff}.retro-table td{background:#eee}@media(max-width:700px){.social-grid{grid-template-columns:1fr}}
+
+.easy-multiplayer{border:3px solid;border-color:#fff #555 #555 #fff;box-shadow:3px 3px #333;background:#c0c0c0;color:#080808}
+.easy-multiplayer>p{color:#222}.easy-join-strip{display:flex;align-items:end;gap:9px;flex-wrap:wrap;padding:12px;background:#d4d0c8;border:1px solid #888}.easy-join-strip label,.easy-config label{display:grid;gap:4px;font-weight:bold;font-size:12px;min-width:140px}.easy-join-strip label{flex:1;min-width:150px}.easy-room-status{margin:12px 0;padding:10px;background:#fff;border:2px inset #888;font-weight:bold;color:#111}.easy-config{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:10px;align-items:end;margin:12px 0;padding:12px;background:#d4d0c8;border:1px solid #888}.easy-config label{min-width:0}.easy-players{padding:10px;background:#eee;border:1px solid #888;margin:10px 0}.easy-player-list{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.easy-player-pill{background:#fff;border:1px solid #777;padding:6px 9px;font-weight:bold}.easy-player-pill.me{background:#ffffcc;border:2px solid #000080}.easy-game-card{background:#eee;border:2px solid;border-color:#fff #555 #555 #fff;padding:14px;margin:12px 0}.easy-game-card h3{color:#000080}.easy-game-answers{display:grid;grid-template-columns:1fr 1fr;gap:8px}.easy-game-answer{padding:11px;text-align:left;background:#c0c0c0;border:2px solid;border-color:#fff #555 #555 #fff;color:#080808;font-weight:bold}.easy-game-answer:disabled{opacity:.75}.easy-game-answer.correct{background:#c7efc7;border-color:#080 #555 #555 #fff}.easy-game-answer.wrong{background:#f6caca;border-color:#c00 #555 #555 #fff}.easy-scoreboard{width:100%;border-collapse:collapse;margin-top:10px}.easy-scoreboard th,.easy-scoreboard td{border:1px solid #888;padding:6px;text-align:left}.easy-scoreboard th{background:#000080;color:#fff}.advanced-connect{margin:12px 0}.advanced-connect>summary{cursor:pointer;background:#d4d0c8;border:1px solid #888;padding:9px;font-weight:bold}.advanced-connect[open]>summary{margin-bottom:8px}.advanced-manual{margin-top:0!important}
+@media(max-width:900px){.easy-config{grid-template-columns:1fr 1fr}.easy-config #easyStartButton{width:100%}}
+@media(max-width:600px){.easy-config{grid-template-columns:1fr}.easy-game-answers{grid-template-columns:1fr}.easy-join-strip>*{width:100%}.easy-join-strip label{width:100%}}
+
+
+.friend-card{border:1px solid var(--line);background:linear-gradient(145deg,#141f35,#11192a);border-radius:15px;padding:14px;margin:10px 0;min-width:0}.friend-card-head{display:flex;align-items:center;gap:10px}.friend-avatar{flex:0 0 42px;width:42px;height:42px;border-radius:13px;background:#283553;display:grid;place-items:center;font-size:23px}.friend-ident{flex:1;min-width:0}.friend-ident b,.friend-ident small{display:block;overflow-wrap:anywhere}.friend-ident small,.friend-shared{font-size:11px;color:var(--muted)}.friend-status{display:inline-block;font-size:10px;font-weight:900;margin-top:4px;padding:3px 7px;border-radius:999px}.friend-status.has-profile{background:#15433d;color:var(--mint)}.friend-status.no-profile{background:#3d3040;color:#ffbdcf}.friend-stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:12px 0 8px}.friend-stat{background:#0e1628;border:1px solid #2b3651;border-radius:10px;padding:8px;min-width:0}.friend-stat small{display:block;font-size:9px;letter-spacing:.8px;color:#91a0bd;font-weight:900}.friend-stat strong{display:block;font-size:12px;overflow-wrap:anywhere;margin-top:4px}.friend-extra{display:flex;gap:7px;flex-wrap:wrap;margin:7px 0}.friend-extra span{font-size:10px;border-radius:999px;background:#202b43;padding:4px 7px;color:#c4cee2}.friend-missing{font-size:12px;color:var(--muted);margin:12px 0}.friend-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.friend-shared{display:block;margin-top:5px}.library-item small{overflow-wrap:anywhere}
+@media(max-width:640px){.friend-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.friend-card-head{align-items:flex-start}.friend-card-head>.mini-btn{padding:6px}}
+</style>
+<style>.social-grid h3{margin:5px 0 10px;color:#000080}.social-grid textarea{font-family:Consolas,monospace;font-size:11px;overflow-wrap:anywhere}.live-q{border:2px solid;border-color:#fff #555 #555 #fff;background:#d4d0c8;padding:12px;margin:10px 0}.live-q button{display:block;width:100%;text-align:left;margin:6px 0;padding:10px;background:#c0c0c0;border:2px solid;border-color:#fff #555 #555 #fff}.live-q button:disabled{opacity:.75}.live-score{font-size:20px;color:#000080;font-weight:bold}@media(max-width:700px){.social-grid textarea{height:100px}}</style>
+</head>
+<body>
+
+<div class="account-overlay" id="accountOverlay" style="display:none">
+  <div class="account-window">
+    <div class="account-title"><span>✦ GCSE Revision Hub — Create Profile</span><span>_ □ ×</span></div>
+    <div class="account-body">
+      <div class="account-logo">🖥️</div>
+      <h1 id="accountHeading">Create your revision profile</h1>
+      <p>Set up your own space before entering the GCSE revision desktop.</p>
+      <form id="accountForm" class="account-form">
+        <label class="wide">Display name *
+          <input class="field" id="profileDisplayName" required maxlength="35" placeholder="What should we call you?">
+        </label>
+        <label>Username *
+          <input class="field" id="profileUsername" required maxlength="24" pattern="[A-Za-z0-9_-]+" placeholder="e.g. study_star">
+        </label>
+        <label>Age
+          <input class="field" id="profileAge" type="number" min="5" max="100" placeholder="Optional">
+        </label>
+        <label>School year *
+          <select class="field" id="profileYear" required>
+            <option value="">Choose year…</option><option>Year 7</option><option>Year 8</option><option>Year 9</option><option>Year 10</option><option>Year 11</option><option>Year 12</option><option>Year 13</option><option>Other / independent study</option>
+          </select>
+        </label>
+        <label>Gender (optional)
+          <select class="field" id="profileGender">
+            <option value="Prefer not to say">Prefer not to say</option><option>Girl / woman</option><option>Boy / man</option><option>Non-binary</option><option>Self-describe</option>
+          </select>
+        </label>
+        <label>Exam board
+          <select class="field" id="profileBoard">
+            <option value="Not set">Choose exam board…</option><option>AQA</option><option>Pearson Edexcel</option><option>OCR</option><option>WJEC / Eduqas</option><option>CCEA</option><option>Cambridge IGCSE</option><option>Mixed / not sure</option>
+          </select>
+        </label>
+        <label>Daily revision goal
+          <select class="field" id="profileGoal"><option value="10">10 minutes</option><option value="15" selected>15 minutes</option><option value="20">20 minutes</option><option value="30">30 minutes</option><option value="45">45 minutes</option><option value="60">60 minutes</option></select>
+        </label>
+        <label class="wide">Choose your avatar<div class="avatar-choice"><button type="button" class="avatar-option selected" data-avatar="🧑‍🎓">🧑‍🎓</button><button type="button" class="avatar-option" data-avatar="🦊">🦊</button><button type="button" class="avatar-option" data-avatar="🐸">🐸</button><button type="button" class="avatar-option" data-avatar="🐼">🐼</button><button type="button" class="avatar-option" data-avatar="🤖">🤖</button><button type="button" class="avatar-option" data-avatar="👾">👾</button><button type="button" class="avatar-option" data-avatar="🐱">🐱</button><button type="button" class="avatar-option" data-avatar="🦄">🦄</button></div></label>
+        <div class="wide"><button class="btn" type="submit" id="accountSubmit">Create my profile & enter →</button></div>
+      </form>
+      <div class="account-warning"><b>Privacy note:</b> This profile form stores its fields locally on this device. For cross-device accounts, friends and live games, use the separate Cloud account panel under Friends & multiplayer after deployment. The cloud service stores your username, display name, avatar, school year, exam-board preference and revision stats; it does not upload the age or gender fields from this local form. Do not use your full name or a password you use elsewhere.</div>
+    </div>
+  </div>
+</div>
+
+<div class="app">
+<header class="topbar">
+  <div class="brand"><div class="logo">✦</div><div>revision quest<small>GCSE study arena</small></div></div>
+  <div class="top-actions"><div class="pill">⚡ <strong id="topXp">0 XP</strong></div><div class="pill">🔥 <strong id="topStreak">0 day streak</strong></div><button class="pill profile-button" onclick="openProfile()" title="View or edit profile"><span class="profile-initial" id="profileInitial">?</span><span id="profileName">Profile</span></button></div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+  <div class="navlabel">YOUR SPACE</div>
+  <button class="navbtn active" data-page="home"><span>⌂</span> Dashboard</button>
+  <button class="navbtn" data-page="practice"><span>⚔</span> Quick battle</button>
+  <button class="navbtn" data-page="cards"><span>▤</span> Flashcards</button>
+  <button class="navbtn" data-page="library"><span>▦</span> My revision bank</button>
+  <button class="navbtn" data-page="create"><span>＋</span> Make a set</button>
+  <button class="navbtn" data-page="subjects"><span>▣</span> Subjects & year</button><button class="navbtn" data-page="social"><span>♟</span> Friends & rooms</button>
+  <div class="navlabel">YOUR PROGRESS</div>
+  <button class="navbtn" data-page="progress"><span>◒</span> Progress & goals</button>
+  <div class="sidebar-note"><b>🎯 Tiny sessions win.</b><p>10 focused minutes today beats a huge panic session tomorrow.</p></div>
+</aside>
+<main class="main">
+<section class="page active" id="page-home">
+  <div class="hero"><div><div class="eyebrow">YOUR GCSE ERA STARTS HERE</div><h1>Your GCSEs.<br>Your setup. Your quest.</h1><p>Choose your subjects, set your school year and exam board, then revise in your own retro study desktop.</p></div><button class="btn" onclick="startQuiz()">▶ Start a quick battle</button></div>
+  <div class="stats">
+    <div class="stat"><div class="top">Total XP <span class="icon">⚡</span></div><strong id="statXp">0</strong><small>Earn XP as you practise</small></div>
+    <div class="stat"><div class="top">Questions answered <span class="icon">🎯</span></div><strong id="statAnswered">0</strong><small>Every attempt counts</small></div>
+    <div class="stat"><div class="top">Accuracy <span class="icon">◎</span></div><strong id="statAccuracy">—</strong><small>Correct answers / attempts</small></div>
+    <div class="stat"><div class="top">Study streak <span class="icon">🔥</span></div><strong id="statStreak">0 days</strong><small>Keep your momentum going</small></div>
+  </div>
+  <div class="section-head"><div><h2>Your subjects</h2><p>Choose a subject to focus your next session.</p></div><button class="textlink" onclick="showPage('library')">View all →</button></div>
+  <div class="subject-grid" id="subjectGrid"></div>
+  <div class="lower-grid">
+    <div class="panel"><h3>🗺 Today's mini-missions</h3><p class="panel-sub">Small wins that add up to big progress.</p>
+      <div class="task"><div class="task-icon">🧠</div><div class="task-copy"><b>Answer 5 quiz questions</b><small>Warm up your recall</small></div><span class="xp">+25 XP</span></div>
+      <div class="task"><div class="task-icon">🃏</div><div class="task-copy"><b>Review 3 flashcards</b><small>Make tricky facts stick</small></div><span class="xp">+15 XP</span></div>
+      <div class="task"><div class="task-icon">✍️</div><div class="task-copy"><b>Create your own question</b><small>Teach it to remember it</small></div><span class="xp">+20 XP</span></div>
+    </div>
+    <div class="panel"><h3>🚀 Pick your power-up</h3><p class="panel-sub">Different ways to revise, same goal: remember more.</p>
+      <div class="mode-grid">
+        <button class="mode" onclick="startQuiz()"><span class="emoji">⚔️</span><b>Quiz battle</b><small>Multiple choice</small></button>
+        <button class="mode" onclick="showPage('cards')"><span class="emoji">🃏</span><b>Flashcards</b><small>Active recall</small></button>
+        <button class="mode" onclick="showPage('create')"><span class="emoji">🛠️</span><b>Set builder</b><small>Your own notes</small></button>
+        <button class="mode" onclick="showPage('progress')"><span class="emoji">📈</span><b>Level check</b><small>Track your XP</small></button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="page" id="page-practice">
+  <div class="section-head"><div><h2>⚔️ Quick battle</h2><p>Pick a subject and test what you know.</p></div><button class="btn secondary" onclick="resetQuiz()">↻ New round</button></div>
+  <div class="toolbar"><select id="quizSubject" class="field" aria-label="Choose subject" onchange="updatePracticeTopics();resetQuiz()"><option value="All">All subjects</option></select><select id="quizTopic" class="field" aria-label="Choose revision topic" onchange="resetQuiz()"><option value="All">All topics</option></select><select id="quizDifficulty" class="field" aria-label="Choose difficulty" onchange="resetQuiz()"><option value="All">All difficulties</option><option>Foundation</option><option>Higher</option></select></div>
+  <div id="quizArea"></div>
+</section>
+<section class="page" id="page-cards">
+  <div class="section-head"><div><h2>🃏 Flashcard studio</h2><p>Think of the answer before you flip the card.</p></div><button class="btn secondary" onclick="shuffleCards()">⇄ Shuffle</button></div>
+  <div class="toolbar"><select id="cardSubject" class="field" aria-label="Flashcard subject" onchange="updateCardTopics();setupCardDeck();renderCard()"><option value="All">All subjects</option></select><select id="cardTopicFilter" class="field" aria-label="Flashcard topic" onchange="setupCardDeck();renderCard()"><option value="All">All topics</option></select><span class="pill" id="cardCount">Card 1</span></div>
+  <div id="flashArea"></div>
+</section>
+<section class="page" id="page-library">
+  <div class="section-head"><div><h2>📚 My revision bank</h2><p>Browse the unique question bank, filter by topic, and add your own questions.</p></div><button class="btn" onclick="showPage('create')">＋ Add question</button></div>
+  <div class="toolbar"><input id="searchBank" class="field" placeholder="Search questions or answers…" oninput="renderLibrary()"><select id="librarySubject" class="field" aria-label="Filter by subject" onchange="updateLibraryTopics();renderLibrary()"><option value="All">All subjects</option></select><select id="libraryTopicFilter" class="field" aria-label="Filter by topic" onchange="renderLibrary()"><option value="All">All topics</option></select></div>
+  <div id="libraryList" class="library-list"></div>
+  <p class="notice">The bank is designed for useful topic practice, but it is not a complete or officially verified GCSE specification. Check your exam board and class notes.</p>
+</section>
+<section class="page" id="page-create">
+  <div class="section-head"><div><h2>🛠️ Make your own set</h2><p>Add the facts you need for your exact exam board and topics.</p></div></div>
+  <div class="panel">
+    <form id="createForm" class="formgrid">
+      <label>Subject<select class="field" id="newSubject" required onchange="updateCreateTopics()"></select></label>
+      <label>Topic<select class="field" id="newTopic"></select></label>
+      <label>Difficulty<select class="field" id="newDifficulty"><option>Foundation</option><option>Higher</option></select></label>
+      <label class="wide">Question / front of card<input class="field" id="newQuestion" required maxlength="220" placeholder="e.g. What is osmosis?"></label>
+      <label class="wide">Answer / back of card<textarea class="field" id="newAnswer" required maxlength="800" placeholder="Write a clear answer in your own words…"></textarea></label>
+      <div class="wide"><button class="btn" type="submit">＋ Save to revision bank</button></div>
+    </form>
+    <p class="notice">Your custom questions and progress are saved in this browser using local storage. Export your sets if you need a backup.</p>
+  </div>
+  <div class="panel" style="margin-top:15px"><h3>📦 Back up your revision</h3><p class="panel-sub">Export your custom cards as a JSON file, or import a backup you previously made.</p><div class="toolbar"><button class="btn secondary" onclick="exportData()">⬇ Export backup</button><label class="btn ghost" for="importFile">⬆ Import backup</label><input type="file" id="importFile" accept=".json,application/json" hidden onchange="importData(event)"></div></div>
+</section>
+<section class="page" id="page-progress">
+  <div class="section-head"><div><h2>📈 Progress & goals</h2><p>Progress is personal. Aim to improve on your last session.</p></div></div>
+  <div class="stats"><div class="stat"><div class="top">Current level <span>🏆</span></div><strong id="levelValue">1</strong><small id="levelSub">Keep earning XP</small></div><div class="stat"><div class="top">Cards in your bank <span>🗂️</span></div><strong id="cardTotal">0</strong><small>Unique starter, topic, practice and custom questions</small></div><div class="stat"><div class="top">Correct answers <span>✅</span></div><strong id="correctTotal">0</strong><small>Build reliable recall</small></div><div class="stat"><div class="top">Next level <span>⚡</span></div><strong id="nextLevel">100 XP</strong><small>XP to the next level</small></div></div>
+  <div class="panel"><h3>XP level path</h3><p class="panel-sub">Every 100 XP unlocks a new level.</p><div class="progress" style="height:12px"><span id="levelBar" style="width:0%"></span></div><div class="subject-bottom"><span id="levelProgress">0 / 100 XP</span><span id="levelPercent">0%</span></div><div style="margin-top:24px"><h3>Study tip of the day</h3><p class="panel-sub" style="font-size:14px">Use spaced repetition: revisit a tricky question tomorrow, then a few days later. Rereading feels easy, but trying to recall the answer is what makes revision powerful.</p></div></div>
+</section>
+
+<section class="page" id="page-subjects">
+  <div class="section-head"><div><h2>🖥️ Subjects & year setup</h2><p>Choose the subjects you study and the school year you're in.</p></div></div>
+  <div class="panel">
+    <div class="window-title"><span>GCSE Revision Hub — Preferences</span><button onclick="showPage('home')" aria-label="Close">×</button></div>
+    <div class="formgrid">
+      <label>School year
+        <select id="prefYear" class="field">
+          <option value="Year 7">Year 7</option><option value="Year 8">Year 8</option><option value="Year 9">Year 9</option><option value="Year 10">Year 10</option><option value="Year 11">Year 11</option><option value="Year 12">Year 12</option><option value="Year 13">Year 13</option><option value="Other">Other / independent study</option>
+        </select>
+      </label>
+      <label>Exam board
+        <select id="prefBoard" class="field">
+          <option value="Not set">Choose your exam board…</option><option>AQA</option><option>Pearson Edexcel</option><option>OCR</option><option>WJEC / Eduqas</option><option>CCEA</option><option>Cambridge IGCSE</option><option>Mixed / not sure</option>
+        </select>
+      </label>
+      <label>Default difficulty
+        <select id="prefDifficulty" class="field"><option>Foundation</option><option>Higher</option><option>Mixed</option></select>
+      </label>
+      <label>Revision goal per day
+        <select id="prefGoal" class="field"><option value="10">10 minutes</option><option value="15">15 minutes</option><option value="20">20 minutes</option><option value="30">30 minutes</option><option value="45">45 minutes</option><option value="60">60 minutes</option></select>
+      </label>
+    </div>
+    <div class="section-head"><div><h2 style="font-size:17px">Choose your subjects</h2><p>Tick as many as you take. Only selected subjects appear in your revision recommendations and study filters.</p></div><div><button class="btn secondary" onclick="toggleAllSubjects(true)">Select all</button> <button class="btn secondary" onclick="toggleAllSubjects(false)">Clear all</button></div></div>
+    <div id="subjectPreferences" class="subject-prefs"></div>
+    <div class="toolbar"><button class="btn" onclick="savePreferences()">✓ Save my setup</button><button class="btn secondary" onclick="showPage('home')">Cancel</button></div>
+    <p class="notice">Your choices are saved in this browser. Every question in the bank is de-duplicated by its question text; this is a growing starter bank, not a complete exam-board specification. Add your own class-specific questions and check your board’s specification.</p>
+  </div>
+</section>
+
+
+<section class="page" id="page-social">
+ <div class="section-head"><div><h2>♟ Friends & multiplayer</h2><p>Create an online account, manage cross-device friends, and play live revision games through Cloudflare once this site is published.</p></div></div>
+ <div class="retro-note"><b>Cloudflare live rooms:</b> once deployed and signed in, rooms and friends work across devices. Cloudflare Workers handles sign-in and room access; a Durable Object coordinates each live game over WebSockets. You do not need to run your own server.</div>
+ <div class="panel easy-multiplayer" style="margin:12px 0">
+  <div class="window-title"><span>⚡ QUICK PLAY — live revision rooms</span><button onclick="easyLeaveRoom()" title="Leave room">×</button></div>
+  <p><b>Real-time multiplayer coordinated by Cloudflare.</b> Sign in, create a short room code, then friends enter the same code to join. Rooms support up to eight signed-in players and stay available for up to three hours. Internet access and HTTPS are required on the published site.</p>
+  <div class="easy-join-strip">
+   <label>Room code<input id="easyRoomCode" class="field" maxlength="8" autocomplete="off" placeholder="e.g. QUIZ42" aria-label="Live room code"></label>
+   <button class="btn" onclick="easyCreateRoom()">🎮 Create room</button>
+   <button class="btn secondary" onclick="easyJoinRoom()">🚪 Join room</button>
+   <button class="btn ghost" onclick="easyCopyRoomCode()">📋 Copy code</button>
+  </div>
+  <div class="easy-room-status" id="easyRoomStatus"><b>Status:</b> Not connected. Create a room or enter a friend's code.</div>
+  <div id="easyRoomPanel" style="display:none">
+   <div class="easy-config">
+    <label>Subject<select id="easyGameSubject" class="field" onchange="updateEasyTopics()"></select></label>
+    <label>Topic<select id="easyGameTopic" class="field"></select></label>
+    <label>Game mode<select id="easyGameMode" class="field"><option value="classic">🏆 Classic Clash · 10 questions</option><option value="sprint">⏱ Speed Sprint · 60 seconds</option><option value="survival">❤️ Survival · 3 lives</option><option value="streak">🔥 Streak Hunter · bonus points</option></select></label>
+    <button id="easyStartButton" class="btn" onclick="easyStartGame()" disabled>▶ Start live game</button>
+   </div>
+   <p class="notice">Pick a topic to focus the whole room. Host starts the round after friends have joined. Room codes are shareable; anyone with a signed-in account and the code can attempt to join. Passwords are never sent to a room.</p>
+   <div class="easy-players"><b>Players in room</b><div id="easyPlayerList" class="easy-player-list"></div></div>
+   <div id="easyGameArea"></div>
+  </div>
+ </div>
+ <div class="panel" id="rqCloudPanel" style="margin:14px 0;border:3px solid;border-color:#fff #555 #555 #fff;background:#c0c0c0;color:#111;border-radius:0">
+  <div class="window-title"><span>☁ Cloud account · real friends & saved progress</span><button onclick="rqRefreshCloud()" title="Refresh cloud status">↻</button></div>
+  <p id="rqCloudStatus" class="retro-note">Checking whether this page is connected to its Cloudflare backend…</p>
+  <form id="rqCloudAuthForm" class="formgrid">
+   <label>Username <input class="field" id="rqCloudUsername" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]+" autocomplete="username" placeholder="study_star" style="background:#fff;color:#111"></label>
+   <label>Password <input class="field" id="rqCloudPassword" type="password" required minlength="10" maxlength="128" autocomplete="current-password" placeholder="At least 10 characters" style="background:#fff;color:#111"></label>
+   <label id="rqCloudDisplayNameWrap" class="wide" style="display:none">Display name <input class="field" id="rqCloudDisplayName" maxlength="35" placeholder="Your display name" style="background:#fff;color:#111"></label>
+   <div class="wide" style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" type="submit" id="rqCloudAuthSubmit">Sign in</button><button class="btn secondary" type="button" id="rqCloudModeToggle">Need an account? Create one</button><button class="btn ghost" type="button" id="rqCloudLogout" style="display:none">Sign out</button></div>
+  </form>
+  <div id="rqCloudSignedIn" style="display:none;margin-top:10px;padding:10px;background:#e8ffe8;border:1px solid #6a8f6a;color:#111"></div>
+  <div id="rqFriendRequests" style="margin-top:10px"></div>
+  <p class="notice" style="color:#333">Use a unique password. Your password is hashed before storage; never share it. This service stores your username, avatar, revision stats and friend links. It deliberately does not upload age or gender from your local profile.</p>
+ </div>
+ <details class="advanced-connect"><summary>Advanced fallback — manual WebRTC connection codes</summary>
+ <div class="panel advanced-manual" style="margin:12px 0"><div class="window-title"><span>🛠 Advanced fallback: manual WebRTC codes</span><button onclick="resetPeer()">×</button></div>
+ <p>This fallback requires manual offer/answer exchange. For the easier room-code experience, use Quick Play above.</p>
+ <div class="social-grid"><div><h3>Host a game</h3><div class="toolbar"><button class="btn" onclick="peerHost()">Create offer code</button></div><textarea id="peerOfferOut" class="field" style="width:100%;height:90px" placeholder="Your offer code appears here"></textarea><div class="toolbar"><button class="btn secondary" onclick="copyField('peerOfferOut')">Copy offer</button></div><label>Paste player's answer</label><textarea id="peerAnswerIn" class="field" style="width:100%;height:75px" placeholder="Answer code from friend"></textarea><button class="btn" onclick="peerAcceptAnswer()">Connect player</button></div>
+ <div><h3>Join a game</h3><label>Paste host's offer</label><textarea id="peerOfferIn" class="field" style="width:100%;height:90px" placeholder="Offer code from host"></textarea><div class="toolbar"><button class="btn" onclick="peerJoin()">Create answer code</button><button class="btn secondary" onclick="copyField('peerAnswerOut')">Copy answer</button></div><textarea id="peerAnswerOut" class="field" style="width:100%;height:75px" placeholder="Send this answer code to the host"></textarea></div></div>
+ <p id="peerStatus"><b>Status:</b> Not connected</p><div id="peerGameControls" style="display:none"><label>Subject</label><select id="peerGameSubject" class="field" onchange="updatePeerGameTopics()"></select> <label>Topic</label><select id="peerGameTopic" class="field"></select> <label>Game mode</label><select id="peerGameMode" class="field"><option value="classic">Classic Quiz</option><option value="sprint">60-second Sprint</option><option value="survival">Survival (3 lives)</option><option value="streak">Streak Hunter</option></select> <button class="btn" onclick="peerStartGame()">▶ Start live revision game</button></div><div id="peerGameArea"></div>
+ </div></details>
+ <div class="social-grid">
+  <div class="panel"><div class="window-title"><span>Friends List · saved on this device</span><button onclick="renderSocial()">×</button></div>
+   <p class="notice" id="rqFriendModeNote">Friends are saved locally until Cloudflare is connected and you sign in. Use Quick Play above for live games.</p><form id="friendForm" class="room-join"><input class="field" id="friendUsername" placeholder="Enter username" maxlength="24" required><button class="btn" type="submit">＋ Add friend</button></form><div class="toolbar"><button class="btn secondary" onclick="exportFriendCard()">Share my friend card</button><button class="btn secondary" onclick="importFriendCard()">Add from friend card</button><button class="btn ghost" onclick="exportData()">Export / transfer save</button></div><div id="friendList" style="margin-top:12px"></div>
+  </div>
+  <div class="panel"><div class="window-title"><span>Local demo rooms · same browser only</span><button onclick="renderRooms()">×</button></div>
+   <p class="notice">These legacy demo rooms are not cross-device multiplayer; use Quick Play above for live games.</p><label>Room name</label><input class="field" id="roomName" placeholder="Biology battle" style="width:100%">
+   <label>Subject</label><select class="field" id="roomSubject" style="width:100%"></select>
+   <div class="toolbar"><button class="btn" onclick="createRoom()">＋ Create room</button></div>
+   <label>Join with room code</label><div class="room-join"><input class="field" id="joinRoomCode" placeholder="Room code" maxlength="6"><button class="btn secondary" onclick="joinRoom()">Join room</button></div><div id="roomList"></div>
+  </div>
+ </div>
+ <div class="panel" id="activeRoomPanel" style="margin-top:14px;display:none"><div class="window-title"><span id="activeRoomTitle">Quiz Room</span><button onclick="closeActiveRoom()">×</button></div><div id="activeRoomContent"></div></div>
+</section>
+</main>
+</div>
+<nav class="mobile-nav"><button onclick="showPage('home')"><span>⌂</span>Home</button><button onclick="showPage('practice')"><span>⚔️</span>Battle</button><button onclick="showPage('cards')"><span>🃏</span>Cards</button><button onclick="showPage('library')"><span>📚</span>Bank</button><button onclick="showPage('create')"><span>＋</span>Create</button><button onclick="showPage('subjects')"><span>⚙</span>Setup</button></nav>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const SUBJECTS=[
+{name:'Biology',icon:'🧬',group:'Science',color:'#65f0c2'},
+{name:'Chemistry',icon:'⚗️',group:'Science',color:'#a99aff'},
+{name:'Physics',icon:'⚡',group:'Science',color:'#ffd66b'},
+{name:'Maths',icon:'📐',group:'Core',color:'#7bb8ff'},
+{name:'English Language',icon:'✍️',group:'Core',color:'#ff8fbd'},
+{name:'English Literature',icon:'📖',group:'Core',color:'#ffb47b'},
+{name:'History',icon:'🏛️',group:'Humanities',color:'#e4a9ff'},
+{name:'Geography',icon:'🌍',group:'Humanities',color:'#65d8f0'},
+{name:'Computer Science',icon:'💻',group:'Options',color:'#8fa9ff'},
+{name:'French',icon:'🇫🇷',group:'Languages',color:'#ff8fbd'},
+{name:'Spanish',icon:'🇪🇸',group:'Languages',color:'#ffd66b'},
+{name:'Religious Studies',icon:'🕊️',group:'Humanities',color:'#c4a7ff'},
+{name:'Business',icon:'📊',group:'Options',color:'#65f0c2'},
+{name:'Economics',icon:'📈',group:'Options',color:'#7bb8ff'},
+{name:'Art & Design',icon:'🎨',group:'Options',color:'#ff8fbd'},
+{name:'Music',icon:'🎵',group:'Options',color:'#e4a9ff'},
+{name:'Drama',icon:'🎭',group:'Options',color:'#ffb47b'},
+{name:'PE',icon:'🏃',group:'Options',color:'#65f0c2'},
+{name:'Food Preparation',icon:'🥗',group:'Options',color:'#ffd66b'},
+{name:'Design & Technology',icon:'🛠️',group:'Options',color:'#8fa9ff'},
+{name:'Citizenship',icon:'🗳️',group:'Humanities',color:'#65d8f0'}
+];
+const TOPICS_BY_SUBJECT={
+'Biology':['Cell biology','Organisation','Infection & response','Bioenergetics','Homeostasis','Inheritance & variation','Ecology'],
+'Chemistry':['Atomic structure','Bonding','Quantitative chemistry','Chemical changes','Rates & energy','Organic chemistry','Chemical analysis'],
+'Physics':['Energy','Electricity','Particle model','Forces','Waves','Magnetism & electromagnetism','Space physics'],
+'Maths':['Number','Algebra','Ratio & proportion','Geometry & measures','Probability & statistics','Graphs & functions'],
+'English Language':['Reading & inference','Language analysis','Structure & comparison','Creative writing','Transactional writing','Evaluation'],
+'English Literature':['Shakespeare','19th-century texts','Modern drama','Poetry','Unseen poetry','Essay skills'],
+'History':['Source skills','Medicine through time','Conflict & warfare','Modern world','Change & continuity','Historical interpretations'],
+'Geography':['Natural hazards','Living world','UK landscapes','Urban issues','Resources & development','Fieldwork'],
+'Computer Science':['Algorithms','Programming','Data representation','Computer systems','Networks & cybersecurity','Databases'],
+'French':['Vocabulary & themes','Grammar & tenses','Speaking','Writing','Reading & translation','Listening'],
+'Spanish':['Vocabulary & themes','Grammar & tenses','Speaking','Writing','Reading & translation','Listening'],
+'Religious Studies':['Beliefs & teachings','Practices','Ethics','Philosophy','Sources of authority','Exam evaluation'],
+'Business':['Business activity','Marketing','Finance','Operations','Human resources','External influences'],
+'Economics':['Supply & demand','Markets','Macroeconomics','Government policy','International trade','Opportunity cost'],
+'Art & Design':['Artist research','Elements of art','Media & techniques','Composition','Portfolio development','Evaluation'],
+'Music':['Elements of music','Rhythm & melody','Instruments & timbre','Structure','Composition','Listening analysis'],
+'Drama':['Performance skills','Characterisation','Staging & design','Devising','Set text','Evaluation'],
+'PE':['Anatomy & physiology','Movement analysis','Training principles','Health & fitness','Sport psychology','Socio-cultural factors'],
+'Food Preparation':['Nutrition','Food science','Food safety','Cooking methods','Ingredients & function','Diet & health'],
+'Design & Technology':['Design process','Materials','Manufacturing','CAD & modelling','Systems & electronics','Testing & evaluation'],
+'Citizenship':['Democracy & government','Law & justice','Rights & responsibilities','Political participation','The economy','Global citizenship']
+};
+function inferTopic(subject,text){
+ const t=String(text||'').toLowerCase();
+ const rules={
+ 'Biology':[['Cell biology',['cell biology','osmosis','diffusion','nucleus','microscope','membrane','specialised'] ],['Organisation',['heart','blood','enzyme','digest','organ','circulat','alveol','plant tissue'] ],['Infection & response',['pathogen','infection','antibiotic','vaccin','immune','disease','communicable'] ],['Bioenergetics',['photosynthesis','respiration','mitochond','glucose','chlorophyll','energy transfer'] ],['Homeostasis',['homeostasis','hormone','insulin','kidney','temperature','nervous system','reflex'] ],['Inheritance & variation',['inherit','gene','allele','dna','chromosome','mutation','evolution','natural selection'] ],['Ecology',['ecosystem','food chain','biodiversity','population','carbon cycle','decomposition'] ]],
+ 'Chemistry':[['Atomic structure',['atom','isotope','proton','neutron','electron','periodic'] ],['Bonding',['bond','ionic','covalent','metallic','structure','lattice'] ],['Quantitative chemistry',['mole','relative formula','concentration','mass','equation','yield'] ],['Chemical changes',['acid','alkali','neutral','electrolysis','reactivity','oxidation','reduction'] ],['Rates & energy',['rate','catalyst','collision','activation energy','exothermic','endothermic','energy profile'] ],['Organic chemistry',['alkane','alkene','polymer','crude oil','hydrocarbon','ethanol'] ],['Chemical analysis',['chromatography','test for','flame test','gas test','purity','formulation'] ]],
+ 'Physics':[['Energy',['energy','power','work done','efficiency','specific heat','thermal'] ],['Electricity',['current','voltage','resistance','circuit','charge','potential difference'] ],['Particle model',['density','particle','pressure','state change','specific latent','internal energy'] ],['Forces',['force','speed','velocity','acceleration','momentum','resultant','newton'] ],['Waves',['wave','frequency','wavelength','sound','refraction','reflection','electromagnetic'] ],['Magnetism & electromagnetism',['magnet','electromagnet','motor effect','transformer','induction'] ],['Space physics',['planet','orbit','star','universe','red-shift','solar system'] ]],
+ 'Maths':[['Number',['fraction','percentage','percent','standard form','ratio','round','prime','hcf','lcm','bounds','surds'] ],['Algebra',['equation','expand','factoris','sequence','inequalit','simultaneous','quadratic','substitut'] ],['Ratio & proportion',['proportion','ratio','best buy','scale factor','directly proportional','inverse proportion'] ],['Geometry & measures',['area','perimeter','volume','angle','circle','bearing','congruen','similar','polygon','surface area'] ],['Probability & statistics',['probability','average','mean','median','mode','interquartile','frequency','histogram','sampling'] ],['Graphs & functions',['gradient','graph','intercept','function','coordinate','tangent','y=','straight line'] ]],
+ 'English Language':[['Language analysis',['metaphor','simile','personification','word choice','language','writer','semantic','imagery'] ],['Structure & comparison',['structure','paragraph','opening','ending','contrast','shift','perspective','comparison'] ],['Creative writing',['describe','description','narrative','story','creative','setting','character'] ],['Transactional writing',['speech','letter','article','leaflet','persuade','argue','inform','formal'] ],['Evaluation',['evaluate','how far','effectiveness','viewpoint','evidence','inference'] ]],
+ 'English Literature':[['Shakespeare',['macbeth','romeo','juliet','shakespeare','hamlet','tempest'] ],['19th-century texts',['christmas carol','jekyll','hyde','frankenstein','dickens','victorian'] ],['Modern drama',['inspector calls','an inspector','blood brothers','modern drama','stage direction'] ],['Poetry',['poem','poetry','stanza','poet','sonnet','power and conflict','anthology'] ],['Unseen poetry',['unseen','compare the poems'] ],['Essay skills',['thesis','essay','quotation','character','theme','context','interpret'] ]],
+ 'History':[['Source skills',['provenance','source','utility','reliability','interpretation'] ],['Medicine through time',['medicine','plague','penicillin','public health','surgery','cholera'] ],['Conflict & warfare',['warfare','war ','battle','trench','weapon','conflict'] ],['Modern world',['nazi','weimar','cold war','hitler','soviet','communism','elizabeth'] ],['Change & continuity',['change','continuity','turning point','cause','consequence'] ],['Historical interpretations',['historian','interpretation','historical'] ]],
+ 'Geography':[['Natural hazards',['earthquake','volcano','tectonic','hurricane','hazard','climate change'] ],['Living world',['ecosystem','rainforest','desert','biodiversity','food web'] ],['UK landscapes',['river','coast','erosion','deposition','floodplain','landscape'] ],['Urban issues',['urban','city','urbanisation','settlement','migration','housing'] ],['Resources & development',['resource','development','water security','energy security','poverty','globalisation'] ],['Fieldwork',['fieldwork','hypothesis','sampling','transect','questionnaire','data collection'] ]],
+ 'Computer Science':[['Algorithms',['algorithm','flowchart','search','sort','binary search','pseudocode'] ],['Programming',['program','loop','iteration','selection','variable','array','function','debug'] ],['Data representation',['binary','hexadecimal','character set','image file','sound file','compression'] ],['Computer systems',['cpu','processor','fetch-decode','ram','rom','operating system','storage'] ],['Networks & cybersecurity',['network','protocol','ip address','phishing','malware','encryption','cyber'] ],['Databases',['database','sql','query','primary key','table','validation'] ]],
+ 'French':[['Grammar & tenses',['conjugat','tense','past','future','present','adjective','pronoun','verb'] ],['Speaking',['speaking','oral','conversation','pronounce'] ],['Writing',['write','writing','paragraph','letter'] ],['Reading & translation',['translate','translation','reading','meaning'] ],['Listening',['listen','listening','audio'] ]],
+ 'Spanish':[['Grammar & tenses',['conjugat','tense','past','future','present','adjective','pronoun','verb'] ],['Speaking',['speaking','oral','conversation','pronounce'] ],['Writing',['write','writing','paragraph','letter'] ],['Reading & translation',['translate','translation','reading','meaning'] ],['Listening',['listen','listening','audio'] ]],
+ 'Religious Studies':[['Beliefs & teachings',['belief','teaching','god','allah','jesus','prophet','revelation'] ],['Practices',['worship','prayer','pilgrimage','fasting','charity','sacrament'] ],['Ethics',['ethic','abortion','euthanasia','war','peace','justice'] ],['Philosophy',['evil','suffering','creation','design argument','miracle'] ],['Sources of authority',['authority','scripture','bible','qur’an','quran','hadith'] ],['Exam evaluation',['evaluate','agree','disagree','justify','conclusion'] ]],
+ 'Business':[['Marketing',['market','marketing','customer','promotion','brand','product life'] ],['Finance',['revenue','profit','cash flow','break-even','cost','finance'] ],['Operations',['production','quality','stock','supplier','operations','productivity'] ],['Human resources',['employee','recruit','training','motivation','human resource'] ],['Business activity',['business','entrepreneur','risk','stakeholder','objective'] ],['External influences',['inflation','tax','interest rate','competition','exchange rate'] ]],
+ 'Economics':[['Supply & demand',['supply','demand','equilibrium','price'] ],['Markets',['market failure','competition','monopoly','externality'] ],['Macroeconomics',['inflation','unemployment','gdp','economic growth','recession'] ],['Government policy',['government','tax','subsidy','interest rate','fiscal','monetary'] ],['International trade',['trade','export','import','exchange rate','globalisation'] ],['Opportunity cost',['opportunity cost','scarcity','choice','resource allocation'] ]],
+ 'Art & Design':[['Artist research',['artist','influence','research','artist study'] ],['Elements of art',['line','tone','texture','colour','form','shape'] ],['Media & techniques',['media','technique','paint','print','photograph','material'] ],['Composition',['composition','layout','balance','focal point'] ],['Portfolio development',['portfolio','development','experiment','refine'] ],['Evaluation',['evaluate','annotation','intentions','review'] ]],
+ 'Music':[['Elements of music',['tempo','dynamics','texture','timbre','pitch','melody','rhythm'] ],['Rhythm & melody',['rhythm','melody','time signature','syncopation','scale'] ],['Instruments & timbre',['instrument','timbre','orchestra','family'] ],['Structure',['structure','binary form','ternary','sonata','verse','chorus'] ],['Composition',['compose','composition','ostinato','motif'] ],['Listening analysis',['listening','describe','identify','aural'] ]],
+ 'Drama':[['Performance skills',['gesture','facial expression','voice','movement','performance skill'] ],['Characterisation',['character','motivation','objective','status'] ],['Staging & design',['staging','lighting','sound','costume','set design','blocking'] ],['Devising',['devising','stimulus','improvisation','rehearsal'] ],['Set text',['set text','playwright','script','scene'] ],['Evaluation',['evaluate','review','audience','intention'] ]],
+ 'PE':[['Anatomy & physiology',['heart','muscle','skeleton','joint','oxygen','circulatory','respiratory'] ],['Movement analysis',['lever','plane','axis','movement analysis'] ],['Training principles',['training','overload','specificity','progression','FITT'] ],['Health & fitness',['fitness','health','BMI','aerobic','anaerobic'] ],['Sport psychology',['motivation','arousal','aggression','confidence'] ],['Socio-cultural factors',['sponsorship','media','participation','ethics','drugs'] ]],
+ 'Food Preparation':[['Nutrition',['protein','carbohydrate','fat','vitamin','mineral','nutrition','fibre'] ],['Food science',['gelatinisation','denaturation','emulsion','fermentation','gluten'] ],['Food safety',['cross-contamination','bacteria','hygiene','temperature','food poisoning'] ],['Cooking methods',['baking','boiling','grilling','roasting','cooking method'] ],['Ingredients & function',['ingredient','raising agent','yeast','flour','sugar'] ],['Diet & health',['diet','health','allergen','intolerance','balanced'] ]],
+ 'Design & Technology':[['Design process',['design brief','design process','client','specification'] ],['Materials',['material','timber','metal','polymer','composite'] ],['Manufacturing',['manufactur','production','batch','mass production'] ],['CAD & modelling',['cad','model','prototype','computer aided'] ],['Systems & electronics',['circuit','input','process','output','control system'] ],['Testing & evaluation',['test','evaluate','criteria','prototype'] ]],
+ 'Citizenship':[['Democracy & government',['democracy','parliament','government','minister','election'] ],['Law & justice',['law','court','justice','sentence','police'] ],['Rights & responsibilities',['right','responsibilit','human rights','equality'] ],['Political participation',['vote','campaign','petition','pressure group','participation'] ],['The economy',['tax','economy','employment','public spending'] ],['Global citizenship',['global','united nations','international','sustainability'] ]]
+ };
+ const found=(rules[subject]||[]).find(([topic,words])=>words.some(w=>t.includes(w)));
+ return found?found[0]:(TOPICS_BY_SUBJECT[subject]||['Core concepts'])[0];
+}
+
+const STARTER=[
+['Biology','What is osmosis?','The net movement of water molecules through a partially permeable membrane from a dilute solution to a more concentrated solution.','Foundation'],
+['Biology','Where does aerobic respiration happen in a cell?','Mainly in the mitochondria.','Foundation'],
+['Biology','What is the function of red blood cells?','They transport oxygen around the body using haemoglobin.','Foundation'],
+['Biology','What do enzymes do?','They are biological catalysts that speed up reactions without being used up.','Higher'],
+['Chemistry','What is the pH of a neutral solution at room temperature?','pH 7.','Foundation'],
+['Chemistry','What is an isotope?','Atoms of the same element with the same number of protons but different numbers of neutrons.','Higher'],
+['Chemistry','What is the test for hydrogen gas?','A lit splint produces a squeaky pop.','Foundation'],
+['Chemistry','What is oxidation in terms of electrons?','Oxidation is loss of electrons. Remember OIL RIG: Oxidation Is Loss, Reduction Is Gain.','Higher'],
+['Physics','What is the equation linking speed, distance and time?','Speed = distance ÷ time.','Foundation'],
+['Physics','What is the unit of electric current?','The ampere (A).','Foundation'],
+['Physics','State the law of conservation of energy.','Energy cannot be created or destroyed; it is transferred between stores.','Higher'],
+['Maths','What is the gradient of a straight line?','The change in y divided by the change in x (rise ÷ run).','Foundation'],
+['Maths','What is the area of a triangle?','Area = ½ × base × perpendicular height.','Foundation'],
+['Maths','What is the quadratic formula?','For ax² + bx + c = 0: x = (−b ± √(b² − 4ac)) ÷ 2a.','Higher'],
+['English Language','What is a metaphor?','A comparison that describes something as if it is something else, without using “like” or “as”.','Foundation'],
+['English Language','What should a strong analysis paragraph explain?','A relevant quotation or detail, the writer’s method, its effect or meaning, and how it supports your interpretation.','Higher'],
+['English Literature','What is a thesis in an essay?','A clear, arguable main interpretation that answers the question and guides the essay.','Foundation'],
+['History','What is provenance when analysing a source?','Information about a source’s origin, such as who created it, when, where, and why.','Foundation'],
+['Geography','What is urbanisation?','An increase in the proportion of people living in urban areas.','Foundation'],
+['Computer Science','What is an algorithm?','A finite sequence of clear instructions used to solve a problem or complete a task.','Foundation'],
+['French','Translate: “Je voudrais…”','“I would like…”','Foundation'],
+['Spanish','Translate: “En mi opinión…”','“In my opinion…”','Foundation'],
+['Religious Studies','What is a primary source of religious authority?','A foundational text or teaching regarded as authoritative within a religion, such as the Bible or Qur’an.','Foundation'],
+['Business','What is revenue?','The income a business receives from sales, usually calculated as selling price × quantity sold.','Foundation'],
+['Economics','What is opportunity cost?','The value of the next best alternative given up when making a choice.','Foundation'],
+['PE','What is the role of the heart in the circulatory system?','It pumps blood around the body, delivering oxygen and nutrients and carrying away waste products.','Foundation'],
+['Music','What does tempo mean?','The speed of the music, usually measured in beats per minute.','Foundation'],
+['Art & Design','What is composition in art?','The arrangement of visual elements within an artwork.','Foundation'],
+['Drama','What is blocking in theatre?','The planned movement and positioning of performers on stage.','Foundation'],
+['Food Preparation','What is cross-contamination?','The transfer of harmful microorganisms or allergens from one surface, food, or item to another.','Foundation'],
+['Design & Technology','What is a prototype?','An early model used to test and evaluate a design before final production.','Foundation'],
+['Citizenship','What is democracy?','A system in which people have a say in how they are governed, often by voting for representatives.','Foundation']
+].map((x,i)=>({id:'s'+i,subject:x[0],q:x[1],a:x[2],difficulty:x[3],topic:inferTopic(x[0],x[1]+' '+x[2]),starter:true}));
+const TOPIC_CARDS=[
+['Biology','Cell biology','What is the function of the cell membrane?','It controls the movement of substances into and out of the cell.','Foundation'],
+['Biology','Organisation','Why do enzymes have an optimum temperature?','At high temperatures their structure changes (denatures), altering the active site.','Higher'],
+['Biology','Infection & response','How do vaccines help protect against a pathogen?','They expose the immune system to antigens so memory cells can help produce a faster response later.','Foundation'],
+['Biology','Bioenergetics','Write the word equation for photosynthesis.','Carbon dioxide + water → glucose + oxygen.','Foundation'],
+['Biology','Homeostasis','What is homeostasis?','Keeping internal conditions within suitable limits despite changes inside or outside the body.','Foundation'],
+['Biology','Inheritance & variation','What is a gene?','A section of DNA that codes for a particular protein or functional product.','Foundation'],
+['Biology','Ecology','What is biodiversity?','The variety of different species of living organisms in an area or ecosystem.','Foundation'],
+['Chemistry','Atomic structure','What determines the atomic number of an element?','The number of protons in its nucleus.','Foundation'],
+['Chemistry','Bonding','What type of bonding involves transfer of electrons?','Ionic bonding, typically between a metal and a non-metal.','Foundation'],
+['Chemistry','Quantitative chemistry','What is the conservation of mass in a chemical reaction?','The total mass stays the same because atoms are rearranged, not created or destroyed.','Foundation'],
+['Chemistry','Chemical changes','What is neutralisation?','A reaction between an acid and a base/alkali that produces a salt and usually water.','Foundation'],
+['Chemistry','Rates & energy','How can increasing temperature increase reaction rate?','Particles move faster, collide more often, and a greater fraction of collisions have enough energy to react.','Higher'],
+['Chemistry','Organic chemistry','What is a homologous series?','A family of compounds with the same functional group and general formula, with similar chemical properties.','Higher'],
+['Chemistry','Chemical analysis','What does chromatography separate?','The components of a mixture, based on their different movement through a stationary phase.','Higher'],
+['Physics','Energy','What is the equation for efficiency as a percentage?','Efficiency = (useful energy transferred ÷ total energy supplied) × 100%.','Foundation'],
+['Physics','Electricity','What is the relationship between potential difference, current and resistance?','V = I × R.','Foundation'],
+['Physics','Particle model','How is density calculated?','Density = mass ÷ volume.','Foundation'],
+['Physics','Forces','What is acceleration?','The rate of change of velocity per unit time.','Foundation'],
+['Physics','Waves','What is the relationship between wave speed, frequency and wavelength?','Wave speed = frequency × wavelength.','Foundation'],
+['Physics','Magnetism & electromagnetism','What happens when a current-carrying wire is placed in a magnetic field?','It can experience a force; the direction depends on current and magnetic field direction.','Higher'],
+['Physics','Space physics','What force keeps planets in orbit around the Sun?','Gravity provides the centripetal force needed to keep planets in orbit.','Foundation'],
+['Maths','Number','How do you convert a percentage to a decimal?','Divide the percentage by 100.','Foundation'],
+['Maths','Algebra','What does factorising an expression do?','It rewrites an expression as a product of factors.','Foundation'],
+['Maths','Ratio & proportion','If two quantities are directly proportional, what happens when one doubles?','The other also doubles, provided the proportional relationship stays the same.','Foundation'],
+['Maths','Geometry & measures','What is the sum of interior angles in an n-sided polygon?','(n − 2) × 180°.','Higher'],
+['Maths','Probability & statistics','What is the probability of an impossible event?','0.','Foundation'],
+['Maths','Graphs & functions','How do you find the gradient of a straight line from two points?','Gradient = change in y ÷ change in x.','Foundation'],
+['English Language','Reading & inference','What is an inference?','A conclusion drawn from evidence and clues in a text rather than stated directly.','Foundation'],
+['English Language','Language analysis','What should you explain when analysing a writer’s word choice?','The connotations of the word, its effect on the reader, and how it supports the writer’s purpose.','Higher'],
+['English Language','Creative writing','How can sensory detail improve descriptive writing?','It helps readers imagine a scene by appealing to senses such as sight, sound, smell, touch and taste.','Foundation'],
+['English Language','Transactional writing','What should you consider before writing a speech or article?','Audience, purpose, form, tone and an appropriate structure.','Foundation'],
+['English Literature','Shakespeare','How can a quotation support a literature essay?','Use a short relevant quotation, analyse specific words or methods, and link it to the question and interpretation.','Foundation'],
+['English Literature','19th-century texts','Why is context useful in a literature response?','It can help explain a writer’s ideas, but should support close analysis rather than replace it.','Higher'],
+['English Literature','Modern drama','What is dramatic irony?','When the audience knows something that one or more characters do not know.','Foundation'],
+['English Literature','Poetry','What is enjambment?','When a sentence or phrase continues beyond the end of a poetic line without a major pause.','Foundation'],
+['English Literature','Unseen poetry','What is a sensible first step when analysing an unseen poem?','Read it carefully, identify the speaker and situation, and note patterns in language, imagery and structure.','Foundation'],
+['English Literature','Essay skills','What is a thesis statement?','A clear, arguable interpretation that directly answers the essay question.','Foundation'],
+['History','Source skills','Why should a historian consider a source’s provenance?','Its origin, purpose and context can help judge what it can reveal and its limitations.','Foundation'],
+['History','Medicine through time','What is one way public health improved in industrial cities?','Measures such as clean water supplies, sewage systems and better sanitation reduced some disease risks.','Foundation'],
+['History','Conflict & warfare','What is meant by a stalemate in warfare?','A situation where neither side can make decisive progress against the other.','Foundation'],
+['History','Modern world','What is appeasement in international relations?','A policy of making concessions to a threatening power in an attempt to avoid conflict.','Foundation'],
+['Geography','Natural hazards','What is the difference between weather and climate?','Weather is short-term atmospheric conditions; climate is the long-term pattern of weather in a place.','Foundation'],
+['Geography','Living world','What is an ecosystem?','A community of organisms interacting with each other and with their physical environment.','Foundation'],
+['Geography','UK landscapes','What is hydraulic action in river erosion?','Water and compressed air force into cracks in the river bed or banks, enlarging them.','Higher'],
+['Geography','Urban issues','What is urbanisation?','An increase in the proportion of a population living in urban areas.','Foundation'],
+['Geography','Resources & development','What is sustainable development?','Meeting present needs without compromising the ability of future generations to meet theirs.','Foundation'],
+['Geography','Fieldwork','Why is sampling used in geographical fieldwork?','It collects manageable data from selected locations or people when measuring everything is impractical.','Foundation'],
+['Computer Science','Algorithms','What is a linear search?','A search that checks items one by one until the target is found or the list ends.','Foundation'],
+['Computer Science','Programming','What is iteration in programming?','Repeating a block of instructions, usually with a loop.','Foundation'],
+['Computer Science','Data representation','How many bits are in one byte?','Eight bits.','Foundation'],
+['Computer Science','Computer systems','What is the role of the CPU?','It processes instructions and controls many operations of the computer.','Foundation'],
+['Computer Science','Networks & cybersecurity','What is phishing?','A social-engineering attack that tricks people into revealing information or taking unsafe actions.','Foundation'],
+['Computer Science','Databases','What is a primary key in a database table?','A field (or combination of fields) that uniquely identifies each record.','Foundation'],
+['French','Vocabulary & themes','What does “à mon avis” mean in English?','“In my opinion.”','Foundation'],
+['French','Grammar & tenses','What does a verb tense usually tell you?','When an action happens, such as in the present, past or future.','Foundation'],
+['French','Speaking','How can you extend a spoken answer in French?','Give an opinion, add a reason using “parce que”, and include an example or another detail.','Foundation'],
+['French','Writing','What should you check when proofreading French writing?','Verb endings, adjective agreement, word order, accents and whether all parts of the task are answered.','Foundation'],
+['Spanish','Vocabulary & themes','What does “sin embargo” mean in English?','“However.”','Foundation'],
+['Spanish','Grammar & tenses','What does a verb tense usually tell you?','When an action happens, such as in the present, past or future.','Foundation'],
+['Spanish','Speaking','How can you extend a spoken answer in Spanish?','Give an opinion, add a reason using “porque”, and include an example or another detail.','Foundation'],
+['Spanish','Writing','What should you check when proofreading Spanish writing?','Verb endings, adjective agreement, accents and whether all parts of the task are answered.','Foundation'],
+['Religious Studies','Beliefs & teachings','What is a religious teaching?','A principle or idea taught by a religious tradition, often drawn from scripture or religious authorities.','Foundation'],
+['Religious Studies','Practices','What is worship?','An act or set of practices through which believers show devotion to a deity or their faith.','Foundation'],
+['Religious Studies','Ethics','What is a moral argument?','Reasoning used to support a judgement about what is right or wrong.','Foundation'],
+['Religious Studies','Exam evaluation','How can you strengthen an evaluative answer?','Explain arguments on more than one side, support them with reasons or evidence, and reach a justified conclusion.','Higher'],
+['Business','Business activity','What is an entrepreneur?','A person who organises a business venture and takes on the risks involved.','Foundation'],
+['Business','Marketing','What is market research used for?','To gather information about customers, competitors and the market to help business decisions.','Foundation'],
+['Business','Finance','How is profit calculated?','Total revenue minus total costs.','Foundation'],
+['Business','Operations','What is quality control?','Checking products or services to identify whether they meet required standards.','Foundation'],
+['Economics','Supply & demand','What usually happens to quantity demanded when price falls, all else equal?','Quantity demanded generally rises, following the law of demand.','Foundation'],
+['Economics','Markets','What is a market?','A situation or arrangement where buyers and sellers exchange goods or services.','Foundation'],
+['Economics','Macroeconomics','What is inflation?','A sustained increase in the general level of prices over time.','Foundation'],
+['Economics','Government policy','Why might a government impose a tax on a good?','To raise revenue and sometimes to discourage consumption of goods with social costs.','Higher'],
+['Art & Design','Artist research','What should artist research explain beyond an artist’s name?','Relevant features of the work and how the artist’s choices could inform your own ideas or experiments.','Foundation'],
+['Art & Design','Elements of art','What does tone describe in art?','How light or dark an area or colour appears.','Foundation'],
+['Art & Design','Media & techniques','Why experiment with more than one medium?','To compare effects and decide which materials or techniques best communicate an intention.','Foundation'],
+['Art & Design','Composition','What is a focal point in an artwork?','The area intended to attract the viewer’s attention first.','Foundation'],
+['Music','Elements of music','What does dynamics describe?','How loud or quiet the music is.','Foundation'],
+['Music','Rhythm & melody','What is syncopation?','Emphasising off-beats or weaker beats to create rhythmic emphasis.','Higher'],
+['Music','Instruments & timbre','What is timbre?','The quality or tone colour that makes one sound or instrument different from another.','Foundation'],
+['Music','Structure','What is a chorus in a typical song?','A section that commonly returns with the same or similar music and lyrics.','Foundation'],
+['Drama','Performance skills','What is projection in acting?','Using the voice so that it can be heard clearly by the audience without simply shouting.','Foundation'],
+['Drama','Characterisation','What is subtext in a performance?','The underlying thoughts or feelings beneath the words spoken by a character.','Higher'],
+['Drama','Staging & design','What is blocking?','The planned movement and positioning of performers on stage.','Foundation'],
+['Drama','Devising','What is a stimulus in devised drama?','A starting point such as an image, article, object, sound or issue that inspires a performance.','Foundation'],
+['PE','Anatomy & physiology','What is the role of red blood cells?','They carry oxygen using haemoglobin.','Foundation'],
+['PE','Movement analysis','What is a lever in the human body?','A rigid structure such as a bone that moves around a joint (fulcrum) when a force is applied.','Higher'],
+['PE','Training principles','What does progressive overload mean?','Gradually increasing training demands so the body adapts.','Foundation'],
+['PE','Health & fitness','What is cardiovascular endurance?','The ability of the heart, lungs and circulatory system to supply oxygen during sustained activity.','Foundation'],
+['Food Preparation','Nutrition','What is the main role of protein in the diet?','Growth and repair of body tissues; proteins also have other important functions.','Foundation'],
+['Food Preparation','Food science','What is gelatinisation?','When starch granules absorb liquid and swell on heating, thickening the mixture.','Higher'],
+['Food Preparation','Food safety','Why should raw meat be kept separate from ready-to-eat food?','To reduce the risk of cross-contamination by harmful microorganisms.','Foundation'],
+['Food Preparation','Cooking methods','What is the main heat-transfer method in boiling?','Conduction from the hot liquid to the food, with convection circulating the liquid.','Higher'],
+['Design & Technology','Design process','What is a design specification?','A list of measurable requirements that a product should meet.','Foundation'],
+['Design & Technology','Materials','Why is material selection important in product design?','The material affects properties, cost, appearance, manufacturing and environmental impact.','Foundation'],
+['Design & Technology','Manufacturing','What is batch production?','Making a set quantity of one product before switching to another batch or product.','Foundation'],
+['Design & Technology','CAD & modelling','What is a prototype?','An early model used to test a design and identify improvements.','Foundation'],
+['Citizenship','Democracy & government','What is the main role of Parliament in the UK?','It makes and scrutinises laws, debates issues and examines the work of government.','Foundation'],
+['Citizenship','Law & justice','Why are courts important in a legal system?','They hear cases, apply the law and make decisions or sentences according to their role.','Foundation'],
+['Citizenship','Rights & responsibilities','What is the purpose of human rights?','To protect fundamental freedoms and dignity that people are entitled to.','Foundation'],
+['Citizenship','Political participation','Give one way people can participate in democracy apart from voting.','For example, signing a petition, contacting a representative, campaigning or joining a pressure group.','Foundation'],
+['English Language','Structure & comparison','What should you look for when analysing a text’s structure?','Track shifts in focus, pace, perspective, paragraphing, and the opening and ending; explain the effect of each choice.','Higher'],
+['English Language','Evaluation','How do you support an evaluation of a writer’s effectiveness?','Make a clear judgement, select relevant evidence, explain how it supports your view, and consider the writer’s purpose.','Higher'],
+['History','Change & continuity','What do change and continuity mean in history?','Change describes what altered over time; continuity describes what stayed similar.','Foundation'],
+['History','Historical interpretations','How should you compare two historical interpretations?','Identify the different claims, support each with details, and consider why the accounts might differ.','Higher'],
+['French','Listening','What is a useful strategy for French listening questions?','Read the question first, predict the information needed, listen for key words and negatives, and check the tense and context.','Foundation'],
+['Spanish','Listening','What is a useful strategy for Spanish listening questions?','Read the question first, predict the information needed, listen for key words and negatives, and check the tense and context.','Foundation'],
+['Religious Studies','Philosophy','What is the problem of evil?','The challenge of explaining how an all-powerful, all-loving deity can allow evil and suffering.','Higher'],
+['Religious Studies','Sources of authority','What is religious scripture?','A sacred text regarded as a source of teaching and authority by a religious community.','Foundation'],
+['Business','Human resources','What is the purpose of recruitment?','To attract and select suitable applicants for a job vacancy.','Foundation'],
+['Business','External influences','What is an external influence on a business?','A factor outside the business, such as economic conditions, legislation, technology or competition, that can affect decisions.','Foundation'],
+['Economics','International trade','What is an export?','A good or service sold to a buyer in another country.','Foundation'],
+['Art & Design','Portfolio development','Why should an art portfolio show development?','To evidence research, experiments, decisions and refinements leading towards a resolved outcome.','Foundation'],
+['Art & Design','Evaluation','What makes an art evaluation useful?','It identifies strengths, explains choices using relevant visual language, and states what could be improved or developed.','Foundation'],
+['Music','Composition','What is a musical motif?','A short musical idea that can be developed or repeated within a composition.','Foundation'],
+['Music','Listening analysis','What should you do when describing a piece of music?','Use musical vocabulary for tempo, dynamics, rhythm, melody, texture, timbre and structure, supporting points with audible evidence.','Foundation'],
+['Drama','Set text','What should you consider when analysing a set-text scene?','Character objectives, relationships, context, dramatic tension and how performance or staging choices communicate meaning.','Higher'],
+['Drama','Evaluation','How can you evaluate a performance effectively?','Explain what was effective, support it with specific moments, and discuss the effect on the audience and possible improvements.','Higher'],
+['PE','Sport psychology','What is arousal in sport?','A performer’s level of physical and mental readiness or activation.','Foundation'],
+['PE','Socio-cultural factors','How can sponsorship affect sport?','It can provide funding and resources, but may also influence coverage, priorities or the image of an event.','Foundation'],
+['Food Preparation','Ingredients & function','What is the role of a raising agent in baking?','It produces or releases gas so a mixture expands and becomes lighter.','Foundation'],
+['Food Preparation','Diet & health','What is a balanced diet?','A diet with appropriate amounts of energy and nutrients for a person’s needs.','Foundation'],
+['Design & Technology','Systems & electronics','What is a sensor in an electronic system?','An input component that detects a change in the environment and sends a signal to the control system.','Higher'],
+['Design & Technology','Testing & evaluation','Why test a prototype against a specification?','To check whether it meets the design criteria and identify what needs refining.','Foundation'],
+['Citizenship','The economy','What is taxation?','Money collected by public authorities to fund services and public spending.','Foundation'],
+['Citizenship','Global citizenship','What is global citizenship?','Recognising that people are connected internationally and have responsibilities regarding issues that cross borders.','Foundation']
+].map((x,i)=>({id:'topic-'+(i+1),subject:x[0],topic:x[1],q:x[2],a:x[3],difficulty:x[4],topicStarter:true}));
+
+// Additional original practice questions. No prompt-frame/numbered copies: each entry
+// asks a distinct question and is de-duplicated with the rest of the bank.
+const EXTRA_CARDS_RAW = [
+['Biology','Cell biology','Why are stains sometimes used when preparing cells for a light microscope?','Stains increase contrast so structures that are nearly transparent are easier to distinguish.','Foundation'],
+['Biology','Cell biology','What does a larger image magnification tell you, and what does it not tell you?','It tells you the image is enlarged more; it does not by itself mean more detail can be resolved.','Higher'],
+['Biology','Organisation','What is the role of bile in digestion?','Bile neutralises stomach acid in the small intestine and emulsifies fats into smaller droplets.','Foundation'],
+['Biology','Infection & response','Why can antibiotics treat many bacterial infections but not viral infections?','Antibiotics target bacterial structures or processes that viruses do not have, and they do not stop viruses replicating inside cells.','Higher'],
+['Biology','Bioenergetics','How could light intensity affect the rate of photosynthesis when other factors are controlled?','Increasing light intensity can raise the rate until another factor becomes limiting, so the rate then levels off.','Higher'],
+['Biology','Ecology','Why should a student sample several quadrats rather than just one?','Several random samples are more representative and reduce the effect of local chance variation.','Foundation'],
+['Chemistry','Atomic structure','Why is an atom electrically neutral overall?','It contains equal numbers of positively charged protons and negatively charged electrons.','Foundation'],
+['Chemistry','Bonding','Why do simple molecular substances often have low boiling points?','The intermolecular forces between molecules are relatively weak, so little energy is needed to overcome them.','Higher'],
+['Chemistry','Quantitative chemistry','Why must a symbol equation be balanced?','It must show the same number of atoms of each element on both sides, conserving atoms and mass.','Foundation'],
+['Chemistry','Rates & energy','What is the purpose of a catalyst in a reaction?','It provides an alternative reaction pathway with a lower activation energy and is not used up overall.','Foundation'],
+['Chemistry','Chemical analysis','What observation is expected when carbon dioxide is bubbled through limewater?','The limewater turns milky or cloudy because a calcium carbonate precipitate forms.','Foundation'],
+['Chemistry','Organic chemistry','Why can crude oil be separated into fractions by fractional distillation?','Its hydrocarbons have different boiling points, so they condense at different temperatures in the column.','Higher'],
+['Physics','Energy','What is the equation linking power, energy transferred and time?','Power = energy transferred ÷ time.','Foundation'],
+['Physics','Electricity','What happens to the current through components connected in series?','The current is the same at every point in a series circuit.','Foundation'],
+['Physics','Electricity','Why are household appliances generally connected in parallel?','Each appliance receives the supply potential difference and can operate independently if another branch is switched off.','Higher'],
+['Physics','Forces','What does a horizontal section on a distance–time graph represent?','The object is stationary because its distance from the starting point is not changing.','Foundation'],
+['Physics','Waves','What happens to a wave’s frequency when it enters a different medium?','Its frequency stays the same; its speed and wavelength may change.','Higher'],
+['Physics','Space physics','What is meant by the half-life of a radioactive isotope?','The time taken for the number of undecayed nuclei, or the activity, to fall to half its initial value.','Higher'],
+['Maths','Number','Write 0.00072 in standard form.','7.2 × 10⁻⁴.','Higher'],
+['Maths','Number','How do you calculate the percentage increase from an original value to a new value?','Percentage increase = (increase ÷ original value) × 100%.','Foundation'],
+['Maths','Algebra','Expand and simplify 3(2x − 5) + 4x.','10x − 15.','Foundation'],
+['Maths','Algebra','Solve 5x − 7 = 18.','x = 5.','Foundation'],
+['Maths','Ratio & proportion','A recipe uses 300 g of flour for 4 people. How much flour is needed for 10 people?','750 g, because 300 ÷ 4 × 10 = 750.','Foundation'],
+['Maths','Geometry & measures','What is the length of the hypotenuse of a right-angled triangle with shorter sides 6 cm and 8 cm?','10 cm, since the hypotenuse is √(6² + 8²) = √100.','Higher'],
+['Maths','Probability & statistics','A fair six-sided die is rolled once. What is the probability of rolling a number greater than 4?','2/6 = 1/3, because the outcomes are 5 and 6.','Foundation'],
+['English Language','Reading & inference','What is the difference between an explicit statement and an inference?','An explicit statement is directly given; an inference is a conclusion drawn from clues and evidence.','Foundation'],
+['English Language','Language analysis','How can a semantic field help a writer shape a reader’s impression?','Related words build a pattern of meaning, reinforcing an atmosphere, idea or viewpoint.','Higher'],
+['English Language','Structure & comparison','What is the effect of beginning a narrative in the middle of an important event?','It can create immediate tension and make the reader want to discover how the situation began.','Higher'],
+['English Language','Transactional writing','Why should a persuasive article address a counterargument?','It shows awareness of another viewpoint and can strengthen the writer’s case by responding to it.','Higher'],
+['English Language','Creative writing','What is the difference between first-person and third-person narration?','First person uses a narrator referring to themselves as “I”; third person refers to characters as “he”, “she” or “they”.','Foundation'],
+['English Literature','Shakespeare','What is a soliloquy, and what can it reveal to an audience?','A speech delivered by a character alone or as if alone, revealing private thoughts, motives or conflict.','Higher'],
+['English Literature','Poetry','How can a caesura affect the rhythm or meaning of a line of poetry?','A pause within a line can slow the pace, interrupt a thought or emphasise a word or contrast.','Higher'],
+['English Literature','Essay skills','Why is embedding a short quotation often effective in literary analysis?','It keeps evidence closely linked to the point and lets the writer analyse precise words without lengthy retelling.','Foundation'],
+['English Literature','19th-century texts','What is the purpose of analysing a character’s development across a whole text?','It helps explain how the writer develops themes, relationships and the reader’s response over time.','Higher'],
+['English Literature','Modern drama','How can a stage direction influence an actor’s performance?','It can guide movement, tone, gesture, facial expression or interaction to communicate meaning to the audience.','Foundation'],
+['History','Source skills','Why can a source be useful for one historical enquiry but less useful for another?','Its content, origin and purpose may provide strong evidence about one issue but little relevant evidence about another.','Higher'],
+['History','Change & continuity','What is a historical turning point?','An event or period that marks a significant change in the direction or nature of developments.','Foundation'],
+['History','Conflict & warfare','Why should a historian distinguish between a long-term cause and a trigger for a war?','Long-term causes build underlying tensions, while a trigger is the immediate event that helps set the conflict in motion.','Higher'],
+['History','Historical interpretations','What evidence should you use when judging whether a historical interpretation is convincing?','Relevant accurate knowledge about the period, compared directly with the interpretation’s claims.','Higher'],
+['History','Medicine through time','How can improved sanitation reduce the spread of infectious disease?','It reduces exposure to pathogens in contaminated water, waste and surroundings.','Foundation'],
+['Geography','Natural hazards','Why do people continue to live in areas at risk from volcanic eruptions?','Reasons can include fertile soils, tourism or jobs, family ties, low land costs and difficulty moving.','Foundation'],
+['Geography','UK landscapes','How does longshore drift move material along a coastline?','Swash carries material up the beach at an angle and backwash returns it down the slope, moving sediment along the coast.','Higher'],
+['Geography','Urban issues','What is an urban heat island?','An urban area that is warmer than surrounding rural areas, partly because built surfaces store heat and there is less vegetation.','Foundation'],
+['Geography','Resources & development','What does the Human Development Index combine to compare development?','Indicators for life expectancy, education and income per person.','Foundation'],
+['Geography','Fieldwork','Why might a geographer use systematic sampling along a transect?','It provides observations at regular intervals, making it easier to examine how a feature changes across space.','Higher'],
+['Computer Science','Algorithms','What is the difference between linear search and binary search?','Linear search checks items one by one; binary search repeatedly halves a sorted search range.','Foundation'],
+['Computer Science','Programming','What is the purpose of validation in data entry?','To check whether input data follows specified rules or acceptable ranges before it is processed.','Foundation'],
+['Computer Science','Data representation','Convert the denary number 22 into 8-bit binary.','00010110.','Foundation'],
+['Computer Science','Networks & cybersecurity','What is the difference between a LAN and a WAN?','A LAN covers a limited local area; a WAN connects networks over a much larger geographical area.','Foundation'],
+['Computer Science','Programming','What is the difference between iteration and selection in an algorithm?','Iteration repeats instructions; selection chooses a path based on a condition.','Foundation'],
+['Computer Science','Databases','Why is a primary key useful in a relational database?','It uniquely identifies each record in a table and helps link tables without confusing records.','Higher'],
+['French','Grammar & tenses','How would you say “I used to play football” in French?','Je jouais au football.','Higher'],
+['French','Grammar & tenses','Why must many French adjectives agree with the noun they describe?','Their form changes to match the noun’s gender and number, according to the adjective’s agreement rules.','Foundation'],
+['French','Vocabulary & themes','Translate “although it is expensive” into French.','Bien que ce soit cher.','Higher'],
+['French','Speaking','What is one useful way to extend an answer in a French speaking exam?','Give a reason using a connector such as parce que, puis add a detail or example.','Foundation'],
+['French','Reading & translation','What should you check when translating a French sentence into English?','The tense, negatives, pronouns, agreement and meaning in context, rather than translating word by word.','Foundation'],
+['Spanish','Grammar & tenses','How would you say “yesterday I went” in Spanish?','Ayer fui.','Foundation'],
+['Spanish','Grammar & tenses','When is “ser” generally used rather than “estar” in Spanish?','Ser is generally used for identity, characteristics, origin and time; estar is often used for states, locations and conditions.','Foundation'],
+['Spanish','Vocabulary & themes','Translate “I would like to improve my Spanish”.','Me gustaría mejorar mi español.','Higher'],
+['Spanish','Speaking','How can you make a Spanish speaking answer more detailed?','Add a reason, an example, a time frame or a contrasting opinion using connectives.','Foundation'],
+['Spanish','Reading & translation','What does “sin embargo” mean in English?','“However” or “nevertheless”.','Foundation'],
+['Religious Studies','Ethics','What is meant by the principle of sanctity of life?','The belief that human life is sacred or has special value, often because it is given by God.','Foundation'],
+['Religious Studies','Practices','What is the difference between an individual act of worship and communal worship?','Individual worship is practised by a person alone; communal worship is practised together with others.','Foundation'],
+['Religious Studies','Exam evaluation','How can a balanced 12-mark evaluation reach a reasoned conclusion?','Develop arguments on more than one side, support them with reasons or sources of authority, and make a justified final judgement.','Higher'],
+['Religious Studies','Beliefs & teachings','What is the meaning of stewardship in many religious traditions?','Humans have a responsibility to care for the Earth and its living things rather than exploit them carelessly.','Foundation'],
+['Religious Studies','Philosophy','What is a theodicy attempting to explain?','How belief in an all-powerful, all-loving God can be reconciled with the existence of evil and suffering.','Higher'],
+['Business','Finance','How is break-even output calculated using contribution?','Break-even output = fixed costs ÷ contribution per unit.','Higher'],
+['Business','Marketing','What is a unique selling point (USP)?','A feature or benefit that differentiates a product from competitors and gives customers a reason to choose it.','Foundation'],
+['Business','Human resources','How can staff training benefit a business?','It can improve skills, quality, productivity and confidence, although it has time and financial costs.','Foundation'],
+['Business','Operations','What is meant by quality assurance?','A planned approach designed to prevent defects by checking and improving processes throughout production.','Higher'],
+['Business','External influences','How might an increase in interest rates affect a business?','Borrowing may become more expensive and consumers may spend less, potentially reducing investment or sales.','Higher'],
+['Economics','Supply & demand','What happens to equilibrium price when demand rises and supply stays unchanged?','Equilibrium price usually rises and equilibrium quantity increases.','Foundation'],
+['Economics','Markets','What is a negative externality of production?','A cost imposed on third parties by production, such as pollution affecting people who are not part of the transaction.','Higher'],
+['Economics','Macroeconomics','What is inflation?','A sustained rise in the general price level of goods and services over time.','Foundation'],
+['Economics','Government policy','What is one way a government could reduce demand-pull inflation?','It could use contractionary policy, such as raising interest rates or reducing government spending, to lower aggregate demand.','Higher'],
+['Economics','International trade','What is a tariff?','A tax imposed on imported goods.','Foundation'],
+['Art & Design','Elements of art','What is chiaroscuro in drawing or painting?','The use of strong contrasts between light and dark to create form, depth or drama.','Higher'],
+['Art & Design','Media & techniques','Why should an artist test a material or technique before using it in a final piece?','Testing reveals how it behaves and helps the artist refine choices before committing to the final work.','Foundation'],
+['Art & Design','Artist research','How can primary research strengthen an art project?','First-hand drawings, photographs or observations give direct visual information to develop personal ideas.','Foundation'],
+['Art & Design','Composition','What is a focal point in an artwork?','The area intended to attract the viewer’s attention first.','Foundation'],
+['Music','Elements of music','What does texture mean in music?','How musical layers or parts combine, including how many parts sound and how they relate.','Foundation'],
+['Music','Rhythm & melody','What is syncopation?','Emphasising off-beats or normally weak beats, creating rhythmic surprise or drive.','Higher'],
+['Music','Instruments & timbre','What is timbre?','The quality or colour of a sound that helps distinguish instruments or voices playing the same pitch.','Foundation'],
+['Music','Structure','What is the difference between binary and ternary form?','Binary form has two main sections; ternary form has three, commonly A–B–A.','Foundation'],
+['Music','Composition','What is an ostinato?','A short musical pattern repeated persistently, often in the rhythm, melody or accompaniment.','Foundation'],
+['Drama','Performance skills','What is proxemics in performance?','The use of distance and spatial relationships between performers to communicate relationships or meaning.','Higher'],
+['Drama','Characterisation','How can an actor use vocal pace to show a character’s state of mind?','A faster pace can suggest excitement, panic or urgency, while a slower pace can suggest calm, thought or control, depending on context.','Foundation'],
+['Drama','Staging & design','What is the effect of staging a scene in traverse?','The audience sits on two opposing sides, creating an intimate shared space but requiring performers to consider sightlines.','Higher'],
+['Drama','Devising','Why should a devised performance have a clear intention or message?','It helps choices in action, character, staging and design work together to communicate meaning to an audience.','Foundation'],
+['PE','Anatomy & physiology','Which type of joint is the shoulder, and what movement does it allow?','A ball-and-socket joint; it allows movement in many directions, including rotation.','Foundation'],
+['PE','Training principles','What does progressive overload mean in training?','Gradually increasing training demands so the body adapts and performance can improve.','Foundation'],
+['PE','Movement analysis','What plane divides the body into left and right portions?','The sagittal plane.','Higher'],
+['PE','Health & fitness','What is the difference between aerobic and anaerobic exercise?','Aerobic exercise relies on energy release using oxygen; anaerobic energy release does not require oxygen in the same way and supports short, intense efforts.','Foundation'],
+['PE','Sport psychology','What is goal setting intended to do for a performer?','Provide clear targets that focus effort, support motivation and help monitor progress.','Foundation'],
+['Food Preparation','Food safety','Why should raw poultry be kept separate from ready-to-eat food?','To prevent harmful microorganisms from raw poultry contaminating food that will not receive further cooking.','Foundation'],
+['Food Preparation','Food science','What happens to egg proteins when they are heated?','They denature and coagulate, changing from a liquid structure to a firmer set texture.','Foundation'],
+['Food Preparation','Nutrition','Which nutrient is the body’s main readily available energy source?','Carbohydrate.','Foundation'],
+['Food Preparation','Cooking methods','What is the difference between boiling and simmering?','Boiling produces vigorous bubbles throughout the liquid; simmering uses gentler bubbles at a lower temperature.','Foundation'],
+['Food Preparation','Ingredients & function','What does gluten help provide in many bread doughs?','An elastic network that traps gas and helps the dough rise and hold its structure.','Higher'],
+['Design & Technology','Materials','What is a thermoplastic?','A polymer that softens when heated and can be reshaped, then hardens again on cooling.','Foundation'],
+['Design & Technology','Design process','What is the purpose of a design specification?','It sets measurable requirements and constraints that a proposed product should meet.','Foundation'],
+['Design & Technology','CAD & modelling','What is one advantage of using CAD during product development?','Designs can be edited precisely, visualised in 3D and modified without rebuilding a physical model each time.','Foundation'],
+['Design & Technology','Manufacturing','What is quality control?','Checking products or samples against required standards to identify defects, often during or after production.','Foundation'],
+['Design & Technology','Testing & evaluation','Why is user testing useful when evaluating a prototype?','It reveals usability issues and whether the product meets the needs of its intended users.','Foundation'],
+['Citizenship','Democracy & government','What is the role of the opposition in a parliamentary democracy?','To scrutinise government decisions, challenge policies and offer alternative proposals.','Foundation'],
+['Citizenship','Law & justice','What is the difference between a civil case and a criminal case?','Civil cases usually resolve disputes between parties; criminal cases concern alleged offences against the law.','Foundation'],
+['Citizenship','Rights & responsibilities','Why are rights often balanced against responsibilities and the rights of others?','Because exercising a right can affect other people, so laws and norms seek to protect competing rights and public interests.','Higher'],
+['Citizenship','Political participation','What is a pressure group?','An organised group that seeks to influence public policy or decisions without directly seeking to form the government.','Foundation'],
+['Citizenship','Global citizenship','What is one way citizens can scrutinise local council decisions?','Attend council meetings, contact elected councillors, submit questions or review published decisions and budgets.','Foundation']
+];
+const EXTRA_CARDS = EXTRA_CARDS_RAW.map((x,i)=>({id:'extra-'+(i+1),subject:x[0],topic:x[1],q:x[2],a:x[3],difficulty:x[4],extraStarter:true}));
+
+const KEY='revisionQuestGCSE_v1';
+let state={xp:0,answered:0,correct:0,custom:[],seen:[],streak:0,lastStudy:null,created:0,preferences:{year:'Year 11',board:'Not set',difficulty:'Mixed',goal:'15',subjects:SUBJECTS.map(s=>s.name)},profile:null};
+try{const saved=JSON.parse(localStorage.getItem(KEY)||'null');if(saved)state={...state,...saved}}catch(e){}
+state.friends=Array.isArray(state.friends)?state.friends:[];state.rooms=Array.isArray(state.rooms)?state.rooms:[];
+state.preferences={year:'Year 11',board:'Not set',difficulty:'Mixed',goal:'15',subjects:SUBJECTS.map(s=>s.name),...(state.preferences||{})};
+let quizDeck=[],quizIndex=0,quizLocked=false,cardDeck=[],cardIndex=0,cardFlipped=false;
+// Unique bank: use distinct authored starter/topic/practice questions, plus the user's
+// cards. Never inflate the count with prompt wrappers or numbered copies.
+const normalizeQuestion = q => String(q||'').toLocaleLowerCase().normalize('NFKD')
+  .replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
+const allCards=()=>{
+  const source=[...(state.custom||[]),...STARTER,...TOPIC_CARDS,...EXTRA_CARDS];
+  const seen=new Set();
+  return source.filter(c=>{const key=normalizeQuestion(c.q);if(!key||seen.has(key))return false;seen.add(key);return true;});
+};
+const cardTopic=c=>c.topic||inferTopic(c.subject,`${c.q||''} ${c.a||''}`);
+const selectedSubjects=()=>state.preferences.subjects||SUBJECTS.map(s=>s.name);
+const availableCards=()=>allCards().filter(c=>selectedSubjects().includes(c.subject));
+const $=id=>document.getElementById(id);
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+function subjectInfo(name){return SUBJECTS.find(s=>s.name===name)||{icon:'📚',color:'#65f0c2',group:'Custom'}}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function updateTopicOptions(id,subject,includeAll=true){const el=$(id);if(!el)return;const old=el.value||'All';const topics=subject==='All'?[]:(TOPICS_BY_SUBJECT[subject]||['Core concepts']);el.innerHTML=(includeAll?'<option value="All">All topics</option>':'')+topics.map(t=>`<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join('');el.value=(old==='All'&&includeAll)||topics.includes(old)?old:(includeAll?'All':topics[0]);}
+function updatePracticeTopics(){updateTopicOptions('quizTopic',$('quizSubject')?.value||'All',true)}
+function updateCardTopics(){updateTopicOptions('cardTopicFilter',$('cardSubject')?.value||'All',true)}
+function updateLibraryTopics(){updateTopicOptions('libraryTopicFilter',$('librarySubject')?.value||'All',true)}
+function updateCreateTopics(){updateTopicOptions('newTopic',$('newSubject')?.value||SUBJECTS[0].name,false)}
+function topicFilterPass(card,topic){return !topic||topic==='All'||cardTopic(card)===topic}
+function uniquePracticeCards(cards){const seen=new Set();return cards.filter(c=>{const key=normalizeQuestion(c.q);if(!key||seen.has(key))return false;seen.add(key);return true})}
+
+function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2100)}
+function showPage(page){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id==='page-'+page));document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.page===page));if(page==='practice'&&!quizDeck.length)resetQuiz();if(page==='cards')renderCard();if(page==='library')renderLibrary();if(page==='progress')renderProgress();if(page==='social')renderSocial();window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.navbtn').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+
+function renderSubjectPreferences(){
+  const chosen=new Set(selectedSubjects());
+  $('subjectPreferences').innerHTML=SUBJECTS.map(s=>`<label class="subject-check"><input type="checkbox" value="${escapeHtml(s.name)}" ${chosen.has(s.name)?'checked':''}><span>${s.icon} ${escapeHtml(s.name)}</span></label>`).join('');
+  $('prefYear').value=state.preferences.year||'Year 11';
+  $('prefBoard').value=state.preferences.board||'Not set';
+  $('prefDifficulty').value=state.preferences.difficulty||'Mixed';
+  $('prefGoal').value=state.preferences.goal||'15';
+}
+function toggleAllSubjects(on){document.querySelectorAll('#subjectPreferences input[type=checkbox]').forEach(el=>el.checked=on)}
+function savePreferences(){
+  const picked=[...document.querySelectorAll('#subjectPreferences input[type=checkbox]:checked')].map(el=>el.value);
+  if(!picked.length){toast('Choose at least one subject');return}
+  state.preferences={year:$('prefYear').value,board:$('prefBoard').value,difficulty:$('prefDifficulty').value,goal:$('prefGoal').value,subjects:picked};
+  save();renderSubjectPreferences();fillSelects();renderSubjects();renderStats();renderProgress();resetQuiz();setupCardDeck();renderCard();renderLibrary();
+  toast('Preferences saved!');
+  showPage('home');
+}
+
+
+function showAccountForm(edit=false){
+  $('accountHeading').textContent=edit?'Edit your profile':'Create your revision profile';
+  $('accountSubmit').textContent=edit?'Save profile changes':'Create my profile & enter →';
+  const p=state.profile||{};
+  $('profileDisplayName').value=p.displayName||'';
+  $('profileUsername').value=p.username||'';
+  $('profileAge').value=p.age||'';
+  $('profileYear').value=p.year||state.preferences.year||'';
+  $('profileGender').value=p.gender||'Prefer not to say';
+  $('profileBoard').value=p.board||state.preferences.board||'Not set';
+  $('profileGoal').value=p.goal||state.preferences.goal||'15';document.querySelectorAll('.avatar-option').forEach(b=>b.classList.toggle('selected',b.dataset.avatar===(p.avatar||'🧑‍🎓')));
+  $('accountOverlay').style.display='flex';
+}
+function openProfile(){showAccountForm(true)}
+function saveProfileFromForm(e){
+  e.preventDefault();
+  const displayName=$('profileDisplayName').value.trim();
+  const username=$('profileUsername').value.trim();
+  const ageVal=$('profileAge').value;
+  const age=ageVal?Number(ageVal):null;
+  if(!displayName||!username||!$('profileYear').value){toast('Please fill in the required fields');return}
+  if(ageVal&&(age<5||age>100)){toast('Please enter a valid age');return}
+  state.profile={displayName,username,age,year:$('profileYear').value,gender:$('profileGender').value,board:$('profileBoard').value,goal:$('profileGoal').value,avatar:document.querySelector('.avatar-option.selected')?.dataset.avatar||'🧑‍🎓',createdAt:state.profile?.createdAt||new Date().toISOString()};
+  state.preferences={...(state.preferences||{}),year:state.profile.year,board:state.profile.board,goal:state.profile.goal};
+  save();updateProfileDisplay();renderSubjectPreferences();fillSelects();renderSubjects();renderStats();renderProgress();resetQuiz();setupCardDeck();renderCard();renderLibrary();
+  $('accountOverlay').style.display='none';
+  toast('Profile saved!');
+}
+function updateProfileDisplay(){
+  const p=state.profile;
+  $('profileName').textContent=p?.username||'Profile';
+  $('profileInitial').textContent=p?.avatar||((p?.displayName||'?').trim().charAt(0).toUpperCase());
+}
+$('accountForm').addEventListener('submit',saveProfileFromForm);
+
+
+document.querySelectorAll('.avatar-option').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.avatar-option').forEach(x=>x.classList.remove('selected'));b.classList.add('selected')}));
+function renderSocial(){
+ $('friendList').innerHTML=(state.friends||[]).map((f,i)=>{
+   const p=f.profileStats||null;
+   const level=p&&Number.isFinite(Number(p.level))?Math.max(1,Number(p.level)):null;
+   const xp=p&&Number.isFinite(Number(p.xp))?Math.max(0,Number(p.xp)):null;
+   const streak=p&&Number.isFinite(Number(p.streak))?Math.max(0,Number(p.streak)):null;
+   const accuracy=p&&Number.isFinite(Number(p.accuracy))?Math.max(0,Math.min(100,Number(p.accuracy))):null;
+   const answered=p&&Number.isFinite(Number(p.answered))?Math.max(0,Number(p.answered)):null;
+   const shared=p&&f.lastSharedAt?new Date(f.lastSharedAt).toLocaleDateString():null;
+   return `<article class="friend-card"><div class="friend-card-head"><div class="friend-avatar">${escapeHtml(f.avatar||'🧑‍🎓')}</div><div class="friend-ident"><b>${escapeHtml(f.displayName||f.username)}</b><small>@${escapeHtml(f.username)} ${f.friendCode?'· '+escapeHtml(f.friendCode):'· Added locally'}</small><span class="friend-status ${p?'has-profile':'no-profile'}">${p?(f.cloudFriendId?'Cloud account':'Shared profile'):'Profile not shared yet'}</span></div><button class="mini-btn" onclick="removeFriend(${i})">Remove</button></div>
+   ${p?`<div class="friend-stat-grid"><div class="friend-stat"><small>LEVEL</small><strong>🏆 ${level||'—'}</strong></div><div class="friend-stat"><small>TOTAL XP</small><strong>⚡ ${(xp??0).toLocaleString()}</strong></div><div class="friend-stat"><small>STREAK</small><strong>🔥 ${streak??0} days</strong></div><div class="friend-stat"><small>ACCURACY</small><strong>🎯 ${accuracy===null?'—':accuracy+'%'}</strong></div></div><div class="friend-extra">${answered===null?'':`<span>${answered.toLocaleString()} questions answered</span>`}${p.subject?`<span>📚 ${escapeHtml(p.subject)}</span>`:''}${p.board?`<span>${escapeHtml(p.board)}</span>`:''}</div><small class="friend-shared">${f.cloudFriendId?`Cloud profile · ${p.online?'🟢 recently active':'last active '+(f.lastSeenAt?new Date(f.lastSeenAt).toLocaleString():'unknown')}`:`Last profile share: ${shared||'date unknown'} · stats update when they share a new card`}</small>`:`<p class="friend-missing">Their level, XP, streak and accuracy will appear here after they send you a friend card.</p>`}
+   <div class="friend-actions"><button class="mini-btn" onclick="updateFriendProfile(${i})">↻ Update profile</button><button class="mini-btn" onclick="showFriendInfo(${i})">View details</button></div></article>`;
+ }).join('')||'<div class="empty">No friends yet. Add a username, or import a friend card to see their revision stats.</div>';
+ $('roomSubject').innerHTML=SUBJECTS.filter(s=>selectedSubjects().includes(s.name)).map(s=>`<option>${escapeHtml(s.name)}</option>`).join('');renderRooms();
+}
+function makeFriendCode(){
+ const p=state.profile||{},answered=Number(state.answered)||0,correct=Number(state.correct)||0;
+ return {app:'RevisionQuestFriend',version:2,username:String(p.username||'Player').slice(0,24),displayName:String(p.displayName||p.username||'Player').slice(0,32),avatar:p.avatar||'🧑‍🎓',friendCode:p.friendCode||('RQ-'+Math.random().toString(36).slice(2,8).toUpperCase()),sharedAt:new Date().toISOString(),profileStats:{level:Math.floor((Number(state.xp)||0)/100)+1,xp:Number(state.xp)||0,streak:Number(state.streak)||0,accuracy:answered?Math.round(correct/answered*100):0,answered,correct,subject:(state.preferences?.subjects||[])[0]||'',board:state.preferences?.board||''}};
+}
+function normalizeFriendStats(p){if(!p||typeof p!=='object')return null;const num=(v,lo=0,hi=1e9)=>{const n=Number(v);return Number.isFinite(n)?Math.max(lo,Math.min(hi,n)):0};return {level:num(p.level,1,9999),xp:num(p.xp),streak:num(p.streak,0,9999),accuracy:num(p.accuracy,0,100),answered:num(p.answered),correct:num(p.correct),subject:String(p.subject||'').slice(0,60),board:String(p.board||'').slice(0,60)}}
+function saveImportedFriendCard(f,allowUpdate=true){
+ if(!f||f.app!=='RevisionQuestFriend'||!f.username)throw Error('Invalid friend card');
+ const username=String(f.username).trim().replace(/^@/,'').slice(0,24);if(!username)throw Error('Invalid username');
+ if(username.toLowerCase()===(state.profile?.username||'').toLowerCase())throw Error('You cannot add yourself');
+ const stats=normalizeFriendStats(f.profileStats||f.stats);const index=state.friends.findIndex(x=>String(x.username||'').toLowerCase()===username.toLowerCase());
+ if(index>=0){if(!allowUpdate)throw Error('Friend already exists');state.friends[index]={...state.friends[index],username,displayName:String(f.displayName||username).slice(0,32),avatar:String(f.avatar||state.friends[index].avatar||'🧑‍🎓').slice(0,8),friendCode:String(f.friendCode||state.friends[index].friendCode||'').slice(0,24),profileStats:stats||state.friends[index].profileStats||null,lastSharedAt:f.sharedAt||new Date().toISOString()};}
+ else state.friends.push({username,displayName:String(f.displayName||username).slice(0,32),avatar:String(f.avatar||'🧑‍🎓').slice(0,8),friendCode:String(f.friendCode||'').slice(0,24),profileStats:stats,lastSharedAt:f.sharedAt||new Date().toISOString()});
+ save();renderSocial();return index>=0?'Friend profile updated':'Friend card added';
+}
+function exportFriendCard(){const card=makeFriendCode();const text=JSON.stringify(card);if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(()=>toast('Friend card copied — send it to your friend')).catch(()=>prompt('Copy this friend card and send it to your friend:',text))}else prompt('Copy this friend card and send it to your friend:',text)}
+function importFriendCard(){const raw=prompt('Paste your friend’s Revision Quest friend card:');if(!raw)return;try{const f=JSON.parse(raw);const msg=saveImportedFriendCard(f,true);toast(msg)}catch(e){alert(e.message==='You cannot add yourself'?e.message:'That friend card is invalid. Ask your friend to use Share my friend card and copy the full text.')}}
+function updateFriendProfile(i){const current=state.friends[i];if(!current)return;const raw=prompt('Paste the latest friend card for @'+current.username+':');if(!raw)return;try{const f=JSON.parse(raw);if(String(f.username||'').toLowerCase()!==String(current.username).toLowerCase())throw Error('That card belongs to a different username.');const msg=saveImportedFriendCard(f,true);toast(msg)}catch(e){alert(e.message||'Could not update this friend profile.')}}
+function showFriendInfo(i){const f=state.friends[i];if(!f)return;const p=f.profileStats;if(!p){alert('@'+f.username+' has not shared profile stats yet. Ask them to open Friends & rooms and click “Share my friend card”.');return}alert(`${f.displayName||f.username} (@${f.username})\nLevel ${p.level||1} · ${(p.xp||0).toLocaleString()} XP\nStreak: ${p.streak||0} days\nAccuracy: ${p.accuracy||0}%\nQuestions answered: ${p.answered||0}\n${p.subject?'Focus subject: '+p.subject+'\n':''}${p.board?'Exam board: '+p.board+'\n':''}\nThese are stats from their last shared friend card, not live synced data.`)}
+$('friendForm').addEventListener('submit',e=>{e.preventDefault();const username=$('friendUsername').value.trim().replace(/^@/,'');if(!username)return;if(username.toLowerCase()===(state.profile?.username||'').toLowerCase()){toast("You can't add yourself");return}if(state.friends.some(f=>f.username.toLowerCase()===username.toLowerCase())){toast('Already on your list');return}state.friends.push({username,displayName:username,avatar:['🦊','🐸','🐼','🤖','🐱'][state.friends.length%5],friendCode:'',profileStats:null,lastSharedAt:null});save();$('friendUsername').value='';renderSocial();toast('Added local demo friend')});
+function removeFriend(i){state.friends.splice(i,1);save();renderSocial()}
+function createRoom(){const subject=$('roomSubject').value||selectedSubjects()[0]||'Biology';const room={id:'r'+Date.now(),code:Math.random().toString(36).slice(2,6).toUpperCase(),name:$('roomName').value.trim()||subject+' quiz room',subject,players:[{username:state.profile?.username||'Player',avatar:state.profile?.avatar||'🧑‍🎓',score:0}],status:'Waiting'};state.rooms.unshift(room);state.activeRoomId=room.id;save();renderSocial();renderActiveRoom();toast('Room created: '+room.code)}
+function joinRoom(){const code=$('joinRoomCode').value.trim().toUpperCase(),room=state.rooms.find(r=>r.code===code);if(!room){toast('Code not found in this local demo');return}const username=state.profile?.username||'Player';if(!room.players.some(p=>p.username===username))room.players.push({username,avatar:state.profile?.avatar||'🧑‍🎓',score:0});state.activeRoomId=room.id;save();renderSocial();renderActiveRoom();toast('Joined room '+room.code)}
+function renderRooms(){$('roomList').innerHTML=(state.rooms||[]).map(r=>`<div class="retro-row"><div class="grow"><b>${escapeHtml(r.name)}</b><small>${escapeHtml(r.subject)} · Code ${escapeHtml(r.code)} · ${r.players.length} player(s)</small></div><button class="mini-btn" onclick="openRoom('${r.id}')">Open</button></div>`).join('')||'<p>No rooms yet.</p>'}
+function openRoom(id){state.activeRoomId=id;renderActiveRoom()}
+function closeActiveRoom(){$('activeRoomPanel').style.display='none';state.activeRoomId=null;save()}
+function renderActiveRoom(){const r=state.rooms.find(x=>x.id===state.activeRoomId);if(!r){$('activeRoomPanel').style.display='none';return}$('activeRoomPanel').style.display='block';$('activeRoomTitle').textContent=r.name;$('activeRoomContent').innerHTML=`<p>Offline room code (same browser only):</p><div class="room-code">${escapeHtml(r.code)}</div><p><b>${escapeHtml(r.status)}</b> · ${r.players.length} player(s)</p><p class="notice">Share a code with someone on another device and it will not connect by itself. No server means a real cross-device game needs a peer-to-peer signaling exchange.</p><table class="retro-table"><thead><tr><th>Player</th><th>Score</th></tr></thead><tbody>${r.players.map(x=>`<tr><td>${escapeHtml(x.avatar)} ${escapeHtml(x.username)}</td><td>${x.score||0}</td></tr>`).join('')}</tbody></table><div class="toolbar"><button class="btn" onclick="startRoomQuiz('${r.id}')">▶ Start demo quiz</button><button class="btn ghost" onclick="deleteRoom('${r.id}')">Close room</button></div><div id="roomQuizArea"></div>`}
+function deleteRoom(id){state.rooms=state.rooms.filter(r=>r.id!==id);state.activeRoomId=null;save();renderRooms();renderActiveRoom()}
+function startRoomQuiz(id){const r=state.rooms.find(x=>x.id===id);if(!r)return;const qs=shuffle(availableCards().filter(c=>c.subject===r.subject).slice()).slice(0,5);const area=$('roomQuizArea');if(!qs.length){area.innerHTML='<p>No questions for this subject. Add custom questions first.</p>';return}let idx=0,score=0;function draw(){if(idx>=qs.length){const me=r.players.find(x=>x.username===(state.profile?.username||'Player'));if(me)me.score+=score;r.status='Round complete';save();renderRooms();renderActiveRoom();$('roomQuizArea').innerHTML=`<h3>Round complete!</h3><p>You scored ${score} points out of ${qs.length*10}.</p><button class="btn" onclick="startRoomQuiz('${r.id}')">Play again</button>`;return}const q=qs[idx],wrong=shuffle(availableCards().filter(c=>c.subject===r.subject&&c.id!==q.id).map(c=>c.a)).slice(0,3),opts=shuffle([q.a,...wrong]);$('roomQuizArea').innerHTML=`<h3>Question ${idx+1}/${qs.length}</h3><p><b>${escapeHtml(q.q)}</b></p><div class="retro-list">${opts.map(a=>`<button class="answer" data-answer="${escapeHtml(a)}">${escapeHtml(a)}</button>`).join('')}</div>`;area.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.answer===q.a){score+=10;toast('Correct +10')}else toast('Answer: '+q.a);idx++;draw()}))}draw()}
+
+function fillSelects(){const opts=SUBJECTS.filter(s=>selectedSubjects().includes(s.name)).map(s=>`<option>${escapeHtml(s.name)}</option>`).join('');['quizSubject','cardSubject','librarySubject'].forEach(id=>{const el=$(id),old=el.value||'All';el.innerHTML='<option value="All">All subjects</option>'+opts;el.value=old});$('newSubject').innerHTML=opts;const easySub=$('easyGameSubject');if(easySub){const oldEasy=easySub.value;easySub.innerHTML=SUBJECTS.filter(s=>selectedSubjects().includes(s.name)).map(s=>`<option>${escapeHtml(s.name)}</option>`).join('');if([...easySub.options].some(o=>o.value===oldEasy))easySub.value=oldEasy;}updatePracticeTopics();updateCardTopics();updateLibraryTopics();updateCreateTopics();updateEasyTopics()}
+function renderSubjects(){const cards=availableCards();const chosen=selectedSubjects();const visible=SUBJECTS.filter(s=>chosen.includes(s.name));$('subjectGrid').innerHTML=visible.slice(0,12).map(s=>{const n=cards.filter(c=>c.subject===s.name).length;const customN=state.custom.filter(c=>c.subject===s.name).length;const pct=n?Math.min(100,Math.round((state.seen.filter(id=>cards.some(c=>c.id===id&&c.subject===s.name)).length/n)*100)):0;return `<article class="subject"><div class="subject-top"><div class="subject-icon" style="color:${s.color}">${s.icon}</div><span class="tag">${s.group}</span></div><h3>${s.name}</h3><p>${n} cards · ${customN} yours</p><div class="progress"><span style="width:${pct}%;background:${s.color}"></span></div><div class="subject-bottom"><span>${pct}% explored</span><button class="mini-btn" onclick="focusSubject('${s.name.replace(/'/g,"\\'")}')">Revise →</button></div></article>`}).join('')}
+function focusSubject(s){$('quizSubject').value=s;$('cardSubject').value=s;updatePracticeTopics();updateCardTopics();$('quizTopic').value='All';showPage('practice');resetQuiz()}
+function renderStats(){const acc=state.answered?Math.round(state.correct/state.answered*100)+'%':'—';$('topXp').textContent=state.xp+' XP';$('topStreak').textContent=state.streak+' day streak';$('statXp').textContent=state.xp;$('statAnswered').textContent=state.answered;$('statAccuracy').textContent=acc;$('statStreak').textContent=state.streak+' days';}
+function updateStreak(){const today=new Date().toISOString().slice(0,10);if(state.lastStudy!==today){const y=new Date();y.setDate(y.getDate()-1);const yesterday=y.toISOString().slice(0,10);state.streak=state.lastStudy===yesterday?(state.streak||0)+1:1;state.lastStudy=today}}
+function award(xp){state.xp+=xp;updateStreak();save();renderStats();renderProgress()}
+function shuffle(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}return arr}
+function resetQuiz(){const sub=$('quizSubject').value||'All',diff=$('quizDifficulty').value||'All',topic=$('quizTopic')?.value||'All';quizDeck=shuffle(uniquePracticeCards(availableCards().filter(c=>(sub==='All'||c.subject===sub)&&(diff==='All'||c.difficulty===diff)&&topicFilterPass(c,topic))));quizIndex=0;quizLocked=false;renderQuiz()}
+function startQuiz(){showPage('practice');resetQuiz()}
+function renderQuiz(){const area=$('quizArea');if(!quizDeck.length){area.innerHTML='<div class="quiz-card empty">No questions for this exact subject/topic/difficulty yet. Try All topics, or add a question for this topic in Set Builder.</div>';return}if(quizIndex>=quizDeck.length){area.innerHTML=`<div class="quiz-card" style="text-align:center"><div style="font-size:48px">🏆</div><h2>Round complete!</h2><p>You answered ${quizDeck.length} questions. Keep going to build stronger recall.</p><p class="timer">+ XP earned along the way</p><button class="btn" onclick="resetQuiz()">Play again ↻</button> <button class="btn secondary" onclick="showPage('cards')">Review flashcards</button></div>`;return}
+const c=quizDeck[quizIndex];const others=shuffle(allCards().filter(x=>x.id!==c.id&&x.subject===c.subject));let choices=shuffle([c.a,...others.slice(0,3).map(x=>x.a)]);if(choices.length<4){const fallback=['Review the key definition and examples.','This describes a different concept.','It is not part of this process.'];while(choices.length<4)choices.push(fallback[choices.length-1])}
+area.innerHTML=`<div class="quiz-card"><div class="quiz-meta"><span>${subjectInfo(c.subject).icon} ${escapeHtml(c.subject)} · ${escapeHtml(cardTopic(c))} · ${c.difficulty}</span><span>QUESTION ${quizIndex+1} / ${quizDeck.length}</span></div><div class="progress"><span style="width:${quizIndex/quizDeck.length*100}%"></span></div><h2>${escapeHtml(c.q)}</h2><div class="answers">${choices.map((a,i)=>`<button class="answer" onclick="chooseAnswer(this,${JSON.stringify(a).replace(/"/g,'&quot;')},${JSON.stringify(c.a).replace(/"/g,'&quot;')})">${String.fromCharCode(65+i)}. ${escapeHtml(a)}</button>`).join('')}</div><div class="feedback" id="quizFeedback">Choose the best answer.</div><div class="quiz-footer"><span class="pill">⚡ +10 XP correct</span><button class="btn" id="nextQuestion" disabled onclick="nextQuestion()">Next question →</button></div></div>`}
+function chooseAnswer(btn,chosen,correct){if(quizLocked)return;quizLocked=true;const good=chosen===correct;document.querySelectorAll('.answer').forEach(b=>{b.disabled=true;if(b.textContent.slice(3).trim()===correct)b.classList.add('correct')});if(!good)btn.classList.add('wrong');const c=quizDeck[quizIndex];state.answered++;if(good){state.correct++;state.seen=[...new Set([...state.seen,c.id])];award(10);$('quizFeedback').textContent='Correct! Nice recall. +10 XP';$('quizFeedback').style.color='var(--mint)'}else{$('quizFeedback').textContent='Not quite — the correct answer is: '+correct;$('quizFeedback').style.color='var(--pink)';save();renderStats()}$('nextQuestion').disabled=false;renderSubjects()}
+function nextQuestion(){quizIndex++;quizLocked=false;renderQuiz()}
+function setupCardDeck(){const sub=$('cardSubject').value||'All',topic=$('cardTopicFilter')?.value||'All';cardDeck=shuffle(uniquePracticeCards(availableCards().filter(c=>(sub==='All'||c.subject===sub)&&topicFilterPass(c,topic))));cardIndex=0;cardFlipped=false}
+function renderCard(){const sub=$('cardSubject').value||'All',topic=$('cardTopicFilter')?.value||'All';if(!cardDeck.length||!cardDeck[cardIndex]||(cardDeck[cardIndex]&&((sub!=='All'&&cardDeck[cardIndex].subject!==sub)||!topicFilterPass(cardDeck[cardIndex],topic))))setupCardDeck();const area=$('flashArea');if(!cardDeck.length){area.innerHTML='<div class="panel empty">No cards found. Add a question in Set Builder.</div>';return}if(cardIndex>=cardDeck.length)cardIndex=0;const c=cardDeck[cardIndex];$('cardCount').textContent=`Card ${cardIndex+1} of ${cardDeck.length}`;area.innerHTML=`<div class="quiz-card"><div class="quiz-meta"><span>${subjectInfo(c.subject).icon} ${escapeHtml(c.subject)} · ${escapeHtml(cardTopic(c))}</span><span>${c.difficulty}</span></div><div class="flashcard" role="button" tabindex="0" onclick="flipCard()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();flipCard()}"><div class="hint">${cardFlipped?'ANSWER':'QUESTION'} · TAP TO FLIP</div><h2>${escapeHtml(cardFlipped?c.a:c.q)}</h2><p>${cardFlipped?'Say it in your own words, then rate how well you knew it.':'Try to answer from memory before revealing the back.'}</p></div><div class="quiz-footer"><button class="btn ghost" onclick="rateCard(false)">Need to practise</button><button class="btn secondary" onclick="flipCard()">${cardFlipped?'Show question':'Reveal answer'}</button><button class="btn" onclick="rateCard(true)">Got it ✓</button></div></div>`}
+function flipCard(){cardFlipped=!cardFlipped;renderCard()}
+function rateCard(known){const c=cardDeck[cardIndex];if(known){state.seen=[...new Set([...state.seen,c.id])];award(5);toast('Card mastered · +5 XP')}else{toast('Added to your mental re-do list!');state.xp+=1;save();renderStats()}cardIndex=(cardIndex+1)%cardDeck.length;cardFlipped=false;renderCard();renderSubjects()}
+function shuffleCards(){setupCardDeck();renderCard()}
+function renderLibrary(){const query=($('searchBank').value||'').toLowerCase();const sub=$('librarySubject').value||'All',topic=$('libraryTopicFilter')?.value||'All';const arr=availableCards().filter(c=>(sub==='All'||c.subject===sub)&&topicFilterPass(c,topic)&&(`${c.q} ${c.a} ${c.subject} ${cardTopic(c)}`).toLowerCase().includes(query));$('libraryList').innerHTML=`<p class="notice">${arr.length.toLocaleString()} matches · showing first ${Math.min(arr.length,200).toLocaleString()} for speed. Choose a subject or search to narrow it down.</p>`+arr.slice(0,200).map(c=>`<div class="library-item"><div class="task-icon">${subjectInfo(c.subject).icon}</div><div class="grow"><b>${escapeHtml(c.q)}</b><small>${escapeHtml(c.subject)} · ${escapeHtml(cardTopic(c))} · ${c.difficulty}${c.custom?' · Your question':c.topicStarter?' · Topic question':c.starter?' · Starter question':' · Practice question'}</small></div><button class="mini-btn" onclick="studyThis('${c.id}')">Study</button>${(!c.starter&&!c.generated&&!c.topicStarter&&!c.extraStarter)?`<button class="mini-btn" title="Delete custom question" onclick="deleteCard('${c.id}')">✕</button>`:''}</div>`).join('')||'<div class="panel empty">No matches. Try another search or create a new card.</div>'}
+function studyThis(id){const c=allCards().find(x=>x.id===id);if(!c)return;$('cardSubject').value=c.subject;updateCardTopics();if(c.topic&&[...$('cardTopicFilter').options].some(o=>o.value===c.topic))$('cardTopicFilter').value=c.topic;cardDeck=[c];cardIndex=0;cardFlipped=false;showPage('cards');renderCard()}
+function deleteCard(id){if(!confirm('Delete this custom question?'))return;state.custom=state.custom.filter(c=>c.id!==id);save();fillSelects();renderLibrary();renderSubjects();renderProgress();toast('Question deleted')}
+$('createForm').addEventListener('submit',e=>{e.preventDefault();const c={id:'c'+Date.now()+Math.random().toString(16).slice(2,6),subject:$('newSubject').value,q:$('newQuestion').value.trim(),a:$('newAnswer').value.trim(),difficulty:$('newDifficulty').value,topic:$('newTopic').value,starter:false,custom:true};if(!c.q||!c.a)return;state.custom.unshift(c);state.created++;save();$('createForm').reset();fillSelects();renderSubjects();renderStats();renderProgress();toast('Saved to your revision bank · +20 XP');award(20);showPage('library')});
+function renderProgress(){const level=Math.floor(state.xp/100)+1,within=state.xp%100;$('levelValue').textContent=level;$('levelSub').textContent=state.xp+' total XP earned';$('cardTotal').textContent=allCards().length;$('correctTotal').textContent=state.correct;$('nextLevel').textContent=(100-within)+' XP';$('levelBar').style.width=within+'%';$('levelProgress').textContent=within+' / 100 XP';$('levelPercent').textContent=within+'%'}
+function exportData(){const blob=new Blob([JSON.stringify({app:'Revision Quest',version:1,exported:new Date().toISOString(),state},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='revision-quest-backup.json';a.click();URL.revokeObjectURL(url);toast('Backup exported')}
+function importData(e){const file=e.target.files[0];if(!file)return;const reader=new FileReader();reader.onload=()=>{try{const data=JSON.parse(reader.result);const imported=data.state||data;if(!Array.isArray(imported.custom))throw Error('Invalid backup');state={...state,...imported};save();fillSelects();renderSubjects();renderStats();renderLibrary();renderProgress();toast('Backup imported')}catch(err){alert('That file does not look like a Revision Quest backup.')}};reader.readAsText(file);e.target.value=''}
+renderSubjectPreferences();fillSelects();renderSubjects();renderStats();renderProgress();resetQuiz();setupCardDeck();renderCard();renderLibrary();
+updateProfileDisplay();renderSocial();updateEasyTopics();updatePeerGameTopics();// Local profile setup is optional; Cloud account sign-in is available in Friends & multiplayer.
+
+
+// Direct WebRTC multiplayer. No application server: players exchange SDP codes manually.
+let peerPC=null,peerChannel=null,peerRole=null,peerRound=null,peerTimer=null;
+function peerStatus(msg){const el=$('peerStatus');if(el)el.innerHTML='<b>Status:</b> '+escapeHtml(msg)}
+function setPeerConnected(){peerStatus('Connected directly! Ready to play.');$('peerGameControls').style.display='block';$('peerGameSubject').innerHTML=SUBJECTS.map(s=>`<option>${escapeHtml(s.name)}</option>`).join('');updatePeerGameTopics()}
+function peerWire(pc,role){peerPC=pc;peerRole=role;pc.onconnectionstatechange=()=>{if(pc.connectionState==='connected')setPeerConnected();else if(['failed','disconnected','closed'].includes(pc.connectionState))peerStatus('Connection '+pc.connectionState+'. Try exchanging fresh codes.')}}
+function waitIce(pc){return new Promise(resolve=>{if(pc.iceGatheringState==='complete')return resolve();const fn=()=>{if(pc.iceGatheringState==='complete'){pc.removeEventListener('icegatheringstatechange',fn);resolve()}};pc.addEventListener('icegatheringstatechange',fn);setTimeout(resolve,12000)})}
+async function peerHost(){try{resetPeer(false);const pc=new RTCPeerConnection({iceServers:[{urls:'stun:stun.l.google.com:19302'}]});peerWire(pc,'host');peerChannel=pc.createDataChannel('revision-quest');wirePeerChannel(peerChannel);await pc.setLocalDescription(await pc.createOffer());peerStatus('Gathering connection details…');await waitIce(pc);$('peerOfferOut').value=btoa(unescape(encodeURIComponent(JSON.stringify(pc.localDescription))));peerStatus('Offer ready. Copy it to your friend. Keep this tab open.')}catch(e){peerStatus('Could not create offer: '+e.message)}}
+async function peerJoin(){try{resetPeer(false);const offer=JSON.parse(decodeURIComponent(escape(atob($('peerOfferIn').value.trim()))));const pc=new RTCPeerConnection({iceServers:[{urls:'stun:stun.l.google.com:19302'}]});peerWire(pc,'guest');pc.ondatachannel=e=>{peerChannel=e.channel;wirePeerChannel(peerChannel)};await pc.setRemoteDescription(offer);await pc.setLocalDescription(await pc.createAnswer());peerStatus('Gathering answer details…');await waitIce(pc);$('peerAnswerOut').value=btoa(unescape(encodeURIComponent(JSON.stringify(pc.localDescription))));peerStatus('Answer ready. Send it to the host.')}catch(e){peerStatus('Could not read offer code. Copy the full code and try again.')}}
+async function peerAcceptAnswer(){try{if(!peerPC||peerRole!=='host')throw Error('Create an offer first');const answer=JSON.parse(decodeURIComponent(escape(atob($('peerAnswerIn').value.trim()))));await peerPC.setRemoteDescription(answer);peerStatus('Answer accepted. Connecting…')}catch(e){peerStatus('Could not read answer code. Check that you copied the full code.')}}
+function wirePeerChannel(ch){ch.onopen=()=>setPeerConnected();ch.onclose=()=>peerStatus('Peer disconnected');ch.onerror=()=>peerStatus('Connection error');ch.onmessage=e=>{let m;try{m=JSON.parse(e.data)}catch{return}peerHandleMessage(m)}}
+function peerSend(obj){if(peerChannel&&peerChannel.readyState==='open')peerChannel.send(JSON.stringify(obj));else toast('Not connected yet')}
+function peerHandleMessage(m){if(m.type==='question'){peerRound=m.round;$('peerGameArea').innerHTML=`<div class="live-q"><div><b>LIVE GAME · ${escapeHtml(m.modeLabel)}</b> · Question ${m.index}/${m.total}</div><h3>${escapeHtml(m.q)}</h3>${m.options.map((a,i)=>`<button onclick="peerAnswer(${i})">${String.fromCharCode(65+i)}. ${escapeHtml(a)}</button>`).join('')}<p>Score: <b>${m.score||0}</b></p></div>`}else if(m.type==='result'){$('peerGameArea').innerHTML=`<div class="live-q"><h3>${m.correct?'✅ Correct!':'❌ Not quite'}</h3><p>Answer: <b>${escapeHtml(m.answer)}</b></p><p>${escapeHtml(m.explanation||'Keep practising!')}</p><p class="live-score">Your score: ${m.score}</p><p>Waiting for next question…</p></div>`}else if(m.type==='end'){$('peerGameArea').innerHTML=`<div class="live-q"><h2>🏆 Game over!</h2><p>${escapeHtml(m.message)}</p><p class="live-score">Your score: ${m.score}</p></div>`}else if(m.type==='answer'&&peerRole==='host'){if(peerRound&&m.round===peerRound.id){const good=m.answer===peerRound.correctIndex;if(good)peerRound.guestScore+=peerRound.mode==='streak'?20:10;else if(peerRound.mode==='survival')peerRound.guestLives--;peerSend({type:'result',correct:good,answer:peerRound.q.a,explanation:peerRound.q.a,score:peerRound.guestScore});peerRound.guestAnswered=true;setTimeout(peerHostNext,900)}}else if(m.type==='hostscore'){$('peerGameArea').insertAdjacentHTML('beforeend',`<p>Host score: ${m.score}</p>`)} }
+function peerAnswer(i){if(!peerRound)return;peerSend({type:'answer',round:peerRound,answer:i});document.querySelectorAll('#peerGameArea .live-q button').forEach(b=>b.disabled=true)}
+function peerStartGame(){if(peerRole!=='host'||!peerChannel||peerChannel.readyState!=='open'){toast('The host must be connected to start');return}const subject=$('peerGameSubject').value,topic=$('peerGameTopic')?.value||'All',mode=$('peerGameMode').value;const deck=shuffle(availableCards().filter(c=>c.subject===subject&&topicFilterPass(c,topic)).slice()).slice(0,mode==='sprint'?20:10);if(!deck.length){toast('No questions available for that subject');return}peerRound={deck,index:0,hostScore:0,guestScore:0,guestLives:3,hostLives:3,mode,id:Date.now()};peerStatus('Live game running · '+subject);peerHostNext()}
+function peerHostNext(){if(!peerRound)return;const r=peerRound;if(r.mode==='sprint'&&r.index>=10){peerSend({type:'end',message:'Sprint finished!',score:r.guestScore});$('peerGameArea').innerHTML=`<div class="live-q"><h2>🏁 Sprint complete!</h2><p>Your score: ${r.hostScore}</p></div>`;peerRound=null;return}if(r.index>=r.deck.length||(r.mode==='survival'&&(r.guestLives<=0||r.hostLives<=0))){peerSend({type:'end',message:'Round complete!',score:r.guestScore});$('peerGameArea').innerHTML=`<div class="live-q"><h2>🏆 Round complete!</h2><p>Guest score: ${r.guestScore} · Host score: ${r.hostScore}</p><button class="btn" onclick="peerStartGame()">Play again</button></div>`;state.xp+=Math.floor(r.hostScore/2);save();renderStats();peerRound=null;return}const q=r.deck[r.index++],wrong=shuffle(availableCards().filter(c=>c.subject===q.subject&&c.a!==q.a).map(c=>c.a)).slice(0,3);let opts=shuffle([q.a,...wrong]);while(opts.length<4)opts.push('Review the key idea');const correctIndex=opts.indexOf(q.a);r.id=Date.now()+r.index;r.q=q;r.correctIndex=correctIndex;r.guestAnswered=false;peerRound=r;peerSend({type:'question',round:r.id,index:r.index,total:r.deck.length,modeLabel:r.mode,q:q.q,options:opts,score:r.guestScore});$('peerGameArea').innerHTML=`<div class="live-q"><b>HOST VIEW · ${escapeHtml(r.mode.toUpperCase())}</b> · Question ${r.index}/${r.deck.length}<h3>${escapeHtml(q.q)}</h3>${opts.map((a,i)=>`<button onclick="peerHostAnswer(${i})">${String.fromCharCode(65+i)}. ${escapeHtml(a)}</button>`).join('')}<p class="live-score">Your score: ${r.hostScore} · Friend: ${r.guestScore}</p><p>Friend lives: ${r.guestLives}</p></div>`;if(r.mode==='sprint'){clearTimeout(peerTimer);peerTimer=setTimeout(()=>{if(peerRound===r){peerSend({type:'end',message:'Time is up!',score:r.guestScore});$('peerGameArea').innerHTML='<div class="live-q"><h2>⏱ Time is up!</h2></div>';peerRound=null}},60000)}}
+function peerHostAnswer(i){const r=peerRound;if(!r||r.hostAnswered)return;r.hostAnswered=true;const good=i===r.correctIndex;if(good)r.hostScore+=r.mode==='streak'?20:10;else if(r.mode==='survival')r.hostLives--;peerSend({type:'hostscore',score:r.hostScore});document.querySelectorAll('#peerGameArea .live-q button').forEach(b=>b.disabled=true);setTimeout(()=>{if(peerRound===r){r.hostAnswered=false;peerHostNext()}},900)}
+function copyField(id){const el=$(id);if(!el||!el.value){toast('Create the code first');return}if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(el.value).then(()=>toast('Code copied')).catch(()=>{el.select();document.execCommand('copy');toast('Code copied')});else{el.select();document.execCommand('copy');toast('Code selected/copied where supported')}}
+function resetPeer(clear=true){if(peerTimer)clearTimeout(peerTimer);peerTimer=null;peerRound=null;if(peerPC){try{peerPC.close()}catch(e){}}peerPC=null;peerChannel=null;peerRole=null;if(clear){['peerOfferOut','peerAnswerIn','peerOfferIn','peerAnswerOut'].forEach(id=>{if($(id))$(id).value=''});$('peerGameArea').innerHTML='';$('peerGameControls').style.display='none';peerStatus('Not connected')}}
+
+
+// Easy live rooms: Trystero discovers peers through public Nostr relays, then
+// question/answer traffic is sent browser-to-browser over WebRTC. No app server.
+let easyRoom=null,easyAction=null,easyRole=null,easyCode='',easyPeerNames=new Map(),easyScores={},easyLives={},easyStreaks={},easyRound=null,easyNextTimer=null,easySprintTimer=null,easySelfId='local',easyHostPeerId=null,easyJoined=false,easyWaitTimer=null;
+function updateEasyTopics(){const sub=$('easyGameSubject')?.value||SUBJECTS[0].name;updateTopicOptions('easyGameTopic',sub,true)}
+function updatePeerGameTopics(){updateTopicOptions('peerGameTopic',$('peerGameSubject')?.value||SUBJECTS[0].name,true)}
+function easyUser(){return {username:state.profile?.username||state.profile?.displayName||'Player',avatar:state.profile?.avatar||'🧑‍🎓'}}
+function easySetStatus(msg){const el=$('easyRoomStatus');if(el)el.innerHTML='<b>Status:</b> '+escapeHtml(msg)}
+function easyRoomCodeMake(){const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';let c='';for(let i=0;i<6;i++)c+=chars[Math.floor(Math.random()*chars.length)];return c}
+function easyRenderPlayers(){const el=$('easyPlayerList');if(!el)return;const me=easyUser();const mineId=easyRole==='host'?'local':easySelfId;const players=[{id:mineId,...me,score:easyScores[mineId]||0,lives:easyLives[mineId]??3,local:true},...[...easyPeerNames.entries()].map(([id,p])=>({id,...p,score:easyScores[id]??(id===easyHostPeerId?(easyScores.local||0):0),lives:easyLives[id]??(id===easyHostPeerId?(easyLives.local??3):3)}))];el.innerHTML=players.map(p=>`<span class="easy-player-pill ${p.local?'me':''}">${escapeHtml(p.avatar||'🧑‍🎓')} ${escapeHtml(p.username||'Player')}${p.local?' (you)':''} · ${p.score} pts${easyRound?.mode==='survival'?' · '+p.lives+' ♥':''}</span>`).join('');const readyPeers=[...easyPeerNames.values()].filter(p=>p.username&&p.username!=='Connecting…').length;const start=$('easyStartButton');if(start)start.disabled=easyRole!=='host'||readyPeers<1||!!easyRound}
+function easyBroadcast(msg){if(easyAction&&easyRoom){try{easyAction.send(msg)}catch(e){easySetStatus('Could not send game update. Check your connection.')}}}
+async function easyCreateRoom(){if(easyRoom)await easyLeaveRoom(false);const code=easyRoomCodeMake();$('easyRoomCode').value=code;await easyConnectRoom(code,'host')}
+async function easyJoinRoom(){const code=($('easyRoomCode').value||'').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,8);if(code.length<4){toast('Enter the room code from your friend');$('easyRoomCode').focus();return}await easyConnectRoom(code,'guest')}
+async function easyConnectRoom(code,role){
+ if(easyRoom)await easyLeaveRoom(false);
+ easyCode=code;easyRole=role;easyPeerNames.clear();easyScores={local:0};easyLives={local:3};easyStreaks={};easyRound=null;easyHostPeerId=null;easyJoined=false;
+ $('easyRoomCode').value=code;$('easyRoomPanel').style.display='block';$('easyGameArea').innerHTML='';easyRenderPlayers();easySetStatus('Loading room connection…');
+ if(!window.isSecureContext){easySetStatus('Your browser requires a secure context for live rooms. Open this page from an HTTPS website or localhost, then try again.');return}
+ try{
+  const mod=await import('https://esm.run/trystero');
+  if(!mod||typeof mod.joinRoom!=='function')throw new Error('Could not load the room connection library. Check your internet connection.');
+  easySelfId=mod.selfId||'local';
+  easyRoom=mod.joinRoom({appId:'com.revisionquest98.revision-arena.v1',password:'rq98-'+code},code);$('easyRoomCode').readOnly=true;
+  easyAction=easyRoom.makeAction('revision-quest-game-v1');
+  easyAction.onMessage=(m,meta)=>easyHandleMessage(m,meta?.peerId);
+  easyRoom.onPeerJoin=peerId=>{
+    easyPeerNames.set(peerId,easyPeerNames.get(peerId)||{username:'Connecting…',avatar:'🧑‍🎓'});
+    easyRenderPlayers();easySetStatus('A player is connecting… room code '+easyCode);
+    easyAction.send({type:'hello',username:easyUser().username,avatar:easyUser().avatar,role:easyRole,roomCode:easyCode},{target:peerId});
+    if(easyRole==='host'&&easyRound)setTimeout(()=>easySendCurrentQuestion(peerId),800);
+    if(easyRole==='host')easyBroadcastLobby();
+  };
+  easyRoom.onPeerLeave=peerId=>{const n=easyPeerNames.get(peerId)?.username||'A player';easyPeerNames.delete(peerId);easyRenderPlayers();easySetStatus(n+' left the room.');if(easyRound&&easyRole==='host')easyCheckAdvanceSoon()};
+  $('easyStartButton').disabled=true;
+  easySetStatus((role==='host'?'Room created':'You joined room')+' · code '+code+'. Waiting for friends… Share the code above.');
+  if(easyWaitTimer)clearTimeout(easyWaitTimer);
+  easyWaitTimer=setTimeout(()=>{if(easyRoom&&!easyPeerNames.size)easySetStatus('Still waiting. Ask your friend to open the same website and enter '+code+'. Both devices need internet access.');},8000);
+  toast(role==='host'?'Room code created! Share it with friends.':'Joining room '+code+'…');
+ }catch(e){if($('easyRoomCode'))$('easyRoomCode').readOnly=false;easySetStatus('Could not connect: '+(e?.message||'unknown error')+'. Check internet access and try again.');}
+}
+function easyBroadcastLobby(){if(!easyAction)return;easyBroadcast({type:'lobby',host:easyUser().username,code:easyCode,players:[{id:easySelfId,...easyUser()},...[...easyPeerNames.entries()].map(([id,p])=>({id,...p}))]})}
+function easyHandleMessage(m,peerId){if(!m||!peerId)return;
+ if(m.type==='hello'){
+  if(m.roomCode&&m.roomCode!==easyCode)return;
+  easyPeerNames.set(peerId,{username:String(m.username||'Player').slice(0,24),avatar:String(m.avatar||'🧑‍🎓').slice(0,8)});
+  if(m.role==='host')easyHostPeerId=peerId;
+  easyRenderPlayers();easySetStatus(easyPeerNames.size+' friend(s) connected · room '+easyCode);
+  easyAction.send({type:'welcome',username:easyUser().username,avatar:easyUser().avatar,role:easyRole,code:easyCode},{target:peerId});
+  if(easyRole==='host')easyBroadcastLobby();
+  if(easyRole==='host'&&easyRound)setTimeout(()=>easySendCurrentQuestion(peerId),500);
+ }else if(m.type==='welcome'){
+  easyPeerNames.set(peerId,{username:String(m.username||'Player').slice(0,24),avatar:String(m.avatar||'🧑‍🎓').slice(0,8)});
+  if(m.role==='host')easyHostPeerId=peerId;
+  easyRenderPlayers();easySetStatus('Connected · '+easyPeerNames.size+' friend(s) here · room '+easyCode);
+ }else if(m.type==='lobby'){
+  if(m.host)easyHostPeerId=peerId;
+  (m.players||[]).forEach(p=>{if(p.id!==easySelfId&&p.id!=='local')easyPeerNames.set(p.id,{username:String(p.username||'Player').slice(0,24),avatar:String(p.avatar||'🧑‍🎓').slice(0,8)})});
+  easyRenderPlayers();if(!easyRound)easySetStatus('Lobby ready · '+easyPeerNames.size+' friend(s) connected · room '+easyCode);
+ }else if(m.type==='question'){
+  if(m.hostPeerId)easyHostPeerId=m.hostPeerId;
+  easyRound={id:m.id,subject:m.subject,topic:m.topic,mode:m.mode,index:m.index,total:m.total,question:m.question,deadline:m.deadline,answers:{},myAnswered:false};
+  easyRenderQuestion(m.question,false);easySetStatus('Live game · '+m.subject+' / '+m.topic+' · question '+m.index+' of '+m.total);
+ }else if(m.type==='answer'&&easyRole==='host'){
+  if(!easyRound||m.questionId!==easyRound.id||easyRound.answers[peerId])return;
+  easyProcessAnswer(peerId,Number(m.choice));
+ }else if(m.type==='result'){
+  if(!easyRound||m.questionId!==easyRound.id)return;
+  easyScores=m.scores||easyScores;easyLives=m.lives||easyLives;easyStreaks=m.streaks||easyStreaks;
+  const myResult=m.playerId===easySelfId?m:(m.playerId===easyHostPeerId&&easyRole==='host'?m:null);
+  if(m.playerId===easySelfId){const fb=$('easyAnswerFeedback');if(fb)fb.textContent=m.correct?'✅ Correct! +'+m.points+' points. '+m.explanation:'❌ Not quite. Answer: '+m.answer;}
+  easyRenderPlayers();
+ }else if(m.type==='scoreboard'){
+  easyScores=m.scores||easyScores;easyLives=m.lives||easyLives;easyRenderPlayers();
+ }else if(m.type==='next'){
+  if(easyRole!=='host'){easyRound={id:m.id,subject:m.subject,topic:m.topic,mode:m.mode,index:m.index,total:m.total,question:m.question,deadline:m.deadline,answers:{},myAnswered:false};easyRenderQuestion(m.question,false);easySetStatus('Live game · '+m.subject+' / '+m.topic+' · question '+m.index+' of '+m.total)}
+ }else if(m.type==='end'){
+  easyScores=m.scores||easyScores;easyLives=m.lives||easyLives;easyRenderPlayers();if(easySprintTimer)clearTimeout(easySprintTimer);easySprintTimer=null;
+  const mine=easyScores[easyRole==='host'?'local':easySelfId]||0;
+  $('easyGameArea').innerHTML=`<div class="easy-game-card"><h2>🏆 Round complete!</h2><p>${escapeHtml(m.message||'Great revision session!')}</p><h3>Your score: ${mine} points</h3>${easyScoreboardHtml()}<button class="btn" onclick="easyStartGame()" ${easyRole==='host'?'':'disabled'}>Play again</button></div>`;
+  if(!easyRound?.awarded){state.xp+=Math.max(0,Math.floor(mine/2));state.answered+=m.total||0;updateStreak();save();renderStats();renderProgress();}
+  easyRound=null;easyRenderPlayers();easySetStatus('Game finished · room '+easyCode+'. The host can start another round.');
+ }
+}
+function easyBuildQuestion(){const r=easyRound;if(!r)return null;const c=r.deck[r.index];if(!c)return null;let distractors=shuffle(availableCards().filter(x=>x.subject===c.subject&&x.id!==c.id&&topicFilterPass(x,r.topic)).map(x=>x.a).filter(a=>a!==c.a));const answers=[c.a];for(const a of distractors){if(!answers.includes(a))answers.push(a);if(answers.length===4)break;}const fallback=['Review the definition and examples.','This is a different concept.','It does not describe the process.'];for(const a of fallback){if(answers.length>=4)break;if(!answers.includes(a))answers.push(a)}const options=shuffle(answers).slice(0,4);return {q:c.q,options,subject:c.subject,topic:cardTopic(c),correctIndex:options.indexOf(c.a),explanation:c.a}}
+function easyStartGame(){if(easyRole!=='host'||!easyRoom||!easyAction){toast('Create a room first');return}if(easyPeerNames.size<1){toast('Wait for at least one friend to connect');return}const subject=$('easyGameSubject').value,topic=$('easyGameTopic').value||'All',mode=$('easyGameMode').value;const deck=shuffle(uniquePracticeCards(availableCards().filter(c=>c.subject===subject&&topicFilterPass(c,topic))));if(!deck.length){toast('No questions found in that topic. Add some in Set Builder.');return}const total=mode==='sprint'?deck.length:Math.min(10,deck.length);easyRound={id:'round-'+Date.now(),deck:deck.slice(0,total),index:-1,total,subject,topic,mode,answers:{},question:null,hostAnswered:false,hostPeerId:easySelfId,awarded:false};easyScores={local:0};easyLives={local:3};easyStreaks={local:0};easyPeerNames.forEach((v,id)=>{easyScores[id]=0;easyLives[id]=3;easyStreaks[id]=0});easySetStatus('Starting '+mode+' · '+subject+' / '+topic+' …');easyRenderPlayers();easyNextQuestion();if(mode==='sprint'){if(easySprintTimer)clearTimeout(easySprintTimer);easySprintTimer=setTimeout(()=>easyEndGame('⏱ Time is up! Sprint complete.'),60000)}}
+function easyNextQuestion(){if(easyRole!=='host'||!easyRound)return;const r=easyRound;if(easyNextTimer)clearTimeout(easyNextTimer);easyNextTimer=null;if(r.index+1>=r.deck.length){easyEndGame('You completed all '+r.total+' questions!');return}r.index++;r.id='q-'+Date.now()+'-'+r.index;r.answers={};r.question=easyBuildQuestion();r.deadline=Date.now()+15000;r.hostAnswered=false;r.myAnswered=false;r.question.correctIndex=r.question.correctIndex;const msg={type:'question',id:r.id,subject:r.subject,topic:r.question.topic||r.topic,mode:r.mode,index:r.index+1,total:r.total,question:{q:r.question.q,options:r.question.options,subject:r.subject,topic:r.question.topic||r.topic},deadline:r.deadline,hostPeerId:easySelfId};easyBroadcast(msg);easyRenderQuestion(r.question,true);easySetStatus('Question '+(r.index+1)+' / '+r.total+' · '+r.subject+' / '+(r.question.topic||r.topic));easyRenderPlayers();easyNextTimer=setTimeout(()=>{if(easyRound===r)easyAdvanceAfterQuestion()},15000)}
+function easySendCurrentQuestion(peerId){if(!easyRound||!easyRound.question||!easyAction)return;const r=easyRound;easyAction.send({type:'question',id:r.id,subject:r.subject,topic:r.question.topic||r.topic,mode:r.mode,index:r.index+1,total:r.total,question:{q:r.question.q,options:r.question.options,subject:r.subject,topic:r.question.topic||r.topic},deadline:r.deadline,hostPeerId:easySelfId},{target:peerId})}
+function easyRenderQuestion(q,isHost){if(!q||!$('easyGameArea'))return;const r=easyRound;const myKey=easyRole==='host'?'local':easySelfId;const eliminated=r?.mode==='survival'&&(easyLives[myKey]??3)<=0;const already=!!r?.myAnswered||eliminated;const isOver=easyRole==='guest'&&!easyHostPeerId;const opts=(q.options||[]).map((a,i)=>`<button class="easy-game-answer" ${already?'disabled':''} onclick="easySubmitAnswer(${i})">${String.fromCharCode(65+i)}. ${escapeHtml(a)}</button>`).join('');$('easyGameArea').innerHTML=`<div class="easy-game-card"><div><b>LIVE REVISION BATTLE</b> · ${escapeHtml((r?.mode||'classic').toUpperCase())} · Question ${r?.index+1||1}/${r?.total||1}</div><p>${escapeHtml(q.subject||'')} · ${escapeHtml(q.topic||'')}</p><h3>${escapeHtml(q.q)}</h3><div class="easy-game-answers">${opts}</div><p id="easyAnswerFeedback" class="feedback">${eliminated?'💔 You are out of lives for this round. Keep watching the leaderboard.':isHost?'Choose an answer.':'Pick your answer — the host checks it.'}</p><div class="quiz-footer"><span class="pill">⚡ +10 points · ${r?.mode==='streak'?'+20 for streaks':''}</span>${isHost?'<button class="btn secondary" onclick="easyHostSkipQuestion()">Skip question →</button>':''}</div></div>`}
+function easySubmitAnswer(choice){if(!easyRound||easyRound.myAnswered)return;const myKey=easyRole==='host'?'local':easySelfId;if(easyRound.mode==='survival'&&(easyLives[myKey]??3)<=0){toast('You are out of lives this round');return}const r=easyRound;r.myAnswered=true;document.querySelectorAll('#easyGameArea .easy-game-answer').forEach(b=>b.disabled=true);if(easyRole==='host'){easyProcessAnswer('local',choice)}else{if(!easyAction||!easyHostPeerId){toast('Still connecting to the host — try again in a moment');r.myAnswered=false;document.querySelectorAll('#easyGameArea .easy-game-answer').forEach(b=>b.disabled=false);return}easyAction.send({type:'answer',questionId:r.id,choice},{target:easyHostPeerId});const fb=$('easyAnswerFeedback');if(fb)fb.textContent='Answer sent! Waiting for the host to check it…'}}
+function easyProcessAnswer(playerId,choice){const r=easyRound;if(!r||r.answers[playerId])return;const correct=Number(choice)===r.question.correctIndex;r.answers[playerId]=true;const streakKey=playerId;const oldStreak=easyStreaks[streakKey]||0;const points=correct?(r.mode==='streak'?20+(oldStreak>=2?10:0):10):0;easyScores[streakKey]=(easyScores[streakKey]||0)+points;easyStreaks[streakKey]=correct?oldStreak+1:0;if(r.mode==='survival'&&!correct)easyLives[streakKey]=Math.max(0,(easyLives[streakKey]??3)-1);if(playerId==='local'){r.hostAnswered=true;const fb=$('easyAnswerFeedback');if(fb)fb.textContent=correct?'✅ Correct! +'+points+' points. '+r.question.explanation:'❌ Not quite. Answer: '+r.question.options[r.question.correctIndex];document.querySelectorAll('#easyGameArea .easy-game-answer').forEach((b,i)=>{b.disabled=true;if(i===r.question.correctIndex)b.classList.add('correct');else if(i===Number(choice))b.classList.add('wrong')})}const person=playerId==='local'?easyUser().username:(easyPeerNames.get(playerId)?.username||'Player');const result={type:'result',questionId:r.id,playerId,player:person,correct,points,answer:r.question.options[r.question.correctIndex],explanation:r.question.explanation,scores:easyScores,lives:easyLives,streaks:easyStreaks};easyBroadcast(result);if(playerId!=='local'){const fb=$('easyAnswerFeedback');if(easyRole==='host'&&fb)fb.textContent=person+(correct?' got it right!':' needs another go.');}easyRenderPlayers();easyBroadcast({type:'scoreboard',scores:easyScores,lives:easyLives});if(easyRole==='host')easyCheckAdvanceSoon()}
+function easyCheckAdvanceSoon(){if(easyRole!=='host'||!easyRound)return;const r=easyRound;const active=['local',...easyPeerNames.keys()].filter(id=>r.mode!=='survival'||(easyLives[id]??3)>0);const answered=active.filter(id=>r.answers[id]).length;if(active.length===0){easyEndGame('Everyone ran out of lives!');return}if(answered>=active.length){if(easyNextTimer)clearTimeout(easyNextTimer);easyNextTimer=setTimeout(()=>{if(easyRound===r)easyAdvanceAfterQuestion()},1400)}}
+function easyAdvanceAfterQuestion(){if(easyRole!=='host'||!easyRound)return;if(easyNextTimer)clearTimeout(easyNextTimer);easyNextTimer=null;if(easyRound.mode==='survival'&&Object.entries(easyLives).filter(([id,l])=>id==='local'||easyPeerNames.has(id)).every(([id,l])=>l<=0)){easyEndGame('Everyone ran out of lives!');return}easyNextQuestion()}
+function easyHostSkipQuestion(){if(easyRole==='host'&&easyRound)easyAdvanceAfterQuestion()}
+function easyScoreboardHtml(){let entries;if(easyRole==='host'){entries=[{id:'local',name:easyUser().username,score:easyScores.local||0},...[...easyPeerNames.entries()].map(([id,p])=>({id,name:p.username||'Player',score:easyScores[id]||0}))]}else{entries=[{id:easySelfId,name:easyUser().username,score:easyScores[easySelfId]||0},...[...easyPeerNames.entries()].map(([id,p])=>({id,name:p.username||'Player',score:easyScores[id]||(id===easyHostPeerId?(easyScores.local||0):0)}))]}entries.sort((a,b)=>b.score-a.score);return `<table class="easy-scoreboard"><thead><tr><th>#</th><th>Player</th><th>Points</th></tr></thead><tbody>${entries.map((p,i)=>`<tr><td>${i+1}</td><td>${escapeHtml(p.name)}</td><td>${p.score}</td></tr>`).join('')}</tbody></table>`}
+function easyEndGame(message){if(!easyRound)return;const r=easyRound;if(easyNextTimer)clearTimeout(easyNextTimer);easyNextTimer=null;if(easySprintTimer)clearTimeout(easySprintTimer);easySprintTimer=null;easyBroadcast({type:'end',message,scores:easyScores,lives:easyLives,total:r.index+1});const mine=easyScores[easyRole==='host'?'local':easySelfId]||0;state.xp+=Math.floor(mine/2);state.answered+=r.index+1;updateStreak();save();renderStats();renderProgress();$('easyGameArea').innerHTML=`<div class="easy-game-card"><h2>🏆 Round complete!</h2><p>${escapeHtml(message)}</p><h3>Your score: ${mine} points</h3>${easyScoreboardHtml()}<button class="btn" onclick="easyStartGame()" ${easyRole==='host'?'':'disabled'}>Play again</button></div>`;r.awarded=true;easyRound=null;easyRenderPlayers();easySetStatus('Game finished · room '+easyCode+'. Host can start another round.')}
+function easyCopyRoomCode(){const value=($('easyRoomCode').value||'').trim();if(!value){toast('Create a room or enter a code first');return}const text=value.toUpperCase();if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(text).then(()=>toast('Room code copied! Send it to your friends.')).catch(()=>{ $('easyRoomCode').select();document.execCommand('copy');toast('Copy the selected room code and send it to friends.')});else{ $('easyRoomCode').select();document.execCommand('copy');toast('Copy the selected room code and send it to friends.')}}
+async function easyLeaveRoom(clearCode=true){if(easyNextTimer)clearTimeout(easyNextTimer);if(easySprintTimer)clearTimeout(easySprintTimer);if(easyWaitTimer)clearTimeout(easyWaitTimer);easyNextTimer=easySprintTimer=easyWaitTimer=null;try{if(easyRoom&&typeof easyRoom.leave==='function')await easyRoom.leave()}catch(e){}easyRoom=null;easyAction=null;easyRole=null;easyRound=null;easyPeerNames.clear();easyScores={};easyLives={};easyStreaks={};easyHostPeerId=null;easyJoined=false;if($('easyGameArea'))$('easyGameArea').innerHTML='';if($('easyRoomPanel'))$('easyRoomPanel').style.display='none';if(clearCode&&$('easyRoomCode'))$('easyRoomCode').value='';if($('easyPlayerList'))$('easyPlayerList').innerHTML='';if($('easyStartButton'))$('easyStartButton').disabled=true;if($('easyRoomStatus'))easySetStatus('Not connected. Create a room or enter a friend’s code.');}
+
+</script>
+
+<script>
+// Cloudflare production integration. If /api/health exists, friends and live rooms use
+// the Cloudflare API/D1/DO stack. Opening this HTML by itself remains a local demo.
+let rqCloudEnabled=false, rqCloudUser=null, rqAuthMode='login', rqCloudSyncTimer=null, rqCloudSyncBusy=false, rqCloudProfileKey='';
+const rqLegacySave=save;
+const rqLegacyRenderSocial=renderSocial;
+const rqLegacyRemoveFriend=removeFriend;
+const rqLegacyUpdateFriendProfile=updateFriendProfile;
+const rqLegacyShowFriendInfo=showFriendInfo;
+const rqLegacyCreateRoom=easyCreateRoom;
+const rqLegacyJoinRoom=easyJoinRoom;
+const rqLegacyLeaveRoom=easyLeaveRoom;
+let rqCloudWebSocket=null;
+async function rqApi(path, options={}){
+ const headers=new Headers(options.headers||{}); let body=options.body;
+ if(body!==undefined && !(body instanceof FormData)){headers.set('content-type','application/json');body=JSON.stringify(body)}
+ const response=await fetch(path,{method:options.method||'GET',headers,body,credentials:'same-origin',cache:'no-store'});
+ let data={};try{data=await response.json()}catch{}
+ if(!response.ok)throw new Error(data.error||('Request failed ('+response.status+')'));
+ return data;
+}
+function rqSetCloudStatus(message,isGood=false){const el=$('rqCloudStatus');if(el){el.textContent=message;el.style.background=isGood?'#d8f3d8':'#fff7ce';el.style.border='1px solid #777';el.style.padding='9px';el.style.color='#111'}}
+function rqSyncLocalProfileFromCloud(user){
+ const before={xp:Number(state.xp)||0,answered:Number(state.answered)||0,correct:Number(state.correct)||0,streak:Number(state.streak)||0};
+ state.profile={...(state.profile||{}),username:user.username,displayName:user.displayName||user.username,avatar:user.avatar||'🧑‍🎓',year:user.year||state.preferences.year||'Year 11',board:user.board||'Mixed / not sure',goal:String(user.goal||15),createdAt:state.profile?.createdAt||user.createdAt||new Date().toISOString()};
+ state.xp=Math.max(before.xp,Number(user.xp)||0);state.answered=Math.max(before.answered,Number(user.answered)||0);state.correct=Math.min(state.answered,Math.max(before.correct,Number(user.correct)||0));state.streak=Math.max(before.streak,Number(user.streak)||0);
+ state.preferences={...(state.preferences||{}),year:state.profile.year,board:state.profile.board,goal:state.profile.goal};
+ rqLegacySave();updateProfileDisplay();renderStats();renderProgress();
+}
+function rqCloudRenderAccount(){
+ const form=$('rqCloudAuthForm'),signed=$('rqCloudSignedIn'),logout=$('rqCloudLogout'),displayWrap=$('rqCloudDisplayNameWrap');
+ if(!form)return;
+ form.style.display=rqCloudUser?'none':'grid';signed.style.display=rqCloudUser?'block':'none';logout.style.display=rqCloudUser?'inline-block':'none';
+ if(rqCloudUser){signed.innerHTML=`<b>Signed in as @${escapeHtml(rqCloudUser.username)}</b><br>☁ Account stored in Cloudflare · Level ${Number(rqCloudUser.level)||Math.floor((Number(rqCloudUser.xp)||0)/100)+1} · ${(Number(rqCloudUser.xp)||0).toLocaleString()} XP<br><small>Friends and stats sync across devices when you sign in to this account.</small>`}
+ if(displayWrap)displayWrap.style.display=rqAuthMode==='register'&&!rqCloudUser?'grid':'none';
+ $('rqCloudAuthSubmit').textContent=rqAuthMode==='register'?'Create online account':'Sign in';
+ $('rqCloudModeToggle').textContent=rqAuthMode==='register'?'Already have an account? Sign in':'Need an account? Create one';
+ $('rqCloudPassword').autocomplete=rqAuthMode==='register'?'new-password':'current-password';
+ $('rqCloudPassword').minLength=rqAuthMode==='register'?10:1;
+}
+function rqSyncProgressSoon(){if(!rqCloudEnabled||!rqCloudUser||rqCloudSyncBusy)return;if(rqCloudSyncTimer)clearTimeout(rqCloudSyncTimer);rqCloudSyncTimer=setTimeout(rqSyncProgress,1600)}
+save=function(){rqLegacySave();rqSyncProgressSoon()};
+async function rqSyncProgress(){if(!rqCloudEnabled||!rqCloudUser||rqCloudSyncBusy)return;rqCloudSyncBusy=true;try{const r=await rqApi('/api/progress',{method:'POST',body:{xp:Number(state.xp)||0,answered:Number(state.answered)||0,correct:Number(state.correct)||0,streak:Number(state.streak)||0,focusSubject:(state.preferences?.subjects||[])[0]||''}});if(r.user)rqCloudUser={...rqCloudUser,...r.user};const p=state.profile||{};const profileBody={displayName:p.displayName||p.username||rqCloudUser.username,avatar:p.avatar||'🧑‍🎓',year:state.preferences?.year||p.year||'Year 11',board:state.preferences?.board||p.board||'Mixed / not sure',goal:state.preferences?.goal||p.goal||15,focusSubject:(state.preferences?.subjects||[])[0]||''};const profileKey=JSON.stringify(profileBody);if(profileKey!==rqCloudProfileKey){const synced=await rqApi('/api/profile',{method:'PATCH',body:profileBody});if(synced.user)rqCloudUser={...rqCloudUser,...synced.user};rqCloudProfileKey=profileKey}}catch(e){/* Offline progress remains saved locally; it will retry after the next change. */}finally{rqCloudSyncBusy=false}}
+async function rqRefreshCloud(){
+ try{
+  const health=await rqApi('/api/health');rqCloudEnabled=!!health.ok;
+  const friendModeNote=$('rqFriendModeNote');if(friendModeNote)friendModeNote.textContent='Cloudflare is connected: accepted friends, their revision stats, and friend requests sync across devices.';
+  const auth=await rqApi('/api/auth/me');rqCloudUser=auth.user||null;
+  if(rqCloudUser){rqSyncLocalProfileFromCloud(rqCloudUser);rqSetCloudStatus('Cloudflare connected · D1 accounts and friend requests are online; live rooms use WebSockets.',true);rqCloudRenderAccount();await rqRefreshSocial();rqSyncProgressSoon()}
+  else {rqSetCloudStatus('Cloudflare backend is reachable. Sign in or create an online account to use synced friends and live rooms.',true);rqCloudRenderAccount();await rqRefreshSocial()}
+ }catch(e){rqCloudEnabled=false;rqCloudUser=null;rqCloudRenderAccount();await rqRefreshSocial();const friendModeNote=$('rqFriendModeNote');if(friendModeNote)friendModeNote.textContent='Cloudflare is not connected here. Friends added here stay on this device; deploy the Worker project to enable online accounts, synced friends and live rooms.';rqSetCloudStatus('Cloudflare backend not detected on this address. Local revision still works; deploy the Worker project to turn on real accounts, synced friends and server-hosted live rooms.');}
+}
+$('rqCloudModeToggle').addEventListener('click',()=>{rqAuthMode=rqAuthMode==='login'?'register':'login';rqCloudRenderAccount()});
+$('rqCloudAuthForm').addEventListener('submit',async e=>{
+ e.preventDefault();if(!rqCloudEnabled){toast('Cloudflare is not connected yet. Deploy the project first.');return}
+ const username=$('rqCloudUsername').value.trim(),password=$('rqCloudPassword').value;
+ try{
+  $('rqCloudAuthSubmit').disabled=true;
+  let result;
+  if(rqAuthMode==='register'){
+   const local=state.profile||{};
+   result=await rqApi('/api/auth/register',{method:'POST',body:{username,password,displayName:$('rqCloudDisplayName').value.trim()||local.displayName||username,avatar:local.avatar||'🧑‍🎓',year:local.year||state.preferences.year||'Year 11',board:local.board||state.preferences.board||'Mixed / not sure',goal:local.goal||state.preferences.goal||'15'}});
+  }else result=await rqApi('/api/auth/login',{method:'POST',body:{username,password}});
+  rqCloudUser=result.user;rqSyncLocalProfileFromCloud(rqCloudUser);rqCloudRenderAccount();rqSetCloudStatus('Signed in. Your friends, profile and revision stats are now linked to Cloudflare.',true);$('rqCloudPassword').value='';toast(rqAuthMode==='register'?'Online account created!':'Signed in to your online account!');await rqRefreshSocial();rqSyncProgressSoon();
+ }catch(err){rqSetCloudStatus(err.message);toast(err.message)}finally{$('rqCloudAuthSubmit').disabled=false}
+});
+$('rqCloudLogout').addEventListener('click',async()=>{try{await rqApi('/api/auth/logout',{method:'POST',body:{}})}catch{}rqCloudUser=null;rqCloudRenderAccount();rqSetCloudStatus('Signed out. Your local revision data is still saved on this device.');await rqRefreshSocial()});
+async function rqRefreshSocial(){
+ if(!rqCloudEnabled||!rqCloudUser){state.friends=(state.friends||[]).filter(f=>!f.cloudFriendId&&!f.cloud);try{rqLegacySave()}catch{}rqLegacyRenderSocial();rqCloudRenderRequests([]);return}
+ try{
+  const [friendsResult,requestsResult]=await Promise.all([rqApi('/api/friends'),rqApi('/api/friends/requests')]);
+  const locals=(state.friends||[]).filter(f=>!f.cloudFriendId&&!f.cloud);
+  const onlineFriends=(friendsResult.friends||[]).map(f=>({username:f.username,displayName:f.displayName,avatar:f.avatar,friendCode:'Cloud friend',cloud:true,cloudFriendId:f.friendshipId,online:!!f.online,lastSeenAt:f.lastSeenAt,profileStats:{level:f.level,xp:f.xp,streak:f.streak,accuracy:f.accuracy,answered:f.answered,correct:f.correct,subject:f.focusSubject,board:f.board,online:!!f.online}}));
+  const cloudNames=new Set(onlineFriends.map(f=>f.username.toLowerCase()));state.friends=[...locals.filter(f=>!cloudNames.has(String(f.username||'').toLowerCase())),...onlineFriends];
+  try{rqLegacySave()}catch{}rqLegacyRenderSocial();rqCloudRenderRequests(requestsResult.requests||[]);
+ }catch(e){rqSetCloudStatus('Online friends could not refresh: '+e.message);}
+}
+function rqCloudRenderRequests(requests){const el=$('rqFriendRequests');if(!el)return;if(!rqCloudUser){el.innerHTML='<p class="notice" style="color:#333">Sign in to send and accept real friend requests across devices.</p>';return}if(!requests.length){el.innerHTML='<p class="notice" style="color:#333">No incoming friend requests.</p>';return}el.innerHTML='<div class="window-title">Incoming friend requests</div>'+requests.map(r=>`<div class="retro-row"><div class="grow"><b>${escapeHtml(r.user.avatar||'🧑‍🎓')} ${escapeHtml(r.user.displayName)} (@${escapeHtml(r.user.username)})</b><small>Level ${r.user.level} · ${Number(r.user.xp||0).toLocaleString()} XP</small></div><button class="mini-btn" onclick="rqRespondFriend('${escapeHtml(r.requestId)}',true)">Accept</button><button class="mini-btn" onclick="rqRespondFriend('${escapeHtml(r.requestId)}',false)">Decline</button></div>`).join('')}
+async function rqRespondFriend(requestId,accept){try{await rqApi('/api/friends/respond',{method:'POST',body:{requestId,accept}});toast(accept?'Friend request accepted!':'Friend request declined.');await rqRefreshSocial()}catch(e){toast(e.message)}}
+// Intercept the original local-only Add Friend handler when the live Cloudflare API is active.
+$('friendForm').addEventListener('submit',async e=>{
+ if(!rqCloudEnabled)return;
+ e.preventDefault();e.stopImmediatePropagation();
+ if(!rqCloudUser){toast('Sign in to your Cloud account to add real friends.');$('rqCloudUsername').focus();return}
+ const input=$('friendUsername'),username=input.value.trim().replace(/^@/,'');if(!username)return;
+ try{const r=await rqApi('/api/friends/request',{method:'POST',body:{username}});input.value='';toast(r.message||'Friend request sent!');await rqRefreshSocial()}catch(err){toast(err.message)}
+},true);
+removeFriend=async function(i){const f=state.friends[i];if(!f)return;if(f.cloudFriendId){if(!confirm('Remove @'+f.username+' from your online friends?'))return;try{await rqApi('/api/friends/'+encodeURIComponent(f.cloudFriendId),{method:'DELETE'});toast('Friend removed');await rqRefreshSocial()}catch(e){toast(e.message)}return}rqLegacyRemoveFriend(i)};
+updateFriendProfile=async function(i){const f=state.friends[i];if(f?.cloudFriendId){await rqRefreshSocial();toast('Friend profile refreshed from Cloudflare');return}rqLegacyUpdateFriendProfile(i)};
+showFriendInfo=function(i){const f=state.friends[i];if(f?.cloudFriendId){const p=f.profileStats||{};alert(`${f.displayName} (@${f.username})\n${f.online?'🟢 Active recently':'⚪ Not recently active'}\nLevel ${p.level||1} · ${(p.xp||0).toLocaleString()} XP\nStreak: ${p.streak||0} days\nAccuracy: ${p.accuracy||0}%\nQuestions answered: ${p.answered||0}\nFocus: ${p.subject||'Not set'}\nExam board: ${p.board||'Not set'}\n\nThese stats are stored on Cloudflare and refresh when the friends list updates.`);return}rqLegacyShowFriendInfo(i)};
+// Poll presence/profile summaries gently while the friends page is in use.
+setInterval(()=>{if(rqCloudEnabled&&rqCloudUser&&document.visibilityState==='visible')rqRefreshSocial()},45000);
+
+// Cloudflare Durable Object WebSocket transport for live games.
+async function rqCloudConnectRoom(code, role){
+ await rqLegacyLeaveRoom(false);
+ easyCode=code;easyRole=role;easyPeerNames.clear();easyScores={local:0};easyLives={local:3};easyStreaks={};easyRound=null;easyHostPeerId=null;easyJoined=false;
+ $('easyRoomCode').value=code;$('easyRoomCode').readOnly=true;$('easyRoomPanel').style.display='block';$('easyGameArea').innerHTML='';easyRenderPlayers();easySetStatus('Connecting to Cloudflare live room '+code+'…');
+ if(!rqCloudUser)throw new Error('Sign in to your Cloud account before joining a live room.');
+ const wsUrl=new URL('/api/rooms/'+encodeURIComponent(code)+'/ws',location.href);wsUrl.protocol=location.protocol==='https:'?'wss:':'ws:';
+ const ws=new WebSocket(wsUrl);rqCloudWebSocket=ws;
+ const room={leave:()=>{try{ws.close(1000,'Player left room')}catch{}return Promise.resolve()}};easyRoom=room;
+ easyAction={send:(message,options={})=>{if(ws.readyState!==WebSocket.OPEN){easySetStatus('Reconnecting to the room…');return}ws.send(JSON.stringify({type:'client-message',message,target:options.target||null}))}};
+ room.onPeerJoin=peerId=>{if(!easyPeerNames.has(peerId))easyPeerNames.set(peerId,{username:'Connecting…',avatar:'🧑‍🎓'});easyRenderPlayers();easyAction.send({type:'hello',username:easyUser().username,avatar:easyUser().avatar,role:easyRole,roomCode:easyCode},{target:peerId});if(easyRole==='host'&&easyRound)setTimeout(()=>easySendCurrentQuestion(peerId),500);if(easyRole==='host')easyBroadcastLobby()};
+ room.onPeerLeave=peerId=>{const name=easyPeerNames.get(peerId)?.username||'A player';easyPeerNames.delete(peerId);easyRenderPlayers();easySetStatus(name+' left room '+easyCode+'.');if(easyRound&&easyRole==='host')easyCheckAdvanceSoon()};
+ ws.onopen=()=>easySetStatus('Connected to Cloudflare · syncing room players…');
+ ws.onmessage=event=>{let m;try{m=JSON.parse(event.data)}catch{return}
+  if(m.event==='ready'){
+   easySelfId=m.self.id;easyRole=m.role;easyHostPeerId=m.role==='host'?null:(m.hostId||m.players?.find(p=>p.role==='host')?.id||null);easyJoined=true;easyPeerNames.clear();
+   for(const p of (m.players||[])){easyPeerNames.set(p.id,{username:p.username,avatar:p.avatar,role:p.role});if(p.role==='host')easyHostPeerId=p.id}
+   $('easyStartButton').disabled=true;easyRenderPlayers();easySetStatus((role==='host'?'Room created':'Joined room')+' · '+code+' · Cloudflare WebSocket connected. Share the code with friends.');
+   for(const p of (m.players||[]))room.onPeerJoin(p.id);
+   toast(role==='host'?'Cloud room ready! Copy the code to invite friends.':'Connected to live room!');
+  }else if(m.event==='peer-join'){
+   const p=m.peer;if(!p||p.id===easySelfId)return;easyPeerNames.set(p.id,{username:p.username,avatar:p.avatar,role:p.role});if(p.role==='host')easyHostPeerId=p.id;room.onPeerJoin(p.id);easyRenderPlayers();easySetStatus((easyPeerNames.size)+' other player(s) connected · '+code);
+  }else if(m.event==='peer-left'){
+   room.onPeerLeave(m.peerId);
+  }else if(m.event==='game-message'){
+   easyHandleMessage(m.message,m.peerId);
+  }else if(m.event==='room-closed'){
+   easySetStatus(m.message||'The room was closed by the host.');$('easyStartButton').disabled=true;
+  }else if(m.event==='error')easySetStatus(m.message||'Room error');
+ };
+ ws.onerror=()=>easySetStatus('Could not connect to the Cloudflare room. Check you are signed in and the room code is valid.');
+ ws.onclose=e=>{if(easyRoom===room){easySetStatus(e.code===1000?'Disconnected from live room.':'Live connection closed. Create a new room or rejoin.');$('easyStartButton').disabled=true;$('easyRoomCode').readOnly=false;easyJoined=false}};
+ try{await new Promise((resolve,reject)=>{const t=setTimeout(()=>reject(new Error('Connection timed out. Try again.')),12000);ws.addEventListener('open',()=>{clearTimeout(t);resolve()},{once:true});ws.addEventListener('error',()=>{clearTimeout(t);reject(new Error('WebSocket connection failed. Make sure the Worker and Durable Object are deployed.'))},{once:true})})}
+ catch(error){try{ws.close()}catch{}if(easyRoom===room){easyRoom=null;easyAction=null;easyRole=null;easyJoined=false;$('easyRoomCode').readOnly=false}throw error}
+}
+easyCreateRoom=async function(){
+ if(!rqCloudEnabled){easySetStatus('Cloudflare is not connected. Deploy the project and finish D1 setup to create a real online room.');toast('Cloudflare is not connected. Online rooms work on the published site after setup.');return;}
+ if(!rqCloudUser){toast('Sign in to your Cloud account before creating a live room.');return}
+ try{if(easyRoom)await rqLegacyLeaveRoom(false);const res=await rqApi('/api/rooms',{method:'POST',body:{subject:$('easyGameSubject')?.value||'Mixed GCSE'}});$('easyRoomCode').value=res.code;await rqCloudConnectRoom(res.code,'host')}
+ catch(e){$('easyRoomCode').readOnly=false;easySetStatus(e.message||'Could not create room.');toast(e.message||'Could not create room.')}
+};
+easyJoinRoom=async function(){
+ if(!rqCloudEnabled){easySetStatus('Cloudflare is not connected. Open the published website to join a real online room.');toast('Cloudflare is not connected. Open the published website to join this room.');return;}
+ if(!rqCloudUser){toast('Sign in to your Cloud account before joining a live room.');return}
+ const code=($('easyRoomCode').value||'').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6);if(code.length!==6){toast('Enter the 6-character room code from your friend.');$('easyRoomCode').focus();return}
+ try{await rqCloudConnectRoom(code,'guest')}catch(e){$('easyRoomCode').readOnly=false;easySetStatus(e.message||'Could not join room.');toast(e.message||'Could not join room.')}
+};
+// Host should only be able to launch if the real room has at least one other connected player.
+const rqOldStartGame=easyStartGame;
+easyStartGame=function(){if(rqCloudEnabled&&(!rqCloudUser||!easyRoom||!easyJoined)){toast('Connect to your Cloudflare room first.');return}return rqOldStartGame()};
+async function rqInitCloud(){
+ rqCloudRenderAccount();await rqRefreshCloud();
+ if(rqCloudEnabled&&rqCloudUser)rqSyncProgressSoon();
+}
+rqInitCloud();
+</script>
+
+</body>
+</html>
