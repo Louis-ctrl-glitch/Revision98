@@ -1067,6 +1067,7 @@ async function rqInitCloud(){
  if(rqCloudEnabled&&rqCloudUser)rqSyncProgressSoon();
 }
 rqInitCloud();
+
 // Route the older room controls to the same authenticated Cloudflare live-room
 // flow as Quick Play. This prevents local-demo room codes being mistaken for
 // online invitations.
@@ -1107,10 +1108,10 @@ rqInitCloud();
     showPage('social');
     toast('Old saved rooms were offline demos. To play online, create a new Cloudflare room and share its six-character code.');
   };
+  // Clear any stale local-demo room card that may have been restored from storage.
   renderRooms();
   if ($('activeRoomPanel')) $('activeRoomPanel').style.display = 'none';
 })();
-
 </script>
 
 </body>
