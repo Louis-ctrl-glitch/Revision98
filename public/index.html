@@ -252,7 +252,7 @@ body.theme-midnight .rq-live-meta,body.theme-midnight .rq-live-footer{border-col
   <div id="flashArea"></div>
 </section>
 <section class="page" id="page-library">
-  <div class="section-head"><div><h2>📚 My revision bank</h2><p>Browse the unique question bank, filter by topic, and add your own questions.</p></div><button class="btn" onclick="showPage('create')">＋ Add question</button></div>
+  <div class="section-head"><div><h2>📚 My revision bank</h2><p>Browse the expanded question bank, filter by topic, and add your own questions. Each of the 129 topics has 150 extra recall, reverse-recall and cloze practice prompts. Their wording is unique, but some revisit existing core facts in different formats rather than representing 19,350 independently researched facts.</p></div><button class="btn" onclick="showPage('create')">＋ Add question</button></div>
   <div class="toolbar"><input id="searchBank" class="field" placeholder="Search questions or answers…" oninput="renderLibrary()"><select id="librarySubject" class="field" aria-label="Filter by subject" onchange="updateLibraryTopics();renderLibrary()"><option value="All">All subjects</option></select><select id="libraryTopicFilter" class="field" aria-label="Filter by topic" onchange="renderLibrary()"><option value="All">All topics</option></select></div>
   <div id="libraryList" class="library-list"></div>
   <p class="notice">The bank is designed for useful topic practice, but it is not a complete or officially verified GCSE specification. Check your exam board and class notes.</p>
@@ -274,7 +274,7 @@ body.theme-midnight .rq-live-meta,body.theme-midnight .rq-live-footer{border-col
 </section>
 <section class="page" id="page-progress">
   <div class="section-head"><div><h2>📈 Progress & goals</h2><p>Progress is personal. Aim to improve on your last session.</p></div></div>
-  <div class="stats"><div class="stat"><div class="top">Current level <span>🏆</span></div><strong id="levelValue">1</strong><small id="levelSub">Keep earning XP</small></div><div class="stat"><div class="top">Cards in your bank <span>🗂️</span></div><strong id="cardTotal">0</strong><small>Unique starter, topic, practice and custom questions</small></div><div class="stat"><div class="top">Correct answers <span>✅</span></div><strong id="correctTotal">0</strong><small>Build reliable recall</small></div><div class="stat"><div class="top">Next level <span>⚡</span></div><strong id="nextLevel">100 XP</strong><small>XP to the next level</small></div></div>
+  <div class="stats"><div class="stat"><div class="top">Current level <span>🏆</span></div><strong id="levelValue">1</strong><small id="levelSub">Keep earning XP</small></div><div class="stat"><div class="top">Cards in your bank <span>🗂️</span></div><strong id="cardTotal">0</strong><small>Starter, topic, generated practice and custom questions</small></div><div class="stat"><div class="top">Correct answers <span>✅</span></div><strong id="correctTotal">0</strong><small>Build reliable recall</small></div><div class="stat"><div class="top">Next level <span>⚡</span></div><strong id="nextLevel">100 XP</strong><small>XP to the next level</small></div></div>
   <div class="panel"><h3>XP level path</h3><p class="panel-sub">Every 100 XP unlocks a new level.</p><div class="progress" style="height:12px"><span id="levelBar" style="width:0%"></span></div><div class="subject-bottom"><span id="levelProgress">0 / 100 XP</span><span id="levelPercent">0%</span></div><div style="margin-top:24px"><h3>Study tip of the day</h3><p class="panel-sub" style="font-size:14px">Use spaced repetition: revisit a tricky question tomorrow, then a few days later. Rereading feels easy, but trying to recall the answer is what makes revision powerful.</p></div></div>
 </section>
 
@@ -736,7 +736,7 @@ let quizDeck=[],quizIndex=0,quizLocked=false,cardDeck=[],cardIndex=0,cardFlipped
 const normalizeQuestion = q => String(q||'').toLocaleLowerCase().normalize('NFKD')
   .replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
 const allCards=()=>{
-  const source=[...(state.custom||[]),...STARTER,...TOPIC_CARDS,...EXTRA_CARDS];
+  const source=[...(state.custom||[]),...STARTER,...TOPIC_CARDS,...EXTRA_CARDS,...TOPIC_PRACTICE_CARDS];
   const seen=new Set();
   return source.filter(c=>{const key=normalizeQuestion(c.q);if(!key||seen.has(key))return false;seen.add(key);return true;});
 };
@@ -753,6 +753,70 @@ function updateCardTopics(){updateTopicOptions('cardTopicFilter',$('cardSubject'
 function updateLibraryTopics(){updateTopicOptions('libraryTopicFilter',$('librarySubject')?.value||'All',true)}
 function updateCreateTopics(){updateTopicOptions('newTopic',$('newSubject')?.value||SUBJECTS[0].name,false)}
 function topicFilterPass(card,topic){return !topic||topic==='All'||cardTopic(card)===topic}
+
+// Add exactly 150 additional topic-focused practice prompts for every GCSE subtopic.
+// They draw on the existing fact cards and use recall, reverse-recall and cloze formats.
+// This deliberately expands practice formats without pretending each prompt is a newly
+// researched independent fact; topics with a small source bank will revisit core facts.
+const RQ_TOPIC_PROMPT_CONTEXTS=[
+ 'Quickfire recall','A GCSE exam warm-up','A flashcard checkpoint','A five-minute revision sprint',
+ 'A retrieval-practice round','An end-of-lesson check','A mini mock-paper warm-up','A teach-back challenge',
+ 'A memory test','An end-of-topic review','A study-session checkpoint','A short-answer challenge',
+ 'A revision quest checkpoint','A pre-exam recap','A confidence-building round'
+];
+const RQ_TOPIC_PROMPT_TASKS=[
+ {kind:'direct',make:s=>`answer this prompt accurately: “${s.q}”`},
+ {kind:'direct',make:s=>`write a concise GCSE response to: “${s.q}”`},
+ {kind:'direct',make:s=>`state the key fact needed for: “${s.q}”`},
+ {kind:'direct',make:s=>`explain the core idea tested by: “${s.q}”`},
+ {kind:'direct',make:s=>`give the response a mark scheme should credit for: “${s.q}”`},
+ {kind:'reverse',make:s=>`a revision card shows this answer: “${s.a}”. What question belongs on the front?`},
+ {kind:'reverse',make:s=>`which revision prompt is answered by this fact? “${s.a}”`},
+ {kind:'cloze',make:(s,blank)=>`complete the missing key word in this fact: “${blank.text}”`},
+ {kind:'direct',make:s=>`teach this idea in one accurate sentence by answering: “${s.q}”`},
+ {kind:'cloze',make:(s,blank)=>`finish this topic explanation: “${blank.text}”`}
+];
+const RQ_STOPWORDS=new Set(['about','after','again','also','among','and','are','around','because','been','being','between','both','can','could','does','each','from','have','into','more','most','often','only','other','over','same','such','than','that','their','them','then','there','these','they','this','through','under','using','what','when','which','while','with','would','your','into','from','have','will','were','where','that','this','than','very','some','much','many','does','done','such','used','uses','help','helps','make','made','main','usually','different','particular','within','without','should','other','system','process','around','between','towards','together']);
+function rqMaskTopicAnswer(answer,slot){
+ const text=String(answer||'');
+ const re=/[A-Za-zÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ'’-]{3,}/g;
+ const words=[...text.matchAll(re)].filter(m=>!RQ_STOPWORDS.has(m[0].toLocaleLowerCase()));
+ if(!words.length)return {text,missing:text};
+ const pick=words[((slot%words.length)+words.length)%words.length];
+ return {text:text.slice(0,pick.index)+'_____'+text.slice(pick.index+pick[0].length),missing:pick[0]};
+}
+function rqSlug(value){return String(value).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
+const TOPIC_PRACTICE_CARDS=(()=>{
+ const factualSource=[...STARTER,...TOPIC_CARDS,...EXTRA_CARDS];
+ const result=[];
+ for(const subject of SUBJECTS){
+  for(const topic of (TOPICS_BY_SUBJECT[subject.name]||[])){
+   const found=factualSource.filter(c=>c.subject===subject.name&&(c.topic||inferTopic(c.subject,`${c.q||''} ${c.a||''}`))===topic);
+   const seeds=[];const seedSeen=new Set();
+   for(const card of found){const key=normalizeQuestion(card.q);if(key&&!seedSeen.has(key)){seedSeen.add(key);seeds.push(card)}}
+   if(!seeds.length)continue;
+   for(let i=0;i<150;i++){
+    const seed=seeds[i%seeds.length];
+    const ctx=RQ_TOPIC_PROMPT_CONTEXTS[Math.floor(i/RQ_TOPIC_PROMPT_TASKS.length)];
+    const task=RQ_TOPIC_PROMPT_TASKS[i%RQ_TOPIC_PROMPT_TASKS.length];
+    const blank=rqMaskTopicAnswer(seed.a,i+Math.floor(i/RQ_TOPIC_PROMPT_TASKS.length));
+    let prompt=task.make(seed,blank);
+    // The context changes the retrieval task, not the subject/topic selection.
+    // It also makes every generated prompt text distinct without numbered-copy padding.
+    let q=`${subject.name} · ${topic} — ${ctx}: ${prompt.charAt(0).toLocaleUpperCase()+prompt.slice(1)}`;
+    if(task.kind==='reverse'){
+      result.push({id:`topic-practice-${rqSlug(subject.name)}-${rqSlug(topic)}-${i+1}`,subject:subject.name,topic,q,a:seed.q,difficulty:i%4===0?'Higher':'Foundation',generated:true,topicPractice:true,practiceType:'reverse-recall'});
+    }else if(task.kind==='cloze'){
+      const missing=blank.missing;
+      result.push({id:`topic-practice-${rqSlug(subject.name)}-${rqSlug(topic)}-${i+1}`,subject:subject.name,topic,q,a:missing,difficulty:i%4===0?'Higher':'Foundation',generated:true,topicPractice:true,practiceType:'cloze'});
+    }else{
+      result.push({id:`topic-practice-${rqSlug(subject.name)}-${rqSlug(topic)}-${i+1}`,subject:subject.name,topic,q,a:seed.a,difficulty:i%4===0?'Higher':'Foundation',generated:true,topicPractice:true,practiceType:'recall'});
+    }
+   }
+  }
+ }
+ return result;
+})();
 function uniquePracticeCards(cards){const seen=new Set();return cards.filter(c=>{const key=normalizeQuestion(c.q);if(!key||seen.has(key))return false;seen.add(key);return true})}
 
 function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2100)}
