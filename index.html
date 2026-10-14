@@ -155,6 +155,41 @@ body.rq-dev-outlines *{outline:1px dashed rgba(255,0,110,.7)!important}
 @media(max-width:600px){#rqDevOverlay{padding:5px}#rqDevWindow{max-height:98vh}.rq-dev-grid{grid-template-columns:1fr}.rq-dev-actions{grid-template-columns:1fr 1fr}#rqDevBody{padding:8px}.rq-dev-status{grid-template-columns:95px minmax(0,1fr)}}
 </style>
 
+
+/* Developer Console theme: color-only palette; all original bevels, shapes and spacing stay untouched. */
+body.theme-developer{--rq-desktop:#302339;--rq-panel:#d8d0e2;--rq-panel-alt:#bdb1d0;--rq-text:#211629;--rq-muted:#594664;--rq-title:#49225f;--rq-title-text:#fff;--rq-accent:#c12686;--rq-heading:#4c1d68;--rq-button:#cfc3dd;--rq-button-text:#24142c;--rq-hi:#fff6ff;--rq-shadow:#65516e;--rq-progress:#df39a0;--rq-yellow:#765000;background:var(--rq-desktop);color:var(--rq-text)}
+body.theme-developer .topbar,body.theme-developer .stat,body.theme-developer .subject,body.theme-developer .panel,body.theme-developer .sidebar,body.theme-developer .quiz-card,body.theme-developer .library-item{background:var(--rq-panel);color:var(--rq-text);border-color:var(--rq-hi) var(--rq-shadow) var(--rq-shadow) var(--rq-hi)}
+body.theme-developer .hero{background:var(--rq-panel);color:var(--rq-text);border-color:var(--rq-hi) var(--rq-shadow) var(--rq-shadow) var(--rq-hi)}
+body.theme-developer .hero h1,body.theme-developer .section-head h2,body.theme-developer .stat strong,body.theme-developer .flashcard h2,body.theme-developer .panel h3{color:var(--rq-heading)}
+body.theme-developer .hero p,body.theme-developer .panel-sub,body.theme-developer .stat .top,body.theme-developer .stat small,body.theme-developer .subject p,body.theme-developer .subject-bottom,body.theme-developer .task-copy small{color:var(--rq-muted)}
+body.theme-developer .window-title,body.theme-developer .rq-theme-titlebar,body.theme-developer .rq-live-titlebar{background:var(--rq-title);color:var(--rq-title-text)}
+body.theme-developer .sidebar-note,body.theme-developer .subject-icon,body.theme-developer .task-icon,body.theme-developer .flashcard{background:var(--rq-panel-alt);color:var(--rq-text);border-color:var(--rq-hi) var(--rq-shadow) var(--rq-shadow) var(--rq-hi)}
+body.theme-developer .sidebar-note p{color:var(--rq-muted)}
+body.theme-developer .navbtn{color:var(--rq-text)}body.theme-developer .navbtn.active,body.theme-developer .navbtn:hover{background:var(--rq-title);color:var(--rq-title-text)}
+body.theme-developer .btn,body.theme-developer .btn.secondary,body.theme-developer .btn.ghost,body.theme-developer .btn.purple,body.theme-developer .mini-btn,body.theme-developer .mode,body.theme-developer .field,body.theme-developer .answer,body.theme-developer .topic-chip{background:var(--rq-button);color:var(--rq-button-text);border-color:var(--rq-hi) var(--rq-shadow) var(--rq-shadow) var(--rq-hi)}
+body.theme-developer .btn{background:var(--rq-accent);color:var(--rq-title-text)}
+body.theme-developer .progress{background:var(--rq-panel-alt);border-color:var(--rq-shadow)}body.theme-developer .progress span{background:var(--rq-progress)!important}
+body.theme-developer .rq-theme-window,body.theme-developer .rq-live-window{background:var(--rq-panel);color:var(--rq-text);border-color:var(--rq-hi) var(--rq-shadow) var(--rq-shadow) var(--rq-hi)}
+body.theme-developer .rq-theme-body h2,body.theme-developer .live-score{color:var(--rq-heading)}
+body.theme-developer .rq-theme-body>p,body.theme-developer .rq-theme-bottom{color:var(--rq-muted)}
+body.theme-developer .rq-theme-choice,body.theme-developer .rq-live-meta,body.theme-developer .rq-live-footer,body.theme-developer .live-q,body.theme-developer .friend-card,body.theme-developer .friend-stat{background:var(--rq-panel-alt);color:var(--rq-text);border-color:var(--rq-hi) var(--rq-shadow) var(--rq-shadow) var(--rq-hi)}
+body.theme-developer .rq-theme-choice small,body.theme-developer .friend-stat small{color:var(--rq-muted)}
+body.theme-developer .live-q button{background:var(--rq-button);color:var(--rq-button-text);border-color:var(--rq-hi) var(--rq-shadow) var(--rq-shadow) var(--rq-hi)}
+body.theme-developer .account-overlay{background:var(--rq-desktop)}
+.rq-dev-input{width:100%;min-width:0;border:2px inset #80758a;background:#fff;color:#211629;padding:6px;font:inherit;border-radius:0}
+.rq-dev-color-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:8px 0}
+.rq-dev-color-row label{display:grid;gap:4px;font-size:11px;font-weight:bold;min-width:0}
+.rq-dev-color-row input[type=color]{width:100%;height:35px;padding:2px;background:#ddd;border:2px inset #999;min-width:0}
+.rq-dev-pin-overlay{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:12px;z-index:15001;background:rgba(0,0,0,.75)}
+.rq-dev-pin-window{width:min(390px,100%);background:#c0c0c0;color:#111;border:3px solid;border-color:#fff #555 #555 #fff;box-shadow:7px 7px #0008;font:13px Tahoma,Arial,sans-serif}
+.rq-dev-pin-title{background:#000080;color:#fff;font-weight:bold;padding:7px 9px;display:flex;justify-content:space-between;align-items:center}
+.rq-dev-pin-body{padding:16px}.rq-dev-pin-body p{margin:0 0 10px}.rq-dev-pin-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}.rq-dev-pin-message{color:#a00000;min-height:18px;font-weight:bold;margin-top:8px}
+#rqDevWindow input,#rqDevWindow select{font:inherit}
+@media(max-width:600px){.rq-dev-color-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+
+body.rq-dev-focus-mode .sidebar,body.rq-dev-focus-mode .topbar{opacity:.35;filter:grayscale(.4)}body.rq-dev-focus-mode .main{filter:contrast(1.04)}
+#rqDevFloatingBadge{user-select:none}
 </head>
 <body>
 
@@ -211,6 +246,7 @@ body.rq-dev-outlines *{outline:1px dashed rgba(255,0,110,.7)!important}
         <button class="rq-theme-choice" data-rq-theme="blue"><span class="rq-theme-swatch swatch-blue"><i></i><b>☁</b></span><strong>Blue Horizon</strong><small>Classic beveled shapes in sky blue and deep blue</small></button>
         <button class="rq-theme-choice" data-rq-theme="midnight"><span class="rq-theme-swatch swatch-midnight"><i></i><b>★</b></span><strong>Midnight Arcade</strong><small>Classic beveled shapes in midnight navy and mint</small></button>
         <button class="rq-theme-choice" data-rq-theme="classic"><span class="rq-theme-swatch swatch-classic"><i></i><b>▣</b></span><strong>Classic Aqua</strong><small>Original teal desktop, silver panels and blue title bars</small></button>
+        <button class="rq-theme-choice" data-rq-theme="developer"><span class="rq-theme-swatch swatch-developer"><i></i><b>⌘</b></span><strong>Developer Console</strong><small>Custom plum, graphite and neon-magenta developer palette</small></button>
       </div>
       <div class="rq-theme-bottom"><span id="rqThemeSavedLabel">Theme saved on this device</span><button class="btn secondary" type="button" onclick="closeThemePicker()">Done</button></div>
     </div>
@@ -949,7 +985,7 @@ function renderSubjects(){const cards=availableCards();const chosen=selectedSubj
 function focusSubject(s){$('quizSubject').value=s;$('cardSubject').value=s;updatePracticeTopics();updateCardTopics();$('quizTopic').value='All';showPage('practice');resetQuiz()}
 function renderStats(){const acc=state.answered?Math.round(state.correct/state.answered*100)+'%':'—';$('topXp').textContent=state.xp+' XP';$('topStreak').textContent=state.streak+' day streak';$('statXp').textContent=state.xp;$('statAnswered').textContent=state.answered;$('statAccuracy').textContent=acc;$('statStreak').textContent=state.streak+' days';}
 function updateStreak(){const today=new Date().toISOString().slice(0,10);if(state.lastStudy!==today){const y=new Date();y.setDate(y.getDate()-1);const yesterday=y.toISOString().slice(0,10);state.streak=state.lastStudy===yesterday?(state.streak||0)+1:1;state.lastStudy=today}}
-function award(xp){state.xp+=xp;updateStreak();save();renderStats();renderProgress()}
+function award(xp){state.xp+=Math.round((Number(xp)||0)*(window.rqDevXpMultiplier||1));updateStreak();save();renderStats();renderProgress()}
 function shuffle(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}return arr}
 function resetQuiz(){const sub=$('quizSubject').value||'All',diff=$('quizDifficulty').value||'All',topic=$('quizTopic')?.value||'All';quizDeck=shuffle(uniquePracticeCards(availableCards().filter(c=>(sub==='All'||c.subject===sub)&&(diff==='All'||c.difficulty===diff)&&topicFilterPass(c,topic))));quizIndex=0;quizLocked=false;renderQuiz()}
 function startQuiz(){showPage('practice');resetQuiz()}
@@ -961,7 +997,7 @@ function nextQuestion(){quizIndex++;quizLocked=false;renderQuiz()}
 function setupCardDeck(){const sub=$('cardSubject').value||'All',topic=$('cardTopicFilter')?.value||'All';cardDeck=shuffle(uniquePracticeCards(availableCards().filter(c=>(sub==='All'||c.subject===sub)&&topicFilterPass(c,topic))));cardIndex=0;cardFlipped=false}
 function renderCard(){const sub=$('cardSubject').value||'All',topic=$('cardTopicFilter')?.value||'All';if(!cardDeck.length||!cardDeck[cardIndex]||(cardDeck[cardIndex]&&((sub!=='All'&&cardDeck[cardIndex].subject!==sub)||!topicFilterPass(cardDeck[cardIndex],topic))))setupCardDeck();const area=$('flashArea');if(!cardDeck.length){area.innerHTML='<div class="panel empty">No cards found. Add a question in Set Builder.</div>';return}if(cardIndex>=cardDeck.length)cardIndex=0;const c=cardDeck[cardIndex];$('cardCount').textContent=`Card ${cardIndex+1} of ${cardDeck.length}`;area.innerHTML=`<div class="quiz-card"><div class="quiz-meta"><span>${subjectInfo(c.subject).icon} ${escapeHtml(c.subject)} · ${escapeHtml(cardTopic(c))}</span><span>${c.difficulty}</span></div><div class="flashcard" role="button" tabindex="0" onclick="flipCard()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();flipCard()}"><div class="hint">${cardFlipped?'ANSWER':'QUESTION'} · TAP TO FLIP</div><h2>${escapeHtml(cardFlipped?c.a:c.q)}</h2><p>${cardFlipped?'Say it in your own words, then rate how well you knew it.':'Try to answer from memory before revealing the back.'}</p></div><div class="quiz-footer"><button class="btn ghost" onclick="rateCard(false)">Need to practise</button><button class="btn secondary" onclick="flipCard()">${cardFlipped?'Show question':'Reveal answer'}</button><button class="btn" onclick="rateCard(true)">Got it ✓</button></div></div>`}
 function flipCard(){cardFlipped=!cardFlipped;renderCard()}
-function rateCard(known){const c=cardDeck[cardIndex];if(known){state.seen=[...new Set([...state.seen,c.id])];award(5);toast('Card mastered · +5 XP')}else{toast('Added to your mental re-do list!');state.xp+=1;save();renderStats()}cardIndex=(cardIndex+1)%cardDeck.length;cardFlipped=false;renderCard();renderSubjects()}
+function rateCard(known){const c=cardDeck[cardIndex];if(known){state.seen=[...new Set([...state.seen,c.id])];award(5);toast('Card mastered · +5 XP')}else{toast('Added to your mental re-do list!');state.xp+=Math.round(1*(window.rqDevXpMultiplier||1));save();renderStats()}cardIndex=(cardIndex+1)%cardDeck.length;cardFlipped=false;renderCard();renderSubjects()}
 function shuffleCards(){setupCardDeck();renderCard()}
 function renderLibrary(){const query=($('searchBank').value||'').toLowerCase();const sub=$('librarySubject').value||'All',topic=$('libraryTopicFilter')?.value||'All';const arr=availableCards().filter(c=>(sub==='All'||c.subject===sub)&&topicFilterPass(c,topic)&&(`${c.q} ${c.a} ${c.subject} ${cardTopic(c)}`).toLowerCase().includes(query));$('libraryList').innerHTML=`<p class="notice">${arr.length.toLocaleString()} matches · showing first ${Math.min(arr.length,200).toLocaleString()} for speed. Choose a subject or search to narrow it down.</p>`+arr.slice(0,200).map(c=>`<div class="library-item"><div class="task-icon">${subjectInfo(c.subject).icon}</div><div class="grow"><b>${escapeHtml(c.q)}</b><small>${escapeHtml(c.subject)} · ${escapeHtml(cardTopic(c))} · ${c.difficulty}${c.custom?' · Your question':c.topicStarter?' · Topic question':c.starter?' · Starter question':' · Practice question'}</small></div><button class="mini-btn" onclick="studyThis('${c.id}')">Study</button>${(!c.starter&&!c.generated&&!c.topicStarter&&!c.extraStarter)?`<button class="mini-btn" title="Delete custom question" onclick="deleteCard('${c.id}')">✕</button>`:''}</div>`).join('')||'<div class="panel empty">No matches. Try another search or create a new card.</div>'}
 function studyThis(id){const c=allCards().find(x=>x.id===id);if(!c)return;$('cardSubject').value=c.subject;updateCardTopics();if(c.topic&&[...$('cardTopicFilter').options].some(o=>o.value===c.topic))$('cardTopicFilter').value=c.topic;cardDeck=[c];cardIndex=0;cardFlipped=false;showPage('cards');renderCard()}
@@ -988,7 +1024,7 @@ function peerSend(obj){if(peerChannel&&peerChannel.readyState==='open')peerChann
 function peerHandleMessage(m){if(m.type==='question'){peerRound=m.round;$('peerGameArea').innerHTML=`<div class="live-q"><div><b>LIVE GAME · ${escapeHtml(m.modeLabel)}</b> · Question ${m.index}/${m.total}</div><h3>${escapeHtml(m.q)}</h3>${m.options.map((a,i)=>`<button onclick="peerAnswer(${i})">${String.fromCharCode(65+i)}. ${escapeHtml(a)}</button>`).join('')}<p>Score: <b>${m.score||0}</b></p></div>`}else if(m.type==='result'){$('peerGameArea').innerHTML=`<div class="live-q"><h3>${m.correct?'✅ Correct!':'❌ Not quite'}</h3><p>Answer: <b>${escapeHtml(m.answer)}</b></p><p>${escapeHtml(m.explanation||'Keep practising!')}</p><p class="live-score">Your score: ${m.score}</p><p>Waiting for next question…</p></div>`}else if(m.type==='end'){$('peerGameArea').innerHTML=`<div class="live-q"><h2>🏆 Game over!</h2><p>${escapeHtml(m.message)}</p><p class="live-score">Your score: ${m.score}</p></div>`}else if(m.type==='answer'&&peerRole==='host'){if(peerRound&&m.round===peerRound.id){const good=m.answer===peerRound.correctIndex;if(good)peerRound.guestScore+=peerRound.mode==='streak'?20:10;else if(peerRound.mode==='survival')peerRound.guestLives--;peerSend({type:'result',correct:good,answer:peerRound.q.a,explanation:peerRound.q.a,score:peerRound.guestScore});peerRound.guestAnswered=true;setTimeout(peerHostNext,900)}}else if(m.type==='hostscore'){$('peerGameArea').insertAdjacentHTML('beforeend',`<p>Host score: ${m.score}</p>`)} }
 function peerAnswer(i){if(!peerRound)return;peerSend({type:'answer',round:peerRound,answer:i});document.querySelectorAll('#peerGameArea .live-q button').forEach(b=>b.disabled=true)}
 function peerStartGame(){if(peerRole!=='host'||!peerChannel||peerChannel.readyState!=='open'){toast('The host must be connected to start');return}const subject=$('peerGameSubject').value,topic=$('peerGameTopic')?.value||'All',mode=$('peerGameMode').value;const deck=shuffle(availableCards().filter(c=>c.subject===subject&&topicFilterPass(c,topic)).slice()).slice(0,mode==='sprint'?20:10);if(!deck.length){toast('No questions available for that subject');return}peerRound={deck,index:0,hostScore:0,guestScore:0,guestLives:3,hostLives:3,mode,id:Date.now()};peerStatus('Live game running · '+subject);peerHostNext()}
-function peerHostNext(){if(!peerRound)return;const r=peerRound;if(r.mode==='sprint'&&r.index>=10){peerSend({type:'end',message:'Sprint finished!',score:r.guestScore});$('peerGameArea').innerHTML=`<div class="live-q"><h2>🏁 Sprint complete!</h2><p>Your score: ${r.hostScore}</p></div>`;peerRound=null;return}if(r.index>=r.deck.length||(r.mode==='survival'&&(r.guestLives<=0||r.hostLives<=0))){peerSend({type:'end',message:'Round complete!',score:r.guestScore});$('peerGameArea').innerHTML=`<div class="live-q"><h2>🏆 Round complete!</h2><p>Guest score: ${r.guestScore} · Host score: ${r.hostScore}</p><button class="btn" onclick="peerStartGame()">Play again</button></div>`;state.xp+=Math.floor(r.hostScore/2);save();renderStats();peerRound=null;return}const q=r.deck[r.index++],wrong=shuffle(availableCards().filter(c=>c.subject===q.subject&&c.a!==q.a).map(c=>c.a)).slice(0,3);let opts=shuffle([q.a,...wrong]);while(opts.length<4)opts.push('Review the key idea');const correctIndex=opts.indexOf(q.a);r.id=Date.now()+r.index;r.q=q;r.correctIndex=correctIndex;r.guestAnswered=false;peerRound=r;peerSend({type:'question',round:r.id,index:r.index,total:r.deck.length,modeLabel:r.mode,q:q.q,options:opts,score:r.guestScore});$('peerGameArea').innerHTML=`<div class="live-q"><b>HOST VIEW · ${escapeHtml(r.mode.toUpperCase())}</b> · Question ${r.index}/${r.deck.length}<h3>${escapeHtml(q.q)}</h3>${opts.map((a,i)=>`<button onclick="peerHostAnswer(${i})">${String.fromCharCode(65+i)}. ${escapeHtml(a)}</button>`).join('')}<p class="live-score">Your score: ${r.hostScore} · Friend: ${r.guestScore}</p><p>Friend lives: ${r.guestLives}</p></div>`;if(r.mode==='sprint'){clearTimeout(peerTimer);peerTimer=setTimeout(()=>{if(peerRound===r){peerSend({type:'end',message:'Time is up!',score:r.guestScore});$('peerGameArea').innerHTML='<div class="live-q"><h2>⏱ Time is up!</h2></div>';peerRound=null}},60000)}}
+function peerHostNext(){if(!peerRound)return;const r=peerRound;if(r.mode==='sprint'&&r.index>=10){peerSend({type:'end',message:'Sprint finished!',score:r.guestScore});$('peerGameArea').innerHTML=`<div class="live-q"><h2>🏁 Sprint complete!</h2><p>Your score: ${r.hostScore}</p></div>`;peerRound=null;return}if(r.index>=r.deck.length||(r.mode==='survival'&&(r.guestLives<=0||r.hostLives<=0))){peerSend({type:'end',message:'Round complete!',score:r.guestScore});$('peerGameArea').innerHTML=`<div class="live-q"><h2>🏆 Round complete!</h2><p>Guest score: ${r.guestScore} · Host score: ${r.hostScore}</p><button class="btn" onclick="peerStartGame()">Play again</button></div>`;state.xp+=Math.floor(r.hostScore/2)*(window.rqDevXpMultiplier||1);save();renderStats();peerRound=null;return}const q=r.deck[r.index++],wrong=shuffle(availableCards().filter(c=>c.subject===q.subject&&c.a!==q.a).map(c=>c.a)).slice(0,3);let opts=shuffle([q.a,...wrong]);while(opts.length<4)opts.push('Review the key idea');const correctIndex=opts.indexOf(q.a);r.id=Date.now()+r.index;r.q=q;r.correctIndex=correctIndex;r.guestAnswered=false;peerRound=r;peerSend({type:'question',round:r.id,index:r.index,total:r.deck.length,modeLabel:r.mode,q:q.q,options:opts,score:r.guestScore});$('peerGameArea').innerHTML=`<div class="live-q"><b>HOST VIEW · ${escapeHtml(r.mode.toUpperCase())}</b> · Question ${r.index}/${r.deck.length}<h3>${escapeHtml(q.q)}</h3>${opts.map((a,i)=>`<button onclick="peerHostAnswer(${i})">${String.fromCharCode(65+i)}. ${escapeHtml(a)}</button>`).join('')}<p class="live-score">Your score: ${r.hostScore} · Friend: ${r.guestScore}</p><p>Friend lives: ${r.guestLives}</p></div>`;if(r.mode==='sprint'){clearTimeout(peerTimer);peerTimer=setTimeout(()=>{if(peerRound===r){peerSend({type:'end',message:'Time is up!',score:r.guestScore});$('peerGameArea').innerHTML='<div class="live-q"><h2>⏱ Time is up!</h2></div>';peerRound=null}},60000)}}
 function peerHostAnswer(i){const r=peerRound;if(!r||r.hostAnswered)return;r.hostAnswered=true;const good=i===r.correctIndex;if(good)r.hostScore+=r.mode==='streak'?20:10;else if(r.mode==='survival')r.hostLives--;peerSend({type:'hostscore',score:r.hostScore});document.querySelectorAll('#peerGameArea .live-q button').forEach(b=>b.disabled=true);setTimeout(()=>{if(peerRound===r){r.hostAnswered=false;peerHostNext()}},900)}
 function copyField(id){const el=$(id);if(!el||!el.value){toast('Create the code first');return}if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(el.value).then(()=>toast('Code copied')).catch(()=>{el.select();document.execCommand('copy');toast('Code copied')});else{el.select();document.execCommand('copy');toast('Code selected/copied where supported')}}
 function resetPeer(clear=true){if(peerTimer)clearTimeout(peerTimer);peerTimer=null;peerRound=null;if(peerPC){try{peerPC.close()}catch(e){}}peerPC=null;peerChannel=null;peerRole=null;if(clear){['peerOfferOut','peerAnswerIn','peerOfferIn','peerAnswerOut'].forEach(id=>{if($(id))$(id).value=''});$('peerGameArea').innerHTML='';$('peerGameControls').style.display='none';peerStatus('Not connected')}}
@@ -1072,7 +1108,7 @@ function easyHandleMessage(m,peerId){if(!m||!peerId)return;
   easyScores=m.scores||easyScores;easyLives=m.lives||easyLives;easyRenderPlayers();if(easySprintTimer)clearTimeout(easySprintTimer);easySprintTimer=null;
   const mine=easyScores[easyRole==='host'?'local':easySelfId]||0;
   $('easyGameArea').innerHTML=`<div class="easy-game-card"><h2>🏆 Round complete!</h2><p>${escapeHtml(m.message||'Great revision session!')}</p><h3>Your score: ${mine} points</h3>${easyScoreboardHtml()}<button class="btn" onclick="easyStartGame()" ${easyRole==='host'?'':'disabled'}>Play again</button></div>`;
-  if(!easyRound?.awarded){state.xp+=Math.max(0,Math.floor(mine/2));state.answered+=m.total||0;updateStreak();save();renderStats();renderProgress();}
+  if(!easyRound?.awarded){state.xp+=Math.max(0,Math.floor(mine/2))*(window.rqDevXpMultiplier||1);state.answered+=m.total||0;updateStreak();save();renderStats();renderProgress();}
   easyRound=null;easyRenderPlayers();easySetStatus('Game finished · room '+easyCode+'. The host can start another round.');
  }
 }
@@ -1090,7 +1126,7 @@ function easyCheckAdvanceSoon(){if(easyRole!=='host'||!easyRound)return;const r=
 function easyAdvanceAfterQuestion(){if(easyRole!=='host'||!easyRound)return;if(easyNextTimer)clearTimeout(easyNextTimer);easyNextTimer=null;if(easyUsesLives(easyRound.mode)&&Object.entries(easyLives).filter(([id,l])=>id==='local'||easyPeerNames.has(id)).every(([id,l])=>l<=0)){easyEndGame('Everyone ran out of lives!');return}easyNextQuestion()}
 function easyHostSkipQuestion(){if(easyRole==='host'&&easyRound)easyAdvanceAfterQuestion()}
 function easyScoreboardHtml(){let entries;if(easyRole==='host'){entries=[{id:'local',name:easyUser().username,score:easyScores.local||0},...[...easyPeerNames.entries()].map(([id,p])=>({id,name:p.username||'Player',score:easyScores[id]||0}))]}else{entries=[{id:easySelfId,name:easyUser().username,score:easyScores[easySelfId]||0},...[...easyPeerNames.entries()].map(([id,p])=>({id,name:p.username||'Player',score:easyScores[id]||(id===easyHostPeerId?(easyScores.local||0):0)}))]}entries.sort((a,b)=>b.score-a.score);return `<table class="easy-scoreboard"><thead><tr><th>#</th><th>Player</th><th>Points</th></tr></thead><tbody>${entries.map((p,i)=>`<tr><td>${i+1}</td><td>${escapeHtml(p.name)}</td><td>${p.score}</td></tr>`).join('')}</tbody></table>`}
-function easyEndGame(message){if(!easyRound)return;const r=easyRound;if(easyNextTimer)clearTimeout(easyNextTimer);easyNextTimer=null;if(easySprintTimer)clearTimeout(easySprintTimer);easySprintTimer=null;easyBroadcast({type:'end',message,scores:easyScores,lives:easyLives,total:r.index+1});const mine=easyScores[easyRole==='host'?'local':easySelfId]||0;state.xp+=Math.floor(mine/2);state.answered+=r.index+1;updateStreak();save();renderStats();renderProgress();$('easyGameArea').innerHTML=`<div class="easy-game-card"><h2>🏆 Round complete!</h2><p>${escapeHtml(message)}</p><h3>Your score: ${mine} points</h3>${easyScoreboardHtml()}<button class="btn" onclick="easyStartGame()" ${easyRole==='host'?'':'disabled'}>Play again</button></div>`;r.awarded=true;easyRound=null;easyRenderPlayers();easySetStatus('Game finished · room '+easyCode+'. Host can start another round.')}
+function easyEndGame(message){if(!easyRound)return;const r=easyRound;if(easyNextTimer)clearTimeout(easyNextTimer);easyNextTimer=null;if(easySprintTimer)clearTimeout(easySprintTimer);easySprintTimer=null;easyBroadcast({type:'end',message,scores:easyScores,lives:easyLives,total:r.index+1});const mine=easyScores[easyRole==='host'?'local':easySelfId]||0;state.xp+=Math.floor(mine/2)*(window.rqDevXpMultiplier||1);state.answered+=r.index+1;updateStreak();save();renderStats();renderProgress();$('easyGameArea').innerHTML=`<div class="easy-game-card"><h2>🏆 Round complete!</h2><p>${escapeHtml(message)}</p><h3>Your score: ${mine} points</h3>${easyScoreboardHtml()}<button class="btn" onclick="easyStartGame()" ${easyRole==='host'?'':'disabled'}>Play again</button></div>`;r.awarded=true;easyRound=null;easyRenderPlayers();easySetStatus('Game finished · room '+easyCode+'. Host can start another round.')}
 function easyCopyRoomCode(){const value=($('easyRoomCode').value||'').trim();if(!value){toast('Create a room or enter a code first');return}const text=value.toUpperCase();if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(text).then(()=>toast('Room code copied! Send it to your friends.')).catch(()=>{ $('easyRoomCode').select();document.execCommand('copy');toast('Copy the selected room code and send it to friends.')});else{ $('easyRoomCode').select();document.execCommand('copy');toast('Copy the selected room code and send it to friends.')}}
 async function easyLeaveRoom(clearCode=true){if(easyNextTimer)clearTimeout(easyNextTimer);if(easySprintTimer)clearTimeout(easySprintTimer);if(easyWaitTimer)clearTimeout(easyWaitTimer);easyNextTimer=easySprintTimer=easyWaitTimer=null;try{if(easyRoom&&typeof easyRoom.leave==='function')await easyRoom.leave()}catch(e){}easyRoom=null;easyAction=null;easyRole=null;easyRound=null;easyPeerNames.clear();easyScores={};easyLives={};easyStreaks={};easyHostPeerId=null;easyJoined=false;if($('easyGameArea'))$('easyGameArea').innerHTML='';if($('easyRoomPanel'))$('easyRoomPanel').style.display='none';if(clearCode&&$('easyRoomCode'))$('easyRoomCode').value='';if($('easyPlayerList'))$('easyPlayerList').innerHTML='';if($('easyStartButton'))$('easyStartButton').disabled=true;if($('easyRoomStatus'))easySetStatus('Not connected. Create a room or enter a friend’s code.');}
 
@@ -1293,19 +1329,22 @@ rqInitCloud();
 
 <script id="rqThemeAndLiveModalController">
 (function(){
-  const themes=['aero','olive','blue','midnight','classic'];
-  const labels={aero:'Frutiger Aero',olive:'Olive Grove',blue:'Blue Horizon',midnight:'Midnight Arcade',classic:'Classic Aqua'};
+  const themes=['aero','olive','blue','midnight','classic','developer'];
+  const labels={aero:'Frutiger Aero',olive:'Olive Grove',blue:'Blue Horizon',midnight:'Midnight Arcade',classic:'Classic Aqua',developer:'Developer Console'};
   function setTheme(name,quiet=false){
     if(!themes.includes(name))name='classic';
-    document.body.classList.remove(...themes.map(t=>'theme-'+t));document.body.classList.add('theme-'+name);
+    document.body.classList.remove(...themes.map(t=>'theme-'+t));
+    if(name!=='developer') ['--rq-desktop','--rq-panel','--rq-panel-alt','--rq-text','--rq-muted','--rq-title','--rq-title-text','--rq-accent','--rq-heading','--rq-button','--rq-button-text','--rq-hi','--rq-shadow','--rq-progress','--rq-yellow'].forEach(v=>document.body.style.removeProperty(v));
+    document.body.classList.add('theme-'+name);
     try{localStorage.setItem('rq98-theme',name)}catch(e){}
     document.querySelectorAll('[data-rq-theme]').forEach(b=>b.classList.toggle('is-active',b.dataset.rqTheme===name));
     const label=document.getElementById('rqThemeSavedLabel');if(label)label.textContent='Active theme: '+labels[name];
     if(!quiet&&typeof toast==='function')toast('Theme changed to '+labels[name]);
   }
+  window.rqSetTheme=setTheme;
   window.openThemePicker=function(){const el=document.getElementById('rqThemeOverlay');if(el){el.style.display='flex';el.setAttribute('aria-hidden','false')}};
   window.closeThemePicker=function(){const el=document.getElementById('rqThemeOverlay');if(el){el.style.display='none';el.setAttribute('aria-hidden','true')}};
-  document.querySelectorAll('[data-rq-theme]').forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.rqTheme)));
+  document.querySelectorAll('[data-rq-theme]').forEach(b=>b.addEventListener('click',()=>{setTheme(b.dataset.rqTheme);if(b.dataset.rqTheme==='developer'&&typeof window.rqApplyDeveloperThemeColors==='function')window.rqApplyDeveloperThemeColors(false)}));
   document.getElementById('rqThemeOverlay')?.addEventListener('click',e=>{if(e.target.id==='rqThemeOverlay')closeThemePicker()});
   let stored='classic';try{stored=localStorage.getItem('rq98-theme')||'classic'}catch(e){}setTheme(stored,true);
 
@@ -1333,6 +1372,19 @@ rqInitCloud();
 </script>
 
 
+<div id="rqDevPinOverlay" class="rq-dev-pin-overlay" style="display:none" aria-hidden="true">
+  <section class="rq-dev-pin-window" role="dialog" aria-modal="true" aria-labelledby="rqDevPinTitle">
+    <div class="rq-dev-pin-title"><span id="rqDevPinTitle">🔐 Owner access code</span><button type="button" id="rqDevPinClose" aria-label="Close code prompt">×</button></div>
+    <div class="rq-dev-pin-body">
+      <p>Developer console detected. Enter the four-digit access code to continue.</p>
+      <form id="rqDevPinForm"><label for="rqDevPinInput"><b>Access code</b></label><input id="rqDevPinInput" class="rq-dev-input" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" placeholder="••••" required></form>
+      <div id="rqDevPinMessage" class="rq-dev-pin-message" aria-live="polite"></div>
+      <div class="rq-dev-pin-actions"><button type="button" class="rq-dev-btn" id="rqDevPinCancel">Cancel</button><button type="submit" form="rqDevPinForm" class="rq-dev-btn">Unlock menu →</button></div>
+      <p style="font-size:10px;color:#444;margin-top:12px">This is a playful local gate only, not secure authentication for server-side admin features.</p>
+    </div>
+  </section>
+</div>
+
 <div id="rqDevOverlay" style="display:none" aria-hidden="true">
   <section id="rqDevWindow" role="dialog" aria-modal="true" aria-labelledby="rqDevTitle">
     <div id="rqDevTitlebar"><span id="rqDevTitle">🛠 Revision Quest — Developer / Owner Menu</span><button type="button" id="rqDevClose" aria-label="Close developer menu">×</button></div>
@@ -1351,7 +1403,7 @@ rqInitCloud();
           <div style="margin-top:10px"><button type="button" class="rq-dev-btn" id="rqDevCheckApi">Check Cloudflare API</button></div>
         </section>
         <section class="rq-dev-panel">
-          <h3>Quick tools</h3>
+          <h3>Diagnostics &amp; shortcuts</h3>
           <div class="rq-dev-actions">
             <button type="button" class="rq-dev-btn" id="rqDevCountQuestions">Count topic questions</button>
             <button type="button" class="rq-dev-btn" id="rqDevCopyReport">Copy diagnostics</button>
@@ -1359,9 +1411,55 @@ rqInitCloud();
             <button type="button" class="rq-dev-btn" id="rqDevOutlines">Toggle layout outlines</button>
             <button type="button" class="rq-dev-btn" id="rqDevFriends">Open Friends &amp; Rooms</button>
             <button type="button" class="rq-dev-btn" id="rqDevThemes">Open Themes</button>
+            <button type="button" class="rq-dev-btn" id="rqDevOpenQuiz">Open Quick Quiz</button>
+            <button type="button" class="rq-dev-btn" id="rqDevOpenCards">Open Flashcards</button>
+            <button type="button" class="rq-dev-btn" id="rqDevOpenLibrary">Open Question Library</button>
+            <button type="button" class="rq-dev-btn" id="rqDevOpenBuilder">Open Set Builder</button>
+            <button type="button" class="rq-dev-btn" id="rqDevToastTest">Test notification</button>
             <button type="button" class="rq-dev-btn" id="rqDevReload">Reload website</button>
-            <button type="button" class="rq-dev-btn" id="rqDevCloseAlt">Close menu</button>
           </div>
+        </section>
+      </div>
+      <div class="rq-dev-grid" style="margin-top:12px">
+        <section class="rq-dev-panel">
+          <h3>⚡ XP &amp; level cheats</h3>
+          <p style="font-size:11px;margin:0 0 8px">Local sandbox tools. If signed in, changes may sync to your own account.</p>
+          <label for="rqDevXpMultiplier" style="font-weight:bold;font-size:12px">XP multiplier for future rewards</label>
+          <div style="display:flex;gap:6px;margin:5px 0 9px"><select id="rqDevXpMultiplier" class="rq-dev-input"><option value="1">Normal XP · 1×</option><option value="2">Double XP · 2×</option><option value="5">5× XP</option><option value="10">10× XP</option><option value="100">MEGA XP · 100×</option></select><button type="button" class="rq-dev-btn" id="rqDevApplyMultiplier">Apply</button></div>
+          <div class="rq-dev-actions"><button type="button" class="rq-dev-btn" id="rqDevAdd100">+100 XP</button><button type="button" class="rq-dev-btn" id="rqDevAdd1000">+1,000 XP</button><button type="button" class="rq-dev-btn" id="rqDevAdd10000">+10,000 XP</button><button type="button" class="rq-dev-btn" id="rqDevSetTargetLevel">Set target level</button></div>
+          <label for="rqDevTargetLevel" style="display:block;margin-top:8px;font-size:12px;font-weight:bold">Target level (1–9999)</label><input id="rqDevTargetLevel" class="rq-dev-input" type="number" min="1" max="9999" value="10">
+          <div id="rqDevXpStatus" style="font-size:11px;margin-top:7px">Current XP: checking…</div>
+        </section>
+        <section class="rq-dev-panel">
+          <h3>📈 Progress lab</h3>
+          <label for="rqDevTargetStreak" style="font-size:12px;font-weight:bold">Set study streak (days, 0–9999)</label><input id="rqDevTargetStreak" class="rq-dev-input" type="number" min="0" max="9999" value="7">
+          <div class="rq-dev-actions" style="margin-top:7px"><button type="button" class="rq-dev-btn" id="rqDevSetStreak">Set streak</button><button type="button" class="rq-dev-btn" id="rqDevMarkAllSeen">Mark all cards reviewed</button><button type="button" class="rq-dev-btn" id="rqDevAddAnswered">+100 answered</button><button type="button" class="rq-dev-btn" id="rqDevResetStats">Reset local stats</button></div>
+          <p style="font-size:10px;margin:8px 0 0">Resetting progress can't undo any stats already synced to a server that only accepts increasing totals.</p>
+        </section>
+      </div>
+      <div class="rq-dev-grid" style="margin-top:12px">
+        <section class="rq-dev-panel">
+          <h3>🎨 Custom Developer theme</h3>
+          <p style="font-size:11px;margin:0 0 5px">Changes colours only. Classic square windows, bevels, and spacing remain the same.</p>
+          <div class="rq-dev-color-row">
+            <label>Desktop<input id="rqDevColorDesktop" type="color" value="#302339"></label>
+            <label>Panels<input id="rqDevColorPanel" type="color" value="#d8d0e2"></label>
+            <label>Title bars<input id="rqDevColorTitle" type="color" value="#49225f"></label>
+            <label>Accent<input id="rqDevColorAccent" type="color" value="#c12686"></label>
+          </div>
+          <div class="rq-dev-actions"><button type="button" class="rq-dev-btn" id="rqDevApplyCustomTheme">Apply custom theme</button><button type="button" class="rq-dev-btn" id="rqDevDefaultTheme">Restore developer defaults</button></div>
+        </section>
+        <section class="rq-dev-panel">
+          <h3>🧰 Fun &amp; test lab</h3>
+          <div class="rq-dev-actions">
+            <button type="button" class="rq-dev-btn" id="rqDevRandomFact">Random revision fact</button>
+            <button type="button" class="rq-dev-btn" id="rqDevFocusMode">Toggle focus mode</button>
+            <button type="button" class="rq-dev-btn" id="rqDevToggleMotion">Toggle reduced motion</button>
+            <button type="button" class="rq-dev-btn" id="rqDevFullscreen">Toggle fullscreen</button>
+            <button type="button" class="rq-dev-btn" id="rqDevCopyBuild">Copy build info</button>
+            <button type="button" class="rq-dev-btn" id="rqDevDevBadge">Toggle DEV label</button>
+          </div>
+          <p style="font-size:10px;margin:8px 0 0">All tools run in this browser. They do not grant privileged Cloudflare access.</p>
         </section>
       </div>
       <section class="rq-dev-panel" style="margin-top:12px">
@@ -1381,79 +1479,73 @@ rqInitCloud();
   const logo=document.getElementById('rqDevLogo');
   const overlay=document.getElementById('rqDevOverlay');
   const output=document.getElementById('rqDevOutput');
-  if(!logo||!overlay||!output)return;
-  let clicks=0,clickReset=null,oldOverflow='';
+  const pinOverlay=document.getElementById('rqDevPinOverlay');
+  if(!logo||!overlay||!output||!pinOverlay)return;
+  let clicks=0,clickReset=null,oldOverflow='',pinFailCount=0,pinLockedUntil=0,focusMode=false,devBadge=null;
+  const PIN='1563';
   const $id=id=>document.getElementById(id);
   const write=text=>{output.textContent=String(text);};
   const getTheme=()=>{const m=(document.body.className||'').match(/(?:^|\s)theme-([\w-]+)/);return m?m[1]:'classic / default';};
-  function getQuestionStats(){
+  const stateSafe=()=>{try{return typeof state!=='undefined'&&state?state:null}catch(e){return null}};
+  const getQuestionStats=()=>{
     let allCount=null,generatedCount=null,topicCounts={};
-    try{if(typeof allCards==='function')allCount=allCards().length;}catch(e){}
-    try{if(typeof TOPIC_PRACTICE_CARDS!=='undefined'&&Array.isArray(TOPIC_PRACTICE_CARDS)){generatedCount=TOPIC_PRACTICE_CARDS.length;TOPIC_PRACTICE_CARDS.forEach(card=>{const key=(card.subject||'Other')+' → '+(card.topic||'General');topicCounts[key]=(topicCounts[key]||0)+1;});}}catch(e){}
-    let topicTotal=null;
-    try{if(typeof TOPICS_BY_SUBJECT!=='undefined')topicTotal=Object.values(TOPICS_BY_SUBJECT).reduce((sum,arr)=>sum+(Array.isArray(arr)?arr.length:0),0);}catch(e){}
+    try{if(typeof allCards==='function')allCount=allCards().length}catch(e){}
+    try{if(typeof TOPIC_PRACTICE_CARDS!=='undefined'&&Array.isArray(TOPIC_PRACTICE_CARDS)){generatedCount=TOPIC_PRACTICE_CARDS.length;TOPIC_PRACTICE_CARDS.forEach(card=>{const key=(card.subject||'Other')+' → '+(card.topic||'General');topicCounts[key]=(topicCounts[key]||0)+1})}}catch(e){}
+    let topicTotal=null;try{if(typeof TOPICS_BY_SUBJECT!=='undefined')topicTotal=Object.values(TOPICS_BY_SUBJECT).reduce((sum,arr)=>sum+(Array.isArray(arr)?arr.length:0),0)}catch(e){}
     return {allCount,generatedCount,topicTotal,topicCounts};
-  }
+  };
+  const refreshXpStatus=()=>{const st=stateSafe();if($id('rqDevXpStatus'))$id('rqDevXpStatus').textContent='Current XP: '+(st?Number(st.xp||0).toLocaleString():'unavailable')+' · Level '+(st?Math.floor((Number(st.xp)||0)/100)+1:'—')+' · Multiplier '+(window.rqDevXpMultiplier||1)+'×'};
   function refreshStatus(){
-    $id('rqDevOrigin').textContent=location.origin;
-    $id('rqDevNetwork').textContent=navigator.onLine?'Online':'Offline';
-    $id('rqDevTheme').textContent=getTheme();
-    let account='Local / not signed in';
-    try{if(typeof rqCloudUser!=='undefined'&&rqCloudUser)account='Signed in as @'+String(rqCloudUser.username||'user');else if(typeof rqCloudEnabled!=='undefined'&&rqCloudEnabled)account='Cloud API available; no online user detected';}catch(e){}
-    $id('rqDevAccount').textContent=account;
-    const stats=getQuestionStats();
-    $id('rqDevQuestionCount').textContent=(stats.allCount===null?'Unknown':stats.allCount.toLocaleString())+' unique cards';
+    $id('rqDevOrigin').textContent=location.origin;$id('rqDevNetwork').textContent=navigator.onLine?'Online':'Offline';$id('rqDevTheme').textContent=getTheme();
+    let account='Local / not signed in';try{if(typeof rqCloudUser!=='undefined'&&rqCloudUser)account='Signed in as @'+String(rqCloudUser.username||'user');else if(typeof rqCloudEnabled!=='undefined'&&rqCloudEnabled)account='Cloud API available; no online user detected'}catch(e){}
+    $id('rqDevAccount').textContent=account;const stats=getQuestionStats();$id('rqDevQuestionCount').textContent=(stats.allCount===null?'Unknown':stats.allCount.toLocaleString())+' cards';refreshXpStatus();
   }
-  function openMenu(){oldOverflow=document.body.style.overflow;document.body.style.overflow='hidden';overlay.style.display='flex';overlay.setAttribute('aria-hidden','false');refreshStatus();write('Developer toolbox ready. Choose a tool to run a check.');$id('rqDevClose').focus();}
-  function closeMenu(){overlay.style.display='none';overlay.setAttribute('aria-hidden','true');document.body.style.overflow=oldOverflow;logo.focus();}
-  function registerLogoClick(){
-    clicks++;
-    if(clickReset)clearTimeout(clickReset);
-    clickReset=setTimeout(()=>{clicks=0;},3200);
-    if(clicks>=5){clicks=0;if(clickReset)clearTimeout(clickReset);openMenu();}
-  }
-  logo.addEventListener('click',registerLogoClick);
-  logo.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();registerLogoClick();}});
-  $id('rqDevClose').addEventListener('click',closeMenu);
-  $id('rqDevCloseAlt').addEventListener('click',closeMenu);
-  overlay.addEventListener('click',event=>{if(event.target===overlay)closeMenu();});
-  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&overlay.style.display!=='none')closeMenu();});
-  $id('rqDevCheckApi').addEventListener('click',async()=>{
-    write('Checking /api/health…');
-    try{
-      let result;
-      if(typeof rqApi==='function')result=await rqApi('/api/health');
-      else {const response=await fetch('/api/health',{cache:'no-store',credentials:'same-origin'});let body={};try{body=await response.json();}catch(e){}if(!response.ok)throw new Error((body&&body.error)||('HTTP '+response.status));result=body;}
-      write('Cloudflare API responded successfully:\n'+JSON.stringify(result,null,2));
-    }catch(error){write('Cloudflare API check failed:\n'+String(error&&error.message||error)+'\n\nThis may mean the API is on another origin, the connection is offline, or the Worker returned an error. No credentials were included in this report.');}
-    refreshStatus();
-  });
-  $id('rqDevCountQuestions').addEventListener('click',()=>{
-    const stats=getQuestionStats();
-    const lines=['QUESTION BANK CHECK','All deduplicated cards: '+(stats.allCount===null?'unavailable':stats.allCount.toLocaleString()),'Generated topic prompts: '+(stats.generatedCount===null?'unavailable':stats.generatedCount.toLocaleString()),'Topics configured: '+(stats.topicTotal===null?'unavailable':stats.topicTotal),''];
-    const entries=Object.entries(stats.topicCounts).sort((a,b)=>a[0].localeCompare(b[0]));
-    lines.push('Sample topic counts:');
-    lines.push(...entries.slice(0,16).map(([name,count])=>'• '+name+': '+count));
-    if(entries.length>16)lines.push('… plus '+(entries.length-16)+' more topics.');
-    if(!entries.length)lines.push('Topic-generation data was not accessible from this page version.');
-    write(lines.join('\n'));refreshStatus();
-  });
-  $id('rqDevCopyReport').addEventListener('click',async()=>{
-    const stats=getQuestionStats();
-    const report={app:'Revision Quest 98',createdAt:new Date().toISOString(),origin:location.origin,online:navigator.onLine,theme:getTheme(),cloudAccountSignedIn:(()=>{try{return !!(typeof rqCloudUser!=='undefined'&&rqCloudUser);}catch(e){return false;}})(),questionCards:stats.allCount,generatedTopicPrompts:stats.generatedCount,configuredTopics:stats.topicTotal,features:{themePicker:!!$id('rqThemeOverlay'),cloudAccountForm:!!$id('rqCloudAuthForm'),friendsPage:!!$id('page-social'),liveRoomCode:!!$id('easyRoomCode')},note:'Diagnostics omit password fields, cookies, session tokens and API secrets.'};
-    const text=JSON.stringify(report,null,2);
-    try{await navigator.clipboard.writeText(text);write('Diagnostics copied to clipboard:\n\n'+text);}catch(e){write('Clipboard was unavailable. Copy the report shown below manually:\n\n'+text);}
-  });
-  $id('rqDevExport').addEventListener('click',()=>{
-    let current={};
-    try{if(typeof state!=='undefined'&&state){current={xp:state.xp||0,answered:state.answered||0,correct:state.correct||0,streak:state.streak||0,lastStudy:state.lastStudy||null,seen:state.seen||[],customQuestions:state.custom||[],preferences:{year:state.preferences?.year,board:state.preferences?.board,difficulty:state.preferences?.difficulty,goal:state.preferences?.goal,subjects:state.preferences?.subjects}};}}catch(e){}
-    const exportData={app:'Revision Quest 98 local study data',exportedAt:new Date().toISOString(),data:current,note:'This export intentionally excludes account passwords, authentication tokens, session cookies, local friends, and identifying profile fields.'};
-    const blob=new Blob([JSON.stringify(exportData,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download='revision-quest-local-study-data.json';document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);write('Your local study-data export was prepared. It includes revision stats, custom questions and study preferences, and excludes credentials and account-identifying fields.');
-  });
-  $id('rqDevOutlines').addEventListener('click',()=>{document.body.classList.toggle('rq-dev-outlines');write('Layout outlines '+(document.body.classList.contains('rq-dev-outlines')?'enabled':'disabled')+'. Reopen this menu to toggle them again.');});
-  $id('rqDevFriends').addEventListener('click',()=>{closeMenu();const btn=document.querySelector('[data-page="social"]');if(btn)btn.click();else write('Friends & Rooms page button was not found.');});
-  $id('rqDevThemes').addEventListener('click',()=>{closeMenu();const btn=$id('themePickerButton');if(btn)btn.click();else write('Theme picker button was not found.');});
+  function openMenu(){oldOverflow=document.body.style.overflow;document.body.style.overflow='hidden';overlay.style.display='flex';overlay.setAttribute('aria-hidden','false');refreshStatus();write('Developer toolbox unlocked. Local sandbox cheats may sync to your own account if cloud progress sync is enabled.');$id('rqDevClose').focus()}
+  function closeMenu(){overlay.style.display='none';overlay.setAttribute('aria-hidden','true');document.body.style.overflow=oldOverflow;logo.focus()}
+  function openPinGate(){if(Date.now()<pinLockedUntil){$id('rqDevPinMessage').textContent='Access is temporarily paused. Try again in a moment.';pinOverlay.style.display='flex';pinOverlay.setAttribute('aria-hidden','false');return}$id('rqDevPinInput').value='';$id('rqDevPinMessage').textContent='';pinOverlay.style.display='flex';pinOverlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(()=>$id('rqDevPinInput').focus(),20)}
+  function closePinGate(){pinOverlay.style.display='none';pinOverlay.setAttribute('aria-hidden','true');document.body.style.overflow=oldOverflow;clicks=0;logo.focus()}
+  function tryPin(e){if(e)e.preventDefault();if(Date.now()<pinLockedUntil){$id('rqDevPinMessage').textContent='Too many attempts. Please wait a short time.';return}if($id('rqDevPinInput').value===PIN){pinFailCount=0;closePinGate();openMenu();return}pinFailCount++;$id('rqDevPinInput').value='';$id('rqDevPinMessage').textContent='That code is not correct. Try again.';if(pinFailCount>=5){pinLockedUntil=Date.now()+15000;pinFailCount=0;$id('rqDevPinMessage').textContent='Too many tries. Access paused for 15 seconds.'}}
+  function registerLogoClick(){clicks++;if(clickReset)clearTimeout(clickReset);clickReset=setTimeout(()=>{clicks=0},3200);if(clicks>=5){clicks=0;if(clickReset)clearTimeout(clickReset);oldOverflow=document.body.style.overflow;openPinGate()}}
+  function safeSaveAndRefresh(){try{if(typeof save==='function')save()}catch(e){}try{if(typeof renderStats==='function')renderStats()}catch(e){}try{if(typeof renderProgress==='function')renderProgress()}catch(e){}try{if(typeof renderSubjects==='function')renderSubjects()}catch(e){}try{if(typeof renderLibrary==='function'&&document.getElementById('page-library')?.classList.contains('active'))renderLibrary()}catch(e){}refreshStatus()}
+  function alterXp(amount){const st=stateSafe();if(!st){write('App state was unavailable. Reload and reopen the menu.');return}st.xp=Math.max(0,Math.min(999999999,(Number(st.xp)||0)+amount));safeSaveAndRefresh();write((amount>=0?'Added ':'Removed ')+Math.abs(amount).toLocaleString()+' XP. Current total: '+Number(st.xp).toLocaleString()+'. If cloud sync is enabled, the site will attempt to sync your own progress.')}
+  function applyDevColors(announce=true){const defaults={desktop:'#302339',panel:'#d8d0e2',title:'#49225f',accent:'#c12686'};const colors={desktop:$id('rqDevColorDesktop')?.value||defaults.desktop,panel:$id('rqDevColorPanel')?.value||defaults.panel,title:$id('rqDevColorTitle')?.value||defaults.title,accent:$id('rqDevColorAccent')?.value||defaults.accent};if(!Object.values(colors).every(v=>/^#[0-9a-f]{6}$/i.test(v))){write('Invalid colour value. Please choose colours using the colour picker.');return}try{localStorage.setItem('rq98-dev-theme-colors',JSON.stringify(colors))}catch(e){}if(typeof window.rqSetTheme==='function')window.rqSetTheme('developer');const shade=(hex,amount)=>{const n=parseInt(hex.slice(1),16),r=Math.max(0,Math.min(255,(n>>16)+amount)),g=Math.max(0,Math.min(255,((n>>8)&255)+amount)),b=Math.max(0,Math.min(255,(n&255)+amount));return '#'+(1<<24|r<<16|g<<8|b).toString(16).slice(1)};const css={'--rq-desktop':colors.desktop,'--rq-panel':colors.panel,'--rq-panel-alt':shade(colors.panel,-20),'--rq-title':colors.title,'--rq-accent':colors.accent,'--rq-progress':colors.accent,'--rq-heading':colors.title,'--rq-button':shade(colors.panel,5),'--rq-hi':shade(colors.panel,35),'--rq-shadow':shade(colors.panel,-90),'--rq-text':'#211629','--rq-muted':'#594664','--rq-title-text':'#ffffff','--rq-button-text':'#24142c','--rq-yellow':'#765000'};Object.entries(css).forEach(([k,v])=>document.body.style.setProperty(k,v));if(announce)write('Developer theme applied and saved on this device. Window shapes and bevels remain unchanged.');refreshStatus()}
+  window.rqApplyDeveloperThemeColors=applyDevColors;
+  function loadDevColors(){try{const c=JSON.parse(localStorage.getItem('rq98-dev-theme-colors')||'null');if(c){if($id('rqDevColorDesktop'))$id('rqDevColorDesktop').value=c.desktop||'#302339';if($id('rqDevColorPanel'))$id('rqDevColorPanel').value=c.panel||'#d8d0e2';if($id('rqDevColorTitle'))$id('rqDevColorTitle').value=c.title||'#49225f';if($id('rqDevColorAccent'))$id('rqDevColorAccent').value=c.accent||'#c12686'}}catch(e){}}
+  const goPage=page=>{closeMenu();const btn=document.querySelector('[data-page="'+page+'"]');if(btn)btn.click();else write('The '+page+' page shortcut was not found.')};
+
+  logo.addEventListener('click',registerLogoClick);logo.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();registerLogoClick()}});
+  $id('rqDevPinForm').addEventListener('submit',tryPin);$id('rqDevPinClose').addEventListener('click',closePinGate);$id('rqDevPinCancel').addEventListener('click',closePinGate);pinOverlay.addEventListener('click',e=>{if(e.target===pinOverlay)closePinGate()});
+  $id('rqDevClose').addEventListener('click',closeMenu);overlay.addEventListener('click',event=>{if(event.target===overlay)closeMenu()});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(overlay.style.display!=='none')closeMenu();else if(pinOverlay.style.display!=='none')closePinGate()}});
+  $id('rqDevCheckApi').addEventListener('click',async()=>{write('Checking /api/health…');try{let result;if(typeof rqApi==='function')result=await rqApi('/api/health');else{const response=await fetch('/api/health',{cache:'no-store',credentials:'same-origin'});let body={};try{body=await response.json()}catch(e){}if(!response.ok)throw new Error((body&&body.error)||('HTTP '+response.status));result=body}write('Cloudflare API responded successfully:\n'+JSON.stringify(result,null,2))}catch(error){write('Cloudflare API check failed:\n'+String(error&&error.message||error)+'\n\nNo credentials were included in this report.')}refreshStatus()});
+  $id('rqDevCountQuestions').addEventListener('click',()=>{const stats=getQuestionStats(),lines=['QUESTION BANK CHECK','All deduplicated cards: '+(stats.allCount===null?'unavailable':stats.allCount.toLocaleString()),'Generated topic prompts: '+(stats.generatedCount===null?'unavailable':stats.generatedCount.toLocaleString()),'Configured topics: '+(stats.topicTotal===null?'unavailable':stats.topicTotal),''];const entries=Object.entries(stats.topicCounts).sort((a,b)=>a[0].localeCompare(b[0]));lines.push('Sample topic counts:');lines.push(...entries.slice(0,20).map(([name,count])=>'• '+name+': '+count));if(entries.length>20)lines.push('… plus '+(entries.length-20)+' more topics.');if(!entries.length)lines.push('Topic generator unavailable in this page version.');write(lines.join('\n'));refreshStatus()});
+  $id('rqDevCopyReport').addEventListener('click',async()=>{const stats=getQuestionStats(),report={app:'Revision Quest 98',createdAt:new Date().toISOString(),origin:location.origin,online:navigator.onLine,theme:getTheme(),cloudAccountSignedIn:(()=>{try{return !!(typeof rqCloudUser!=='undefined'&&rqCloudUser)}catch(e){return false}})(),questionCards:stats.allCount,generatedTopicPrompts:stats.generatedCount,configuredTopics:stats.topicTotal,xpMultiplier:window.rqDevXpMultiplier||1,features:{themePicker:!!$id('rqThemeOverlay'),cloudAccountForm:!!$id('rqCloudAuthForm'),friendsPage:!!$id('page-social'),liveRoomCode:!!$id('easyRoomCode')},note:'No passwords, session cookies, auth tokens, or API secrets are included.'},text=JSON.stringify(report,null,2);try{await navigator.clipboard.writeText(text);write('Diagnostics copied:\n\n'+text)}catch(e){write('Clipboard unavailable; copy this report manually:\n\n'+text)}});
+  $id('rqDevExport').addEventListener('click',()=>{const st=stateSafe()||{};const current={xp:st.xp||0,answered:st.answered||0,correct:st.correct||0,streak:st.streak||0,lastStudy:st.lastStudy||null,seen:st.seen||[],customQuestions:st.custom||[],preferences:{year:st.preferences?.year,board:st.preferences?.board,difficulty:st.preferences?.difficulty,goal:st.preferences?.goal,subjects:st.preferences?.subjects}};const blob=new Blob([JSON.stringify({app:'Revision Quest 98 local study data',exportedAt:new Date().toISOString(),data:current,note:'Excludes passwords, cookies, session tokens, local friends and identifying profile fields.'},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download='revision-quest-local-study-data.json';document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);write('Local study-data export downloaded. Credentials are excluded.')});
+  $id('rqDevOutlines').addEventListener('click',()=>{document.body.classList.toggle('rq-dev-outlines');write('Layout outlines '+(document.body.classList.contains('rq-dev-outlines')?'enabled':'disabled')+'.')});
+  $id('rqDevFriends').addEventListener('click',()=>goPage('social'));$id('rqDevThemes').addEventListener('click',()=>{closeMenu();const btn=$id('themePickerButton');if(btn)btn.click();else write('Theme picker button not found.')});
+  $id('rqDevOpenQuiz').addEventListener('click',()=>goPage('practice'));$id('rqDevOpenCards').addEventListener('click',()=>goPage('cards'));$id('rqDevOpenLibrary').addEventListener('click',()=>goPage('library'));$id('rqDevOpenBuilder').addEventListener('click',()=>goPage('create'));
+  $id('rqDevToastTest').addEventListener('click',()=>{write('Notification test fired.');if(typeof toast==='function')toast('🛠 Developer console notification test!')});
   $id('rqDevReload').addEventListener('click',()=>location.reload());
+  window.rqDevXpMultiplier=1;try{const n=Number(localStorage.getItem('rq98-dev-xp-multiplier'));if([1,2,5,10,100].includes(n))window.rqDevXpMultiplier=n}catch(e){}
+  if($id('rqDevXpMultiplier'))$id('rqDevXpMultiplier').value=String(window.rqDevXpMultiplier);
+  $id('rqDevApplyMultiplier').addEventListener('click',()=>{const v=Number($id('rqDevXpMultiplier').value);window.rqDevXpMultiplier=[1,2,5,10,100].includes(v)?v:1;try{localStorage.setItem('rq98-dev-xp-multiplier',String(window.rqDevXpMultiplier))}catch(e){}write('XP multiplier set to '+window.rqDevXpMultiplier+'× for future XP rewards on this device.');refreshXpStatus()});
+  $id('rqDevAdd100').addEventListener('click',()=>alterXp(100));$id('rqDevAdd1000').addEventListener('click',()=>alterXp(1000));$id('rqDevAdd10000').addEventListener('click',()=>alterXp(10000));
+  $id('rqDevSetTargetLevel').addEventListener('click',()=>{const st=stateSafe();if(!st)return;const level=Math.max(1,Math.min(9999,Math.floor(Number($id('rqDevTargetLevel').value)||1)));st.xp=(level-1)*100;safeSaveAndRefresh();write('Level set to '+level+' ('+st.xp.toLocaleString()+' XP).')});
+  $id('rqDevSetStreak').addEventListener('click',()=>{const st=stateSafe();if(!st)return;st.streak=Math.max(0,Math.min(9999,Math.floor(Number($id('rqDevTargetStreak').value)||0)));safeSaveAndRefresh();write('Study streak set to '+st.streak+' day(s).')});
+  $id('rqDevMarkAllSeen').addEventListener('click',()=>{const st=stateSafe();if(!st||typeof allCards!=='function')return;st.seen=allCards().map(c=>c.id);safeSaveAndRefresh();write('Marked '+st.seen.length.toLocaleString()+' cards as reviewed on this device.')});
+  $id('rqDevAddAnswered').addEventListener('click',()=>{const st=stateSafe();if(!st)return;st.answered=(Number(st.answered)||0)+100;safeSaveAndRefresh();write('Added 100 to the answered-question counter.')});
+  $id('rqDevResetStats').addEventListener('click',()=>{if(!confirm('Reset this device’s XP, answers, accuracy, streak and reviewed-card list? Custom questions and account credentials are not removed.'))return;const st=stateSafe();if(!st)return;st.xp=0;st.answered=0;st.correct=0;st.streak=0;st.seen=[];st.lastStudy=null;safeSaveAndRefresh();write('Local progress counters were reset. Server-side records may remain unchanged.')});
+  $id('rqDevApplyCustomTheme').addEventListener('click',()=>applyDevColors(true));
+  $id('rqDevDefaultTheme').addEventListener('click',()=>{const defaults={desktop:'#302339',panel:'#d8d0e2',title:'#49225f',accent:'#c12686'};$id('rqDevColorDesktop').value=defaults.desktop;$id('rqDevColorPanel').value=defaults.panel;$id('rqDevColorTitle').value=defaults.title;$id('rqDevColorAccent').value=defaults.accent;applyDevColors(true)});
+  $id('rqDevRandomFact').addEventListener('click',()=>{try{const bank=typeof allCards==='function'?allCards():[];if(!bank.length){write('No question cards found.');return}const c=bank[Math.floor(Math.random()*bank.length)];write('RANDOM REVISION CARD\n'+(c.subject||'Subject')+' → '+(c.topic||'Topic')+'\n\nQ: '+c.q+'\n\nA: '+c.a)}catch(e){write('Could not read the question bank: '+e.message)}});
+  $id('rqDevFocusMode').addEventListener('click',()=>{focusMode=!focusMode;document.body.classList.toggle('rq-dev-focus-mode',focusMode);write('Focus mode '+(focusMode?'enabled: main content highlighted':'disabled')+'.')});
+  $id('rqDevToggleMotion').addEventListener('click',()=>{const css=$id('rqDevReducedMotionStyle');if(css)css.remove();else{const st=document.createElement('style');st.id='rqDevReducedMotionStyle';st.textContent='*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}';document.head.appendChild(st)}write('Reduced motion '+($id('rqDevReducedMotionStyle')?'enabled':'disabled')+'.')});
+  $id('rqDevFullscreen').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();write('Fullscreen '+(document.fullscreenElement?'enabled':'requested')+'.')}catch(e){write('Fullscreen is blocked or unavailable in this browser: '+e.message)}});
+  $id('rqDevCopyBuild').addEventListener('click',async()=>{const report='Revision Quest 98\nBuild: Dev Console Expansion\nLoaded: '+new Date().toISOString()+'\nOrigin: '+location.origin+'\nUser agent: '+navigator.userAgent;try{await navigator.clipboard.writeText(report);write('Build information copied:\n'+report)}catch(e){write(report)}});
+  $id('rqDevDevBadge').addEventListener('click',()=>{if(devBadge){devBadge.remove();devBadge=null;write('DEV badge hidden.')}else{devBadge=document.createElement('div');devBadge.id='rqDevFloatingBadge';devBadge.textContent='🛠 DEV MODE';devBadge.style.cssText='position:fixed;right:8px;top:8px;z-index:12000;background:#49225f;color:#fff;border:3px solid;border-color:#fff #555 #555 #fff;padding:6px 10px;font:bold 12px Tahoma,Arial,sans-serif;pointer-events:none';document.body.appendChild(devBadge);write('DEV badge shown in the top-right corner.')}});
+  window.rqSetTheme=window.rqSetTheme||undefined;
+  loadDevColors();
+  if(document.body.classList.contains('theme-developer'))applyDevColors(false);
   refreshStatus();
 })();
 </script>
