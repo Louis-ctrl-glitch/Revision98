@@ -191,6 +191,9 @@ body.theme-developer .account-overlay{background:var(--rq-desktop)}
 
 body.rq-dev-focus-mode .sidebar,body.rq-dev-focus-mode .topbar{opacity:.35;filter:grayscale(.4)}body.rq-dev-focus-mode .main{filter:contrast(1.04)}
 #rqDevFloatingBadge{user-select:none}
+.rq-dev-name-badge{display:inline-block;margin-left:5px;padding:2px 5px;font: bold 10px/1.35 Tahoma,Arial,sans-serif;letter-spacing:.3px;background:#49225f;color:#fff;border:2px solid;border-color:#fff #392047 #392047 #fff;white-space:nowrap;vertical-align:middle;box-shadow:1px 1px #555}
+.rq-dev-name-badge[hidden]{display:none!important}
+body.theme-developer .rq-dev-name-badge{background:var(--rq-accent);color:var(--rq-title-text);border-color:var(--rq-hi) var(--rq-shadow) var(--rq-shadow) var(--rq-hi)}
 </style>
 </head>
 <body>
@@ -248,7 +251,6 @@ body.rq-dev-focus-mode .sidebar,body.rq-dev-focus-mode .topbar{opacity:.35;filte
         <button class="rq-theme-choice" data-rq-theme="blue"><span class="rq-theme-swatch swatch-blue"><i></i><b>☁</b></span><strong>Blue Horizon</strong><small>Classic beveled shapes in sky blue and deep blue</small></button>
         <button class="rq-theme-choice" data-rq-theme="midnight"><span class="rq-theme-swatch swatch-midnight"><i></i><b>★</b></span><strong>Midnight Arcade</strong><small>Classic beveled shapes in midnight navy and mint</small></button>
         <button class="rq-theme-choice" data-rq-theme="classic"><span class="rq-theme-swatch swatch-classic"><i></i><b>▣</b></span><strong>Classic Aqua</strong><small>Original teal desktop, silver panels and blue title bars</small></button>
-        <button class="rq-theme-choice" data-rq-theme="developer"><span class="rq-theme-swatch swatch-developer"><i></i><b>⌘</b></span><strong>Developer Console</strong><small>Custom plum, graphite and neon-magenta developer palette</small></button>
       </div>
       <div class="rq-theme-bottom"><span id="rqThemeSavedLabel">Theme saved on this device</span><button class="btn secondary" type="button" onclick="closeThemePicker()">Done</button></div>
     </div>
@@ -258,7 +260,7 @@ body.rq-dev-focus-mode .sidebar,body.rq-dev-focus-mode .topbar{opacity:.35;filte
 <div class="app">
 <header class="topbar">
   <div class="brand"><div class="logo" id="rqDevLogo" role="button" tabindex="0" aria-label="Revision Quest logo" title="Revision Quest">✦</div><div>revision quest<small>GCSE study arena</small></div></div>
-  <div class="top-actions"><div class="pill">⚡ <strong id="topXp">0 XP</strong></div><div class="pill">🔥 <strong id="topStreak">0 day streak</strong></div><button class="pill" id="themePickerButton" onclick="openThemePicker()" title="Choose a desktop theme">🎨 Themes</button><button class="pill profile-button" onclick="openProfile()" title="View or edit profile"><span class="profile-initial" id="profileInitial">?</span><span id="profileName">Profile</span></button></div>
+  <div class="top-actions"><div class="pill">⚡ <strong id="topXp">0 XP</strong></div><div class="pill">🔥 <strong id="topStreak">0 day streak</strong></div><button class="pill" id="themePickerButton" onclick="openThemePicker()" title="Choose a desktop theme">🎨 Themes</button><button class="pill profile-button" onclick="openProfile()" title="View or edit profile"><span class="profile-initial" id="profileInitial">?</span><span id="profileName">Profile</span><span id="rqDevProfileBadge" class="rq-dev-name-badge" hidden aria-label="Developer mode badge">🛠 DEV</span></button></div>
 </header>
 <div class="layout">
 <aside class="sidebar">
@@ -1449,7 +1451,7 @@ rqInitCloud();
             <label>Title bars<input id="rqDevColorTitle" type="color" value="#49225f"></label>
             <label>Accent<input id="rqDevColorAccent" type="color" value="#c12686"></label>
           </div>
-          <div class="rq-dev-actions"><button type="button" class="rq-dev-btn" id="rqDevApplyCustomTheme">Apply custom theme</button><button type="button" class="rq-dev-btn" id="rqDevDefaultTheme">Restore developer defaults</button></div>
+          <div class="rq-dev-actions"><button type="button" class="rq-dev-btn" id="rqDevApplyCustomTheme">Apply Developer theme</button><button type="button" class="rq-dev-btn" id="rqDevDefaultTheme">Restore developer defaults</button></div><p style="font-size:10px;margin:7px 0 0">This theme is intentionally hidden from the normal Themes picker and can only be selected here.</p>
         </section>
         <section class="rq-dev-panel">
           <h3>🧰 Fun &amp; test lab</h3>
@@ -1502,7 +1504,14 @@ rqInitCloud();
     let account='Local / not signed in';try{if(typeof rqCloudUser!=='undefined'&&rqCloudUser)account='Signed in as @'+String(rqCloudUser.username||'user');else if(typeof rqCloudEnabled!=='undefined'&&rqCloudEnabled)account='Cloud API available; no online user detected'}catch(e){}
     $id('rqDevAccount').textContent=account;const stats=getQuestionStats();$id('rqDevQuestionCount').textContent=(stats.allCount===null?'Unknown':stats.allCount.toLocaleString())+' cards';refreshXpStatus();
   }
-  function openMenu(){oldOverflow=document.body.style.overflow;document.body.style.overflow='hidden';overlay.style.display='flex';overlay.setAttribute('aria-hidden','false');refreshStatus();write('Developer toolbox unlocked. Local sandbox cheats may sync to your own account if cloud progress sync is enabled.');$id('rqDevClose').focus()}
+  function setProfileDevBadge(enabled){
+    const badge=$id('rqDevProfileBadge');
+    if(!badge)return;
+    badge.hidden=!enabled;
+    badge.setAttribute('aria-hidden',enabled?'false':'true');
+    try{if(enabled)sessionStorage.setItem('rq98-dev-badge-unlocked','1');else sessionStorage.removeItem('rq98-dev-badge-unlocked')}catch(e){}
+  }
+  function openMenu(){setProfileDevBadge(true);oldOverflow=document.body.style.overflow;document.body.style.overflow='hidden';overlay.style.display='flex';overlay.setAttribute('aria-hidden','false');refreshStatus();write('Developer toolbox unlocked. DEV badge added beside your profile name for this browser tab. Local sandbox cheats may sync to your own account if cloud progress sync is enabled.');$id('rqDevClose').focus()}
   function closeMenu(){overlay.style.display='none';overlay.setAttribute('aria-hidden','true');document.body.style.overflow=oldOverflow;logo.focus()}
   function openPinGate(){if(Date.now()<pinLockedUntil){$id('rqDevPinMessage').textContent='Access is temporarily paused. Try again in a moment.';pinOverlay.style.display='flex';pinOverlay.setAttribute('aria-hidden','false');return}$id('rqDevPinInput').value='';$id('rqDevPinMessage').textContent='';pinOverlay.style.display='flex';pinOverlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(()=>$id('rqDevPinInput').focus(),20)}
   function closePinGate(){pinOverlay.style.display='none';pinOverlay.setAttribute('aria-hidden','true');document.body.style.overflow=oldOverflow;clicks=0;logo.focus()}
@@ -1544,9 +1553,10 @@ rqInitCloud();
   $id('rqDevToggleMotion').addEventListener('click',()=>{const css=$id('rqDevReducedMotionStyle');if(css)css.remove();else{const st=document.createElement('style');st.id='rqDevReducedMotionStyle';st.textContent='*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}';document.head.appendChild(st)}write('Reduced motion '+($id('rqDevReducedMotionStyle')?'enabled':'disabled')+'.')});
   $id('rqDevFullscreen').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();write('Fullscreen '+(document.fullscreenElement?'enabled':'requested')+'.')}catch(e){write('Fullscreen is blocked or unavailable in this browser: '+e.message)}});
   $id('rqDevCopyBuild').addEventListener('click',async()=>{const report='Revision Quest 98\nBuild: Dev Console Expansion\nLoaded: '+new Date().toISOString()+'\nOrigin: '+location.origin+'\nUser agent: '+navigator.userAgent;try{await navigator.clipboard.writeText(report);write('Build information copied:\n'+report)}catch(e){write(report)}});
-  $id('rqDevDevBadge').addEventListener('click',()=>{if(devBadge){devBadge.remove();devBadge=null;write('DEV badge hidden.')}else{devBadge=document.createElement('div');devBadge.id='rqDevFloatingBadge';devBadge.textContent='🛠 DEV MODE';devBadge.style.cssText='position:fixed;right:8px;top:8px;z-index:12000;background:#49225f;color:#fff;border:3px solid;border-color:#fff #555 #555 #fff;padding:6px 10px;font:bold 12px Tahoma,Arial,sans-serif;pointer-events:none';document.body.appendChild(devBadge);write('DEV badge shown in the top-right corner.')}});
+  $id('rqDevDevBadge').addEventListener('click',()=>{const badge=$id('rqDevProfileBadge');const show=!!badge&&badge.hidden;setProfileDevBadge(show);write(show?'DEV badge shown next to your profile name.':'DEV badge hidden next to your profile name.')});
   window.rqSetTheme=window.rqSetTheme||undefined;
   loadDevColors();
+  try{if(sessionStorage.getItem('rq98-dev-badge-unlocked')==='1')setProfileDevBadge(true)}catch(e){}
   if(document.body.classList.contains('theme-developer'))applyDevColors(false);
   refreshStatus();
 })();
