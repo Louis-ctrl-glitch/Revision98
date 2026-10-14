@@ -134,6 +134,27 @@ body.theme-aero .friend-extra span,body.theme-olive .friend-extra span,body.them
 body.theme-midnight .rq-live-meta,body.theme-midnight .rq-live-footer{border-color:#69718f}
 </style>
 
+
+<style id="rqDevMenuStyles">
+#rqDevOverlay{position:fixed;inset:0;z-index:15000;display:none;align-items:center;justify-content:center;padding:12px;background:rgba(0,0,0,.67);backdrop-filter:blur(3px)}
+#rqDevWindow{width:min(850px,100%);max-height:95vh;overflow:auto;background:var(--rq-panel,#c0c0c0);color:var(--rq-text,#111);border:3px solid;border-color:var(--rq-hi,#fff) var(--rq-shadow,#555) var(--rq-shadow,#555) var(--rq-hi,#fff);box-shadow:7px 7px 0 rgba(0,0,0,.55);font-family:Tahoma,Arial,sans-serif}
+#rqDevTitlebar{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--rq-title,#000080);color:var(--rq-title-text,#fff);padding:7px 9px;font-weight:bold}
+#rqDevTitlebar button,#rqDevWindow .rq-dev-btn{border:2px solid;border-color:var(--rq-hi,#fff) var(--rq-shadow,#555) var(--rq-shadow,#555) var(--rq-hi,#fff);border-radius:0;background:var(--rq-button,#c0c0c0);color:var(--rq-button-text,#111);padding:7px 10px;font:inherit;font-weight:bold;cursor:pointer;box-shadow:none}
+#rqDevBody{padding:13px}
+.rq-dev-warning{border:1px solid var(--rq-shadow,#666);background:var(--rq-panel-alt,#e0e0e0);padding:9px 10px;font-size:12px;margin-bottom:12px}
+.rq-dev-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rq-dev-panel{border:2px solid;border-color:var(--rq-hi,#fff) var(--rq-shadow,#555) var(--rq-shadow,#555) var(--rq-hi,#fff);padding:10px;background:var(--rq-panel-alt,#d4d0c8);min-width:0}
+.rq-dev-panel h3{margin:0 0 8px;color:var(--rq-heading,var(--rq-title,#000080));font-size:15px}
+.rq-dev-status{display:grid;grid-template-columns:minmax(90px,.75fr) minmax(0,1.25fr);gap:6px 10px;margin:0;font-size:12px}
+.rq-dev-status dt{font-weight:bold}.rq-dev-status dd{margin:0;overflow-wrap:anywhere}
+.rq-dev-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+#rqDevOutput{white-space:pre-wrap;overflow-wrap:anywhere;max-height:190px;overflow:auto;margin:9px 0 0;padding:9px;background:var(--rq-hi,#fff);color:#171717;border:2px inset var(--rq-shadow,#777);font:12px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace}
+.rq-dev-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px;font-size:11px;color:var(--rq-muted,#444)}
+body.rq-dev-outlines *{outline:1px dashed rgba(255,0,110,.7)!important}
+#rqDevLogo{user-select:none;-webkit-user-select:none;touch-action:manipulation}
+@media(max-width:600px){#rqDevOverlay{padding:5px}#rqDevWindow{max-height:98vh}.rq-dev-grid{grid-template-columns:1fr}.rq-dev-actions{grid-template-columns:1fr 1fr}#rqDevBody{padding:8px}.rq-dev-status{grid-template-columns:95px minmax(0,1fr)}}
+</style>
+
 </head>
 <body>
 
@@ -198,7 +219,7 @@ body.theme-midnight .rq-live-meta,body.theme-midnight .rq-live-footer{border-col
 
 <div class="app">
 <header class="topbar">
-  <div class="brand"><div class="logo">✦</div><div>revision quest<small>GCSE study arena</small></div></div>
+  <div class="brand"><div class="logo" id="rqDevLogo" role="button" tabindex="0" aria-label="Revision Quest logo" title="Revision Quest">✦</div><div>revision quest<small>GCSE study arena</small></div></div>
   <div class="top-actions"><div class="pill">⚡ <strong id="topXp">0 XP</strong></div><div class="pill">🔥 <strong id="topStreak">0 day streak</strong></div><button class="pill" id="themePickerButton" onclick="openThemePicker()" title="Choose a desktop theme">🎨 Themes</button><button class="pill profile-button" onclick="openProfile()" title="View or edit profile"><span class="profile-initial" id="profileInitial">?</span><span id="profileName">Profile</span></button></div>
 </header>
 <div class="layout">
@@ -1308,6 +1329,132 @@ rqInitCloud();
   if(typeof easyHandleMessage==='function'){const old=easyHandleMessage;window.easyHandleMessage=function(message,peerId){if(message&&(message.type==='question'||message.type==='next')&&(!seenRound||Number(message.index)===1)){seenRound=true;if(Number(message.index)===1)dismissed=false;if(!dismissed)window.openLiveGameWindow()}const result=old.apply(this,arguments);updateLiveMeta();return result}}
   if(typeof easyEndGame==='function'){const old=easyEndGame;window.easyEndGame=function(){const result=old.apply(this,arguments);updateLiveMeta();if(!dismissed)window.openLiveGameWindow();return result}}
   if(typeof easyLeaveRoom==='function'){const old=easyLeaveRoom;window.easyLeaveRoom=async function(){try{return await old.apply(this,arguments)}finally{setOpen(false);reopen.style.display='none';seenRound=false;dismissed=false}}}
+})();
+</script>
+
+
+<div id="rqDevOverlay" style="display:none" aria-hidden="true">
+  <section id="rqDevWindow" role="dialog" aria-modal="true" aria-labelledby="rqDevTitle">
+    <div id="rqDevTitlebar"><span id="rqDevTitle">🛠 Revision Quest — Developer / Owner Menu</span><button type="button" id="rqDevClose" aria-label="Close developer menu">×</button></div>
+    <div id="rqDevBody">
+      <div class="rq-dev-warning"><strong>Hidden toolbox · local browser controls.</strong> This easter egg is not secure admin authentication. It does not grant Cloudflare or server permissions, and must not be used to protect privileged actions.</div>
+      <div class="rq-dev-grid">
+        <section class="rq-dev-panel">
+          <h3>System status</h3>
+          <dl class="rq-dev-status">
+            <dt>Website</dt><dd id="rqDevOrigin">Checking…</dd>
+            <dt>Network</dt><dd id="rqDevNetwork">Checking…</dd>
+            <dt>Theme</dt><dd id="rqDevTheme">Checking…</dd>
+            <dt>Online account</dt><dd id="rqDevAccount">Not checked</dd>
+            <dt>Question bank</dt><dd id="rqDevQuestionCount">Not checked</dd>
+          </dl>
+          <div style="margin-top:10px"><button type="button" class="rq-dev-btn" id="rqDevCheckApi">Check Cloudflare API</button></div>
+        </section>
+        <section class="rq-dev-panel">
+          <h3>Quick tools</h3>
+          <div class="rq-dev-actions">
+            <button type="button" class="rq-dev-btn" id="rqDevCountQuestions">Count topic questions</button>
+            <button type="button" class="rq-dev-btn" id="rqDevCopyReport">Copy diagnostics</button>
+            <button type="button" class="rq-dev-btn" id="rqDevExport">Export local study data</button>
+            <button type="button" class="rq-dev-btn" id="rqDevOutlines">Toggle layout outlines</button>
+            <button type="button" class="rq-dev-btn" id="rqDevFriends">Open Friends &amp; Rooms</button>
+            <button type="button" class="rq-dev-btn" id="rqDevThemes">Open Themes</button>
+            <button type="button" class="rq-dev-btn" id="rqDevReload">Reload website</button>
+            <button type="button" class="rq-dev-btn" id="rqDevCloseAlt">Close menu</button>
+          </div>
+        </section>
+      </div>
+      <section class="rq-dev-panel" style="margin-top:12px">
+        <h3>Developer output</h3>
+        <div style="font-size:12px">Run a check above to see its result. Reports avoid passwords, session cookies and API tokens.</div>
+        <pre id="rqDevOutput" aria-live="polite">Developer toolbox ready.</pre>
+      </section>
+      <div class="rq-dev-footer"><span>Revision Quest 98 · hidden easter egg</span><span>Click the top-left ✦ five times to open</span></div>
+    </div>
+  </section>
+</div>
+
+
+<script id="rqDevMenuScript">
+(()=>{
+  'use strict';
+  const logo=document.getElementById('rqDevLogo');
+  const overlay=document.getElementById('rqDevOverlay');
+  const output=document.getElementById('rqDevOutput');
+  if(!logo||!overlay||!output)return;
+  let clicks=0,clickReset=null,oldOverflow='';
+  const $id=id=>document.getElementById(id);
+  const write=text=>{output.textContent=String(text);};
+  const getTheme=()=>{const m=(document.body.className||'').match(/(?:^|\s)theme-([\w-]+)/);return m?m[1]:'classic / default';};
+  function getQuestionStats(){
+    let allCount=null,generatedCount=null,topicCounts={};
+    try{if(typeof allCards==='function')allCount=allCards().length;}catch(e){}
+    try{if(typeof TOPIC_PRACTICE_CARDS!=='undefined'&&Array.isArray(TOPIC_PRACTICE_CARDS)){generatedCount=TOPIC_PRACTICE_CARDS.length;TOPIC_PRACTICE_CARDS.forEach(card=>{const key=(card.subject||'Other')+' → '+(card.topic||'General');topicCounts[key]=(topicCounts[key]||0)+1;});}}catch(e){}
+    let topicTotal=null;
+    try{if(typeof TOPICS_BY_SUBJECT!=='undefined')topicTotal=Object.values(TOPICS_BY_SUBJECT).reduce((sum,arr)=>sum+(Array.isArray(arr)?arr.length:0),0);}catch(e){}
+    return {allCount,generatedCount,topicTotal,topicCounts};
+  }
+  function refreshStatus(){
+    $id('rqDevOrigin').textContent=location.origin;
+    $id('rqDevNetwork').textContent=navigator.onLine?'Online':'Offline';
+    $id('rqDevTheme').textContent=getTheme();
+    let account='Local / not signed in';
+    try{if(typeof rqCloudUser!=='undefined'&&rqCloudUser)account='Signed in as @'+String(rqCloudUser.username||'user');else if(typeof rqCloudEnabled!=='undefined'&&rqCloudEnabled)account='Cloud API available; no online user detected';}catch(e){}
+    $id('rqDevAccount').textContent=account;
+    const stats=getQuestionStats();
+    $id('rqDevQuestionCount').textContent=(stats.allCount===null?'Unknown':stats.allCount.toLocaleString())+' unique cards';
+  }
+  function openMenu(){oldOverflow=document.body.style.overflow;document.body.style.overflow='hidden';overlay.style.display='flex';overlay.setAttribute('aria-hidden','false');refreshStatus();write('Developer toolbox ready. Choose a tool to run a check.');$id('rqDevClose').focus();}
+  function closeMenu(){overlay.style.display='none';overlay.setAttribute('aria-hidden','true');document.body.style.overflow=oldOverflow;logo.focus();}
+  function registerLogoClick(){
+    clicks++;
+    if(clickReset)clearTimeout(clickReset);
+    clickReset=setTimeout(()=>{clicks=0;},3200);
+    if(clicks>=5){clicks=0;if(clickReset)clearTimeout(clickReset);openMenu();}
+  }
+  logo.addEventListener('click',registerLogoClick);
+  logo.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();registerLogoClick();}});
+  $id('rqDevClose').addEventListener('click',closeMenu);
+  $id('rqDevCloseAlt').addEventListener('click',closeMenu);
+  overlay.addEventListener('click',event=>{if(event.target===overlay)closeMenu();});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&overlay.style.display!=='none')closeMenu();});
+  $id('rqDevCheckApi').addEventListener('click',async()=>{
+    write('Checking /api/health…');
+    try{
+      let result;
+      if(typeof rqApi==='function')result=await rqApi('/api/health');
+      else {const response=await fetch('/api/health',{cache:'no-store',credentials:'same-origin'});let body={};try{body=await response.json();}catch(e){}if(!response.ok)throw new Error((body&&body.error)||('HTTP '+response.status));result=body;}
+      write('Cloudflare API responded successfully:\n'+JSON.stringify(result,null,2));
+    }catch(error){write('Cloudflare API check failed:\n'+String(error&&error.message||error)+'\n\nThis may mean the API is on another origin, the connection is offline, or the Worker returned an error. No credentials were included in this report.');}
+    refreshStatus();
+  });
+  $id('rqDevCountQuestions').addEventListener('click',()=>{
+    const stats=getQuestionStats();
+    const lines=['QUESTION BANK CHECK','All deduplicated cards: '+(stats.allCount===null?'unavailable':stats.allCount.toLocaleString()),'Generated topic prompts: '+(stats.generatedCount===null?'unavailable':stats.generatedCount.toLocaleString()),'Topics configured: '+(stats.topicTotal===null?'unavailable':stats.topicTotal),''];
+    const entries=Object.entries(stats.topicCounts).sort((a,b)=>a[0].localeCompare(b[0]));
+    lines.push('Sample topic counts:');
+    lines.push(...entries.slice(0,16).map(([name,count])=>'• '+name+': '+count));
+    if(entries.length>16)lines.push('… plus '+(entries.length-16)+' more topics.');
+    if(!entries.length)lines.push('Topic-generation data was not accessible from this page version.');
+    write(lines.join('\n'));refreshStatus();
+  });
+  $id('rqDevCopyReport').addEventListener('click',async()=>{
+    const stats=getQuestionStats();
+    const report={app:'Revision Quest 98',createdAt:new Date().toISOString(),origin:location.origin,online:navigator.onLine,theme:getTheme(),cloudAccountSignedIn:(()=>{try{return !!(typeof rqCloudUser!=='undefined'&&rqCloudUser);}catch(e){return false;}})(),questionCards:stats.allCount,generatedTopicPrompts:stats.generatedCount,configuredTopics:stats.topicTotal,features:{themePicker:!!$id('rqThemeOverlay'),cloudAccountForm:!!$id('rqCloudAuthForm'),friendsPage:!!$id('page-social'),liveRoomCode:!!$id('easyRoomCode')},note:'Diagnostics omit password fields, cookies, session tokens and API secrets.'};
+    const text=JSON.stringify(report,null,2);
+    try{await navigator.clipboard.writeText(text);write('Diagnostics copied to clipboard:\n\n'+text);}catch(e){write('Clipboard was unavailable. Copy the report shown below manually:\n\n'+text);}
+  });
+  $id('rqDevExport').addEventListener('click',()=>{
+    let current={};
+    try{if(typeof state!=='undefined'&&state){current={xp:state.xp||0,answered:state.answered||0,correct:state.correct||0,streak:state.streak||0,lastStudy:state.lastStudy||null,seen:state.seen||[],customQuestions:state.custom||[],preferences:{year:state.preferences?.year,board:state.preferences?.board,difficulty:state.preferences?.difficulty,goal:state.preferences?.goal,subjects:state.preferences?.subjects}};}}catch(e){}
+    const exportData={app:'Revision Quest 98 local study data',exportedAt:new Date().toISOString(),data:current,note:'This export intentionally excludes account passwords, authentication tokens, session cookies, local friends, and identifying profile fields.'};
+    const blob=new Blob([JSON.stringify(exportData,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download='revision-quest-local-study-data.json';document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);write('Your local study-data export was prepared. It includes revision stats, custom questions and study preferences, and excludes credentials and account-identifying fields.');
+  });
+  $id('rqDevOutlines').addEventListener('click',()=>{document.body.classList.toggle('rq-dev-outlines');write('Layout outlines '+(document.body.classList.contains('rq-dev-outlines')?'enabled':'disabled')+'. Reopen this menu to toggle them again.');});
+  $id('rqDevFriends').addEventListener('click',()=>{closeMenu();const btn=document.querySelector('[data-page="social"]');if(btn)btn.click();else write('Friends & Rooms page button was not found.');});
+  $id('rqDevThemes').addEventListener('click',()=>{closeMenu();const btn=$id('themePickerButton');if(btn)btn.click();else write('Theme picker button was not found.');});
+  $id('rqDevReload').addEventListener('click',()=>location.reload());
+  refreshStatus();
 })();
 </script>
 
