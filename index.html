@@ -162,6 +162,60 @@ body.theme-midnight .rq-live-meta,body.theme-midnight .rq-live-footer{border-col
 body.rq-dev-outlines *{outline:1px dashed rgba(255,0,110,.7)!important}
 #rqDevLogo{user-select:none;-webkit-user-select:none;touch-action:manipulation}
 @media(max-width:600px){#rqDevOverlay{padding:5px}#rqDevWindow{max-height:98vh}.rq-dev-grid{grid-template-columns:1fr}.rq-dev-actions{grid-template-columns:1fr 1fr}#rqDevBody{padding:8px}.rq-dev-status{grid-template-columns:95px minmax(0,1fr)}}
+
+/* Hidden nested Chaos Lab. All effects are ephemeral and scoped to this tab. */
+#rqChaosLabOverlay,#rqChaosGateOverlay,#rqChaosFakeAlert{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:12px;background:rgba(0,0,0,.78);z-index:15020;font:13px Tahoma,Arial,sans-serif;color:#111}
+#rqChaosGateOverlay{z-index:15030}
+#rqChaosFakeAlert{z-index:15040;background:rgba(0,0,0,.42)}
+.rq-chaos-window{width:min(760px,100%);max-height:94vh;overflow:auto;background:#c0c0c0;border:3px solid;border-color:#fff #555 #555 #fff;box-shadow:8px 8px #0008}
+.rq-chaos-title{position:sticky;top:0;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:8px;background:#000080;color:#fff;font-weight:bold;padding:8px 10px}
+.rq-chaos-title button,.rq-chaos-actions button,.rq-chaos-gate-actions button{border:2px solid;border-color:#fff #555 #555 #fff;border-radius:0;background:#c0c0c0;color:#111;padding:7px 10px;font:inherit;font-weight:bold;cursor:pointer}
+.rq-chaos-body{padding:12px}
+.rq-chaos-banner{border:1px solid #777;background:#fff7ce;padding:8px;margin:0 0 10px;line-height:1.45}
+.rq-chaos-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.rq-chaos-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:8px}
+.rq-chaos-actions button{min-height:42px;text-align:left}
+.rq-chaos-actions button:hover,.rq-chaos-title button:hover{background:#e6e6e6}
+.rq-chaos-actions button.chaos-on{background:#d8efcf;border-color:#fff #34572c #34572c #fff}
+.rq-chaos-status{padding:8px;margin-top:10px;border:2px inset #888;background:#fff;color:#111;min-height:35px;white-space:pre-wrap}
+.rq-chaos-gate-body{padding:16px}
+.rq-chaos-gate-body p{margin:0 0 10px}
+.rq-chaos-gate-body input{width:100%;padding:8px;border:2px inset #888;border-radius:0;font:inherit}
+.rq-chaos-gate-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}
+.rq-chaos-foot{font-size:11px;color:#333;margin-top:9px}
+#rqChaosConfettiLayer{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:15010}
+.rq-chaos-confetti{position:absolute;top:-40px;font-size:24px;animation:rqChaosFall var(--duration,2.8s) linear forwards;filter:drop-shadow(1px 1px 0 #0004)}
+@keyframes rqChaosFall{to{transform:translate3d(var(--drift,60px),110vh,0) rotate(900deg)}}
+@keyframes rqChaosFloat{0%{transform:translate(0,0) rotate(0deg)}33%{transform:translate(10px,-9px) rotate(1deg)}66%{transform:translate(-7px,8px) rotate(-1.3deg)}100%{transform:translate(5px,12px) rotate(.7deg)}}
+@keyframes rqChaosDisco{0%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(130deg)}100%{filter:hue-rotate(300deg)}}
+@keyframes rqChaosRainbow{0%{color:#ff4141}20%{color:#ffac2f}40%{color:#44a84a}60%{color:#2d9eea}80%{color:#9254e8}100%{color:#ff4aa6}}
+@keyframes rqChaosGlitch{0%,100%{transform:translate(0)}20%{transform:translate(2px,-1px)}40%{transform:translate(-2px,1px)}60%{transform:translate(1px,2px)}80%{transform:translate(-1px,-2px)}}
+@keyframes rqChaosBob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(1.5deg)}}
+@keyframes rqChaosShake{0%,100%{transform:translate(0,0)}25%{transform:translate(2px,-1px)}50%{transform:translate(-2px,1px)}75%{transform:translate(1px,2px)}}
+@keyframes rqChaosWobble{0%,100%{border-radius:0}50%{border-radius:18px 2px 14px 4px}}
+body.rq-chaos-float .app .topbar,body.rq-chaos-float .app .sidebar,body.rq-chaos-float .app .hero,body.rq-chaos-float .app .stat,body.rq-chaos-float .app .subject,body.rq-chaos-float .app .panel,body.rq-chaos-float .app .quiz-card{animation:rqChaosFloat 3.8s ease-in-out infinite alternate;will-change:transform}
+body.rq-chaos-float .app .subject:nth-child(2n),body.rq-chaos-lowgravity .app .subject:nth-child(3n){animation-delay:-1.2s}
+body.rq-chaos-upside .app h1,body.rq-chaos-upside .app h2,body.rq-chaos-upside .app h3,body.rq-chaos-upside .app p,body.rq-chaos-upside .app small,body.rq-chaos-upside .app label,body.rq-chaos-upside .app button,body.rq-chaos-upside .app .navbtn,body.rq-chaos-upside .app .brand,body.rq-chaos-upside .app .stat strong,body.rq-chaos-upside .app .subject h3,body.rq-chaos-upside .app .task-copy,body.rq-chaos-upside .app .eyebrow{transform:rotate(180deg)!important}
+body.rq-chaos-disco .app .hero,body.rq-chaos-disco .app .stat,body.rq-chaos-disco .app .subject,body.rq-chaos-disco .app .panel,body.rq-chaos-disco .app .sidebar,body.rq-chaos-disco .app .topbar{animation:rqChaosDisco 4s linear infinite alternate}
+body.rq-chaos-layout .app .layout{display:flex!important;flex-wrap:wrap!important;align-items:flex-start;gap:14px}
+body.rq-chaos-layout .app .sidebar{position:relative!important;top:auto!important;flex:1 1 190px;width:auto!important}
+body.rq-chaos-layout .app .main{flex:4 1 330px;min-width:260px}
+body.rq-chaos-layout .app .stats,body.rq-chaos-layout .app .subject-grid,body.rq-chaos-layout .app .lower-grid{display:flex!important;flex-wrap:wrap!important;gap:12px}
+body.rq-chaos-layout .app .stat,body.rq-chaos-layout .app .subject,body.rq-chaos-layout .app .lower-grid>*{flex:1 1 190px;min-width:150px}
+body.rq-chaos-rainbow .app h1,body.rq-chaos-rainbow .app h2,body.rq-chaos-rainbow .app h3,body.rq-chaos-rainbow .app .navbtn,body.rq-chaos-rainbow .app .brand,body.rq-chaos-rainbow .app .section-head,body.rq-chaos-rainbow .app .stat strong{animation:rqChaosRainbow 3.5s linear infinite}
+body.rq-chaos-invert .app{filter:invert(1) hue-rotate(180deg)}
+body.rq-chaos-comic .app,body.rq-chaos-comic .app button,body.rq-chaos-comic .app input,body.rq-chaos-comic .app select{font-family:"Comic Sans MS","Comic Sans",cursive!important}
+body.rq-chaos-glitch .app .hero h1,body.rq-chaos-glitch .app .section-head,body.rq-chaos-glitch .app .brand{animation:rqChaosGlitch .22s steps(2,end) infinite}
+body.rq-chaos-lowgravity .app .btn,body.rq-chaos-lowgravity .app .mini-btn,body.rq-chaos-lowgravity .app .mode,body.rq-chaos-lowgravity .app .subject,body.rq-chaos-lowgravity .app .stat{animation:rqChaosBob 2.8s ease-in-out infinite}
+body.rq-chaos-shake .app{animation:rqChaosShake .14s linear infinite}
+body.rq-chaos-rubber .app button,body.rq-chaos-rubber .app .subject,body.rq-chaos-rubber .app .stat{animation:rqChaosWobble 2.5s ease-in-out infinite;transform-origin:center}
+body.rq-chaos-ducks .app .navbtn::after{content:" 🦆";font-size:1.1em}
+body.rq-chaos-ducks .app .subject h3::after{content:" ✨"}
+body.rq-chaos-cursor .app,body.rq-chaos-cursor .app *{cursor:crosshair!important}
+#rqChaosLabOverlay .rq-chaos-actions button:focus-visible,#rqChaosLabOverlay .rq-chaos-title button:focus-visible{outline:3px solid #00a6ac;outline-offset:2px}
+@media(max-width:650px){.rq-chaos-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#rqChaosLabOverlay,#rqChaosGateOverlay,#rqChaosFakeAlert{padding:5px}.rq-chaos-window{max-height:98vh}.rq-chaos-body{padding:8px}}
+@media(prefers-reduced-motion:reduce){body.rq-chaos-float .app *,body.rq-chaos-disco .app *,body.rq-chaos-rainbow .app *,body.rq-chaos-glitch .app *,body.rq-chaos-lowgravity .app *,body.rq-chaos-shake .app *,body.rq-chaos-rubber .app *{animation-duration:6s!important}}
+
 </style>
 
 
@@ -1492,6 +1546,42 @@ rqInitCloud();
 </div>
 
 
+
+<div id="rqChaosGateOverlay" aria-hidden="true">
+  <section class="rq-chaos-window" role="dialog" aria-modal="true" aria-labelledby="rqChaosGateTitle" style="max-width:420px">
+    <div class="rq-chaos-title"><span id="rqChaosGateTitle">☢ Unknown subsystem detected</span><button type="button" id="rqChaosGateClose" aria-label="Close secret gate">×</button></div>
+    <div class="rq-chaos-gate-body">
+      <p>Developer console: hidden subsystem locked. Enter the secret lab phrase to proceed.</p>
+      <form id="rqChaosGateForm"><label for="rqChaosGateInput"><b>Secret phrase</b></label><input id="rqChaosGateInput" type="password" autocomplete="off" maxlength="16" placeholder="••••••••" required></form>
+      <div id="rqChaosGateMessage" class="rq-chaos-foot" aria-live="polite" style="color:#a00000;min-height:18px"></div>
+      <div class="rq-chaos-gate-actions"><button type="button" id="rqChaosGateCancel">Cancel</button><button type="submit" form="rqChaosGateForm">Unlock subsystem →</button></div>
+    </div>
+  </section>
+</div>
+
+<div id="rqChaosLabOverlay" aria-hidden="true">
+  <section class="rq-chaos-window" role="dialog" aria-modal="true" aria-labelledby="rqChaosLabTitle">
+    <div class="rq-chaos-title"><span id="rqChaosLabTitle">☢ RQ98 SECRET CHAOS LAB // LOCAL ONLY</span><div><button type="button" id="rqChaosRestoreTop" title="Immediately restore normal layout">RESTORE REALITY</button> <button type="button" id="rqChaosLabClose" aria-label="Close secret lab">×</button></div></div>
+    <div class="rq-chaos-body">
+      <div class="rq-chaos-banner"><b>Warning: mayhem ahead.</b> These are visual effects in this browser tab only. They do not alter Cloudflare, other players, account records, or saved progress. Click <b>RESTORE REALITY</b> or press <b>Alt + Shift + R</b> to undo everything.</div>
+      <div class="rq-chaos-grid">
+        <section class="rq-dev-panel"><h3>🌪 Layout chaos</h3><div class="rq-chaos-actions"><button type="button" id="rqChaosMaster">💥 FULL CHAOS</button><button type="button" id="rqChaosLayout">🧩 Break the layout</button><button type="button" id="rqChaosFloat">🪟 Floating windows</button><button type="button" id="rqChaosUpside">🙃 Upside-down text</button><button type="button" id="rqChaosLowGravity">🪐 Low gravity</button></div></section>
+        <section class="rq-dev-panel"><h3>🎨 Visual mayhem</h3><div class="rq-chaos-actions"><button type="button" id="rqChaosDisco">🪩 Disco colours</button><button type="button" id="rqChaosRainbow">🌈 Rainbow text</button><button type="button" id="rqChaosInvert">🙃 Invert colours</button><button type="button" id="rqChaosComic">✍ Comic mode</button><button type="button" id="rqChaosGlitch">📺 Glitch mode</button></div></section>
+        <section class="rq-dev-panel"><h3>🦆 Completely unserious</h3><div class="rq-chaos-actions"><button type="button" id="rqChaosRubber">🫠 Rubber UI</button><button type="button" id="rqChaosShake">📳 Wobbly desktop</button><button type="button" id="rqChaosDucks">🦆 Duckify buttons</button><button type="button" id="rqChaosCursor">🪄 Magic cursor</button><button type="button" id="rqChaosConfetti">🎉 Confetti cannon</button></div></section>
+        <section class="rq-dev-panel"><h3>🧪 Pranks & controls</h3><div class="rq-chaos-actions"><button type="button" id="rqChaosFakeError">🛑 Fake error popup</button><button type="button" id="rqChaosRandomize">🎲 Random chaos mix</button><button type="button" id="rqChaosRestore">🧯 RESTORE EVERYTHING</button><button type="button" id="rqChaosCloseBottom">Return to Developer Menu</button></div><div id="rqChaosStatus" class="rq-chaos-status" aria-live="polite">Secret subsystem is idle. Pick an effect. All effects are temporary and local.</div></section>
+      </div>
+      <div class="rq-chaos-foot">Secret lab build 98-X · effects are not saved · no network calls · use Restore Reality if anything feels too chaotic.</div>
+    </div>
+  </section>
+</div>
+
+<div id="rqChaosFakeAlert" aria-hidden="true">
+  <section class="rq-chaos-window" role="alertdialog" aria-modal="true" aria-labelledby="rqChaosFakeTitle" style="max-width:430px">
+    <div class="rq-chaos-title"><span id="rqChaosFakeTitle">System message — just kidding</span><button type="button" id="rqChaosFakeClose" aria-label="Close fake error">×</button></div>
+    <div class="rq-chaos-gate-body"><p id="rqChaosFakeText">Error 98: Reality not found.</p><p style="font-size:11px;color:#555">This is a harmless local joke. No real error occurred.</p><div class="rq-chaos-gate-actions"><button type="button" id="rqChaosFakeOkay">OK, carry on</button></div></div>
+  </section>
+</div>
+
 <script id="rqDevMenuScript">
 (()=>{
   'use strict';
@@ -1569,6 +1659,36 @@ rqInitCloud();
   $id('rqDevFullscreen').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();write('Fullscreen '+(document.fullscreenElement?'enabled':'requested')+'.')}catch(e){write('Fullscreen is blocked or unavailable in this browser: '+e.message)}});
   $id('rqDevCopyBuild').addEventListener('click',async()=>{const report='Revision Quest 98\nBuild: Dev Console Expansion\nLoaded: '+new Date().toISOString()+'\nOrigin: '+location.origin+'\nUser agent: '+navigator.userAgent;try{await navigator.clipboard.writeText(report);write('Build information copied:\n'+report)}catch(e){write(report)}});
   $id('rqDevDevBadge').addEventListener('click',()=>{const badge=$id('rqDevProfileBadge');const show=!!badge&&badge.hidden;setProfileDevBadge(show);write(show?'DEV badge shown next to your profile name.':'DEV badge hidden next to your profile name.')});
+
+  // Super-hidden second-level easter egg: click the Developer Console title seven times, then enter CHAOS98.
+  const chaosGate=$id('rqChaosGateOverlay'),chaosLab=$id('rqChaosLabOverlay'),fakeAlert=$id('rqChaosFakeAlert');
+  let chaosTitleClicks=0,chaosTitleTimer=null,chaosGateFailures=0,chaosGateLockUntil=0,fakeAlertTimer=null;
+  const chaosClasses=['rq-chaos-float','rq-chaos-upside','rq-chaos-disco','rq-chaos-layout','rq-chaos-rainbow','rq-chaos-invert','rq-chaos-comic','rq-chaos-glitch','rq-chaos-lowgravity','rq-chaos-shake','rq-chaos-rubber','rq-chaos-ducks','rq-chaos-cursor'];
+  const chaosIds={rqChaosFloat:'rq-chaos-float',rqChaosUpside:'rq-chaos-upside',rqChaosDisco:'rq-chaos-disco',rqChaosLayout:'rq-chaos-layout',rqChaosRainbow:'rq-chaos-rainbow',rqChaosInvert:'rq-chaos-invert',rqChaosComic:'rq-chaos-comic',rqChaosGlitch:'rq-chaos-glitch',rqChaosLowGravity:'rq-chaos-lowgravity',rqChaosShake:'rq-chaos-shake',rqChaosRubber:'rq-chaos-rubber',rqChaosDucks:'rq-chaos-ducks',rqChaosCursor:'rq-chaos-cursor'};
+  const chaosStatus=msg=>{if($id('rqChaosStatus'))$id('rqChaosStatus').textContent=msg};
+  const chaosLabOpen=()=>{if(!chaosLab)return;chaosLab.style.display='flex';chaosLab.setAttribute('aria-hidden','false');if($id('rqChaosLabClose'))$id('rqChaosLabClose').focus()};
+  const chaosGateClose=()=>{if(!chaosGate)return;chaosGate.style.display='none';chaosGate.setAttribute('aria-hidden','true');if($id('rqChaosGateInput'))$id('rqChaosGateInput').value=''};
+  const chaosLabClose=()=>{if(!chaosLab)return;chaosLab.style.display='none';chaosLab.setAttribute('aria-hidden','true')};
+  function chaosSet(id,enabled){const cls=chaosIds[id];if(!cls)return;document.body.classList.toggle(cls,!!enabled);const b=$id(id);if(b){b.classList.toggle('chaos-on',!!enabled);b.setAttribute('aria-pressed',enabled?'true':'false')}chaosStatus((enabled?'Enabled: ':'Disabled: ')+(b?b.textContent.replace(/^[^A-Za-z0-9]+/,''):'effect')+'. This only affects this open page.')}
+  function chaosRestoreAll(){chaosClasses.forEach(c=>document.body.classList.remove(c));Object.keys(chaosIds).forEach(id=>{const b=$id(id);if(b){b.classList.remove('chaos-on');b.setAttribute('aria-pressed','false')}});document.querySelectorAll('.rq-chaos-confetti').forEach(el=>el.remove());const layer=$id('rqChaosConfettiLayer');if(layer)layer.remove();if(fakeAlertTimer){clearTimeout(fakeAlertTimer);fakeAlertTimer=null}if(fakeAlert){fakeAlert.style.display='none';fakeAlert.setAttribute('aria-hidden','true')}chaosStatus('Reality restored. All visual effects have been removed; your theme, account, questions and progress were not changed.')}
+  function chaosSetAll(){const full=chaosClasses.some(c=>!document.body.classList.contains(c));if(full){chaosClasses.forEach(c=>document.body.classList.add(c));Object.keys(chaosIds).forEach(id=>{const b=$id(id);if(b){b.classList.add('chaos-on');b.setAttribute('aria-pressed','true')}});chaosStatus('FULL CHAOS active: layout is bent, windows float, and colours go wild. Press Alt+Shift+R or Restore Reality to recover.')}else chaosRestoreAll()}
+  function chaosBurst(){let layer=$id('rqChaosConfettiLayer');if(!layer){layer=document.createElement('div');layer.id='rqChaosConfettiLayer';layer.setAttribute('aria-hidden','true');document.body.appendChild(layer)}const shapes=['✦','★','✧','🦆','⚡','🎉','◆','✿','💫'];for(let i=0;i<72;i++){const bit=document.createElement('span');bit.className='rq-chaos-confetti';bit.textContent=shapes[Math.floor(Math.random()*shapes.length)];bit.style.left=(Math.random()*100)+'%';bit.style.setProperty('--duration',(2.1+Math.random()*2.2)+'s');bit.style.setProperty('--drift',((Math.random()-.5)*260)+'px');bit.style.animationDelay=(Math.random()*.45)+'s';bit.style.fontSize=(13+Math.random()*22)+'px';layer.appendChild(bit);setTimeout(()=>bit.remove(),5000)}setTimeout(()=>{if(layer&&!layer.childElementCount)layer.remove()},5200);chaosStatus('CONFETTI CANNON: '+72+' bits of harmless browser confetti launched!')}
+  function chaosFakeError(){if(!fakeAlert)return;const messages=['Error 98: Reality not found.','Warning: Too much revision detected. Deploying ducks…','Critical exception: The desktop has become too powerful.','404: Chill not found. Please take a tiny break.','Unexpected sparkle overflow at address 0x98.'];$id('rqChaosFakeText').textContent=messages[Math.floor(Math.random()*messages.length)];fakeAlert.style.display='flex';fakeAlert.setAttribute('aria-hidden','false');chaosStatus('Fake error displayed. Just a joke; no real error has occurred.');if(fakeAlertTimer)clearTimeout(fakeAlertTimer);fakeAlertTimer=setTimeout(()=>{fakeAlert.style.display='none';fakeAlert.setAttribute('aria-hidden','true');fakeAlertTimer=null},4500)}
+  const chaosTitle=$id('rqDevTitle');
+  if(chaosTitle){chaosTitle.style.cursor='default';chaosTitle.setAttribute('title','');chaosTitle.addEventListener('click',()=>{chaosTitleClicks++;if(chaosTitleTimer)clearTimeout(chaosTitleTimer);chaosTitleTimer=setTimeout(()=>{chaosTitleClicks=0},3200);if(chaosTitleClicks>=7){chaosTitleClicks=0;clearTimeout(chaosTitleTimer);if(Date.now()<chaosGateLockUntil){write('Secret subsystem is cooling down. Try later.');return}if(chaosGate){$id('rqChaosGateMessage').textContent='';$id('rqChaosGateInput').value='';chaosGate.style.display='flex';chaosGate.setAttribute('aria-hidden','false');setTimeout(()=>$id('rqChaosGateInput').focus(),20)}}})}
+  if($id('rqChaosGateForm'))$id('rqChaosGateForm').addEventListener('submit',e=>{e.preventDefault();if(Date.now()<chaosGateLockUntil){$id('rqChaosGateMessage').textContent='Subsystem temporarily paused. Try again shortly.';return}if(($id('rqChaosGateInput').value||'').trim().toUpperCase()==='CHAOS98'){chaosGateFailures=0;chaosGateClose();chaosLabOpen();chaosStatus('Secret lab unlocked. Everything here is local to this tab.');return}chaosGateFailures++;$id('rqChaosGateInput').value='';$id('rqChaosGateMessage').textContent='No match. This subsystem remains hidden.';if(chaosGateFailures>=4){chaosGateFailures=0;chaosGateLockUntil=Date.now()+12000;$id('rqChaosGateMessage').textContent='Too many tries. Subsystem cooling down for 12 seconds.'}});
+  const hideChaosGate=()=>{chaosGateClose()};if($id('rqChaosGateClose'))$id('rqChaosGateClose').addEventListener('click',hideChaosGate);if($id('rqChaosGateCancel'))$id('rqChaosGateCancel').addEventListener('click',hideChaosGate);if(chaosGate)chaosGate.addEventListener('click',e=>{if(e.target===chaosGate)hideChaosGate()});
+  if($id('rqChaosLabClose'))$id('rqChaosLabClose').addEventListener('click',chaosLabClose);if($id('rqChaosCloseBottom'))$id('rqChaosCloseBottom').addEventListener('click',chaosLabClose);if(chaosLab)chaosLab.addEventListener('click',e=>{if(e.target===chaosLab)chaosLabClose()});
+  Object.keys(chaosIds).forEach(id=>{const b=$id(id);if(b)b.addEventListener('click',()=>chaosSet(id,!document.body.classList.contains(chaosIds[id])))});
+  if($id('rqChaosMaster'))$id('rqChaosMaster').addEventListener('click',chaosSetAll);
+  if($id('rqChaosRestore'))$id('rqChaosRestore').addEventListener('click',chaosRestoreAll);if($id('rqChaosRestoreTop'))$id('rqChaosRestoreTop').addEventListener('click',chaosRestoreAll);
+  if($id('rqChaosConfetti'))$id('rqChaosConfetti').addEventListener('click',chaosBurst);
+  if($id('rqChaosFakeError'))$id('rqChaosFakeError').addEventListener('click',chaosFakeError);
+  const closeFake=()=>{if(fakeAlertTimer)clearTimeout(fakeAlertTimer);fakeAlertTimer=null;if(fakeAlert){fakeAlert.style.display='none';fakeAlert.setAttribute('aria-hidden','true')}};if($id('rqChaosFakeClose'))$id('rqChaosFakeClose').addEventListener('click',closeFake);if($id('rqChaosFakeOkay'))$id('rqChaosFakeOkay').addEventListener('click',closeFake);if(fakeAlert)fakeAlert.addEventListener('click',e=>{if(e.target===fakeAlert)closeFake()});
+  if($id('rqChaosRandomize'))$id('rqChaosRandomize').addEventListener('click',()=>{chaosRestoreAll();const keys=Object.keys(chaosIds),count=3+Math.floor(Math.random()*6),selected=[];while(selected.length<count){const key=keys[Math.floor(Math.random()*keys.length)];if(!selected.includes(key))selected.push(key)}selected.forEach(key=>{document.body.classList.add(chaosIds[key]);const b=$id(key);if(b){b.classList.add('chaos-on');b.setAttribute('aria-pressed','true')}});if(Math.random()>.4)chaosBurst();chaosStatus('Random chaos mix: '+selected.map(id=>$id(id).textContent.trim()).join(' · ')+'. Restore Reality undoes everything.')});
+  // Safety valve: Escape closes the nested lab and restores the normal view; Alt+Shift+R always restores.
+  document.addEventListener('keydown',e=>{if(e.altKey&&e.shiftKey&&e.key.toLowerCase()==='r'){chaosRestoreAll();chaosLabClose();chaosGateClose();write('Chaos effects cleared with the emergency keyboard shortcut.');e.preventDefault();e.stopImmediatePropagation();return}if(e.key==='Escape'&&chaosLab&&chaosLab.style.display!=='none'){chaosRestoreAll();chaosLabClose();e.preventDefault();e.stopImmediatePropagation()}},{capture:true});
+
   window.rqSetTheme=window.rqSetTheme||undefined;
   loadDevColors();
   try{if(sessionStorage.getItem('rq98-dev-badge-unlocked')==='1')setProfileDevBadge(true)}catch(e){}
